@@ -30,6 +30,38 @@ const companies = [
     orderType: "buy",
     orderValidity: "day",
   },
+  {
+    symbol: "TSLA",
+    quantity: 1,
+    purchasedPrice: 50,
+    ltp: 1000,
+    orderType: "buy",
+    orderValidity: "day",
+  },
+  {
+    symbol: "GOOGL",
+    quantity: 1,
+    purchasedPrice: 50,
+    ltp: 1000,
+    orderType: "buy",
+    orderValidity: "day",
+  },
+  {
+    symbol: "INFY",
+    quantity: -1,
+    purchasedPrice: 50,
+    ltp: 70,
+    orderType: "sell",
+    orderValidity: "day",
+  },
+  {
+    symbol: "AAPL",
+    quantity: -1,
+    purchasedPrice: 50,
+    ltp: 70,
+    orderType: "sell",
+    orderValidity: "day",
+  },
 ];
 
 const socketUrl =
@@ -77,6 +109,10 @@ export default function Positions() {
         socket.send(
           JSON.stringify({ type: "subscribe", symbol: "BINANCE:BTCUSDT" })
         );
+        socket.send(JSON.stringify({ type: "subscribe", symbol: "TSLA" }));
+        socket.send(JSON.stringify({ type: "subscribe", symbol: "GOOGL" }));
+        socket.send(JSON.stringify({ type: "subscribe", symbol: "INFY" }));
+        socket.send(JSON.stringify({ type: "subscribe", symbol: "AAPL" }));
       });
 
       socket.addEventListener("message", function (event) {

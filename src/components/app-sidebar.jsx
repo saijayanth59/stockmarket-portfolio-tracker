@@ -3,6 +3,7 @@ import { Plus, LogOut, CandlestickChart, History, Gauge } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 
 import {
   Sidebar,

@@ -1,8 +1,8 @@
-// import PortfolioOverview from "@/components/portfolio-overview";
-// import TopMovers from "@/components/top-movers";
-// import StockPerformance from "@/components/stock-performance";
-// import MarketOverview from "@/components/market-overview";
-// import RecentTransactions from "@/components/recent-transactions";
+import TopIndexes from "@/components/line-chart";
+import AreaChartPortoflio from "@/components/area-chart";
+import MostTransactions from "@/components/bar-chart";
+import StockPurchases from "@/components/pie-chart";
+import TopGainersAndLosers from "@/components/TopGainersAndLosers";
 
 export const metadata = {
   title: "Dashboard",
@@ -10,15 +10,19 @@ export const metadata = {
 };
 
 export default function page() {
+  console.log("Dashboard page");
+
   return (
     <>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {/* <PortfolioOverview />
-        <TopMovers />
-        <StockPerformance />
-        <MarketOverview /> */}
+      <div className="flex px-5 gap-5 flex-col">
+        <TopIndexes />
+        <div className="flex gap-5 justify-between items-center">
+          <AreaChartPortoflio />
+          <MostTransactions />
+          <TopGainersAndLosers />
+          {/* <StockPurchases /> */}
+        </div>
       </div>
-      <div className="mt-4">{/* <RecentTransactions /> */}</div>
     </>
   );
 }

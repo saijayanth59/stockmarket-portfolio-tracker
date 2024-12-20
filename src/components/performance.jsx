@@ -11,8 +11,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
 
 export default function PerformanceSummary() {
   const [pastPL, setPastPL] = useState(68015.0);
