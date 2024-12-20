@@ -18,8 +18,6 @@ import {
 } from "lucide-react";
 import { EditOrderDialog } from "../components/edit-order-dialog";
 import { ConfirmationDialog } from "./confirmation-dialog";
-import { finnhubClient } from "@/utils/hub";
-import { set } from "date-fns";
 
 const totalPortfolio = 100000;
 
@@ -106,7 +104,7 @@ export default function Positions() {
       };
     }
 
-    // connectWebSocket();
+    connectWebSocket();
   }, []);
 
   const handleOpenEditOrderDialog = (company) => {

@@ -117,7 +117,7 @@ export default function PlaceOrderPage() {
             className={`w-1/2 ${
               orderType === "Buy"
                 ? "bg-green-500 hover:bg-green-600"
-                : " text-green-500 hover:bg-green-200"
+                : " text-green-500"
             }`}
           >
             Buy
@@ -128,7 +128,7 @@ export default function PlaceOrderPage() {
             className={`w-1/2 ${
               orderType === "Sell"
                 ? "bg-red-500 hover:bg-red-600"
-                : " text-red-500 hover:bg-red-200"
+                : " text-red-500"
             }`}
           >
             Sell
