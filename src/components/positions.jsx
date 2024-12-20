@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -18,45 +18,24 @@ import {
 } from "lucide-react";
 import { EditOrderDialog } from "../components/edit-order-dialog";
 import { ConfirmationDialog } from "./confirmation-dialog";
+import { finnhubClient } from "@/utils/hub";
+import { set } from "date-fns";
 
-// Mock data
 const totalPortfolio = 100000;
-const positionsPL = 5000;
-const availableMargin = 50000;
-const investedMargin = 50000;
 
 const companies = [
   {
-    symbol: "AAPL",
-    currentProfit: 1000,
-    quantity: 10,
-    profitPercentage: 2.5,
-    avgPrice: 150,
-    ltp: 153.75,
+    symbol: "BINANCE:BTCUSDT",
+    quantity: 1,
+    purchasedPrice: 1000,
+    ltp: 1000,
     orderType: "buy",
     orderValidity: "day",
   },
-  {
-    symbol: "GOOGL",
-    currentProfit: -500,
-    quantity: -5,
-    profitPercentage: -1.2,
-    avgPrice: 2800,
-    ltp: 2766.4,
-    orderType: "sell",
-    orderValidity: "gtc",
-  },
-  {
-    symbol: "MSFT",
-    currentProfit: 750,
-    quantity: 15,
-    profitPercentage: 1.8,
-    avgPrice: 300,
-    ltp: 305.4,
-    orderType: "buy",
-    orderValidity: "ioc",
-  },
 ];
+
+const socketUrl =
+  "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
 
 export default function Positions() {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -64,13 +43,78 @@ export default function Positions() {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [orderToExit, setOrderToExit] = useState(null);
   const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false);
+  const [stocks, setStocks] = useState([...companies]);
+
+  const investedMargin = Math.abs(
+    stocks.reduce((acc, stock) => {
+      return acc + stock.purchasedPrice * stock.quantity;
+    }, 0)
+  );
+
+  const updatedStocks = stocks.map((stock) => {
+    const currentProfit = (stock.ltp - stock.purchasedPrice) * stock.quantity;
+    const currentProfitPercentage =
+      (currentProfit / stock.purchasedPrice) * 100;
+    return {
+      ...stock,
+      currentProfit,
+      currentProfitPercentage,
+    };
+  });
+
+  const positionsPL = updatedStocks.reduce((acc, stock) => {
+    return acc + stock.currentProfit;
+  }, 0);
+
+  const currentProtofolio = totalPortfolio + positionsPL;
+  const availableMargin = totalPortfolio - investedMargin;
+
+  let socket = null;
+
+  useEffect(() => {
+    function connectWebSocket() {
+      socket = new WebSocket(socketUrl);
+
+      socket.addEventListener("open", function () {
+        socket.send(
+          JSON.stringify({ type: "subscribe", symbol: "BINANCE:BTCUSDT" })
+        );
+      });
+
+      socket.addEventListener("message", function (event) {
+        const data = JSON.parse(event.data);
+
+        if (data.type === "trade") {
+          const updatedPrice = data.data[0]?.p;
+          const updatedSymbol = data.data[0]?.s;
+
+          setStocks((prevStocks) =>
+            prevStocks.map((stock) =>
+              stock.symbol === updatedSymbol
+                ? {
+                    ...stock,
+                    ltp: updatedPrice,
+                  }
+                : stock
+            )
+          );
+        }
+      });
+
+      return () => {
+        if (socket) socket.close();
+      };
+    }
+
+    // connectWebSocket();
+  }, []);
 
   const handleOpenEditOrderDialog = (company) => {
     setSelectedOrder({
       symbol: company.symbol,
       type: company.orderType,
       quantity: Math.abs(company.quantity),
-      price: company.avgPrice,
+      price: company.purchasedPrice,
       validity: company.orderValidity,
     });
     setEditOrderDialogOpen(true);
@@ -82,7 +126,6 @@ export default function Positions() {
   };
 
   const confirmExit = () => {
-    // Perform exit logic here
     console.log("Exiting order:", orderToExit);
     setConfirmationDialogOpen(false);
   };
@@ -96,7 +139,7 @@ export default function Positions() {
           <div className="flex justify-between m-4">
             <div>
               <p className="text-2xl font-semibold">
-                ₹{totalPortfolio.toFixed(2)}
+                ₹{currentProtofolio.toFixed(2)}
               </p>
               <p className="text-sm text-muted-foreground">Total Portfolio</p>
             </div>
@@ -129,7 +172,7 @@ export default function Positions() {
       </Card>
 
       <div className="space-y-4">
-        {companies.map((company, index) => (
+        {updatedStocks.map((company, index) => (
           <Card
             key={index}
             className={expandedCard === company.symbol ? "border-primary" : ""}
@@ -153,21 +196,21 @@ export default function Positions() {
               <div className="flex justify-between text-sm text-muted-foreground mb-2">
                 <span>
                   {Math.abs(company.quantity)} Qty (
-                  {company.quantity > 0 ? "Buy" : "Sell"})
+                  {company.quantity > 0 ? "buy" : "sell"})
                 </span>
                 <span
                   className={
-                    company.profitPercentage >= 0
+                    company.currentProfit >= 0
                       ? "text-green-500"
                       : "text-red-500"
                   }
                 >
-                  ({company.profitPercentage >= 0 ? "+" : ""}
-                  {company.profitPercentage.toFixed(2)}%)
+                  ({company.currentProfitPercentage >= 0 ? "+" : ""}
+                  {company.currentProfitPercentage.toFixed(2)}%)
                 </span>
               </div>
               <div className="flex justify-between text-sm">
-                <span>Avg: ₹{company.avgPrice.toFixed(2)}</span>
+                <span>price: ₹{company.purchasedPrice.toFixed(2)}</span>
                 <span>LTP: ₹{company.ltp.toFixed(2)}</span>
               </div>
             </CardContent>
@@ -233,17 +276,17 @@ export default function Positions() {
                     Day Change %:{" "}
                     <span
                       className={
-                        company.profitPercentage >= 0
+                        company.currentProfit >= 0
                           ? "text-green-500"
                           : "text-red-500"
                       }
                     >
-                      {company.profitPercentage >= 0 ? (
+                      {company.currentProfit >= 0 ? (
                         <ArrowUpIcon className="inline w-4 h-4" />
                       ) : (
                         <ArrowDownIcon className="inline w-4 h-4" />
                       )}
-                      {Math.abs(company.profitPercentage).toFixed(2)}%
+                      {Math.abs(company.currentProfit).toFixed(2)}%
                     </span>
                   </div>
                   <div>Order Type: {company.orderType}</div>
