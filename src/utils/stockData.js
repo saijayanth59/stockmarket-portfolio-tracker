@@ -1,0 +1,42 @@
+export const stockData = [
+  {
+    id: "1",
+    name: "Apple Inc.",
+    symbol: "AAPL",
+    ltp: 150.25,
+    change: 2.5,
+    changePercent: 1.69,
+  },
+  {
+    id: "2",
+    name: "Microsoft Corporation",
+    symbol: "MSFT",
+    ltp: 305.75,
+    change: -1.25,
+    changePercent: -0.41,
+  },
+  {
+    id: "3",
+    name: "Amazon.com Inc.",
+    symbol: "AMZN",
+    ltp: 3302.5,
+    change: 15.75,
+    changePercent: 0.48,
+  },
+  {
+    id: "4",
+    name: "Alphabet Inc.",
+    symbol: "GOOGL",
+    ltp: 2750.0,
+    change: 22.5,
+    changePercent: 0.82,
+  },
+  {
+    id: "5",
+    name: "Tesla Inc.",
+    symbol: "TSLA",
+    ltp: 725.6,
+    change: -10.4,
+    changePercent: -1.41,
+  },
+];

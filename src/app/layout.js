@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { ThemeToggleButton } from "@/components/theme-toggle-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           {children}
+          <ThemeToggleButton classes="fixed right-7 bottom-5" />
         </ThemeProvider>
       </body>
     </html>

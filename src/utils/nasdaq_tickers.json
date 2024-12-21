@@ -1,0 +1,4459 @@
+[
+  {
+    "symbol": "AACG",
+    "name": "ATA Creativity Global American Depositary Shares"
+  },
+  {
+    "symbol": "AADI",
+    "name": "Aadi Bioscience Inc. Common Stock"
+  },
+  {
+    "symbol": "AAL",
+    "name": "American Airlines Group Inc. Common Stock"
+  },
+  {
+    "symbol": "AAME",
+    "name": "Atlantic American Corporation Common Stock"
+  },
+  {
+    "symbol": "AAOI",
+    "name": "Applied Optoelectronics Inc. Common Stock"
+  },
+  {
+    "symbol": "AAON",
+    "name": "AAON Inc. Common Stock"
+  },
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc. Common Stock"
+  },
+  {
+    "symbol": "ABAT",
+    "name": "American Battery Technology Company Common Stock"
+  },
+
+  {
+    "symbol": "AEP",
+    "name": "American Electric Power Company Inc. Common Stock"
+  },
+  {
+    "symbol": "AERT",
+    "name": "Aeries Technology Inc. Class A Ordinary Share"
+  },
+  {
+    "symbol": "AERTW",
+    "name": "Aeries Technology Inc. Warrant"
+  },
+  {
+    "symbol": "AEYE",
+    "name": "AudioEye Inc. Common Stock"
+  },
+  {
+    "symbol": "AFBI",
+    "name": "Affinity Bancshares Inc. Common Stock (MD)"
+  },
+  {
+    "symbol": "AFCG",
+    "name": "Advanced Flower Capital Inc. Common Stock"
+  },
+  {
+    "symbol": "AFJK",
+    "name": "Aimei Health Technology Co. Ltd Ordinary Share"
+  },
+  {
+    "symbol": "AFMD",
+    "name": "Affimed N.V."
+  },
+  {
+    "symbol": "AFRI",
+    "name": "Forafric Global PLC Ordinary Shares"
+  },
+  {
+    "symbol": "AFRIW",
+    "name": "Forafric Global PLC Warrants"
+  },
+  {
+    "symbol": "AFRM",
+    "name": "Affirm Holdings Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AFYA",
+    "name": "Afya Limited Class A Common Shares"
+  },
+  {
+    "symbol": "AGAE",
+    "name": "Allied Gaming & Entertainment Inc. Common Stock"
+  },
+  {
+    "symbol": "AGEN",
+    "name": "Agenus Inc. Common Stock"
+  },
+  {
+    "symbol": "AGFY",
+    "name": "Agrify Corporation Common Stock"
+  },
+  {
+    "symbol": "AGIO",
+    "name": "Agios Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "AGMH",
+    "name": "AGM Group Holdings Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "AGNC",
+    "name": "AGNC Investment Corp. Common Stock"
+  },
+  {
+    "symbol": "AGNCL",
+    "name": "AGNC Investment Corp. Depositary Shares Each Representing a 1/1000th Interest in a Share of 7.75% Series G Fixed-Rate Reset Cumulative Redeemable Preferred Stock"
+  },
+  {
+    "symbol": "AGNCM",
+    "name": "AGNC Investment Corp. Depositary Shares rep 6.875% Series D Fixed-to-Floating Cumulative Redeemable Preferred Stock"
+  },
+  {
+    "symbol": "AGNCN",
+    "name": "AGNC Investment Corp. Depositary Shares Each Representing a 1/1000th Interest in a Share of 7.00% Series C Fixed-To-Floating Rate Cumulative Redeemable Preferred Stock"
+  },
+  {
+    "symbol": "AGNCO",
+    "name": "AGNC Investment Corp. Depositary Shares each representing a 1/1000th interest in a share of 6.50% Series E Fixed-to-Floating Cumulative Redeemable Preferred Stock"
+  },
+  {
+    "symbol": "AGNCP",
+    "name": "AGNC Investment Corp. Depositary Shares Each Representing a 1/1000th Interest in a Share of 6.125% Series F Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock"
+  },
+  {
+    "symbol": "AGRI",
+    "name": "AgriFORCE  Growing Systems Ltd. Common Shares"
+  },
+  {
+    "symbol": "AGYS",
+    "name": "Agilysys Inc. Common Stock (DE)"
+  },
+  {
+    "symbol": "AHCO",
+    "name": "AdaptHealth Corp. Common Stock"
+  },
+  {
+    "symbol": "AHG",
+    "name": "Akso Health Group ADS"
+  },
+  {
+    "symbol": "AIEV",
+    "name": "Thunder Power Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "AIFF",
+    "name": "Firefly Neuroscience Inc. Common Stock"
+  },
+  {
+    "symbol": "AIFU",
+    "name": "AIX Inc. American Depositary Shares"
+  },
+  {
+    "symbol": "AIHS",
+    "name": "Senmiao Technology Limited Common Stock"
+  },
+  {
+    "symbol": "AILE",
+    "name": "iLearningEngines Inc. Common Stock"
+  },
+  {
+    "symbol": "AILEW",
+    "name": "iLearningEngines Inc. Warrant"
+  },
+  {
+    "symbol": "AIMAW",
+    "name": "Aimfinity Investment Corp. I Warrant"
+  },
+  {
+    "symbol": "AIMD",
+    "name": "Ainos Inc. Common Stock"
+  },
+  {
+    "symbol": "AIOT",
+    "name": "PowerFleet Inc. Common Stock"
+  },
+  {
+    "symbol": "AIP",
+    "name": "Arteris Inc. Common Stock"
+  },
+  {
+    "symbol": "AIRE",
+    "name": "reAlpha Tech Corp. Common Stock"
+  },
+  {
+    "symbol": "AIRG",
+    "name": "Airgain Inc. Common Stock"
+  },
+  {
+    "symbol": "AIRJ",
+    "name": "AirJoule Technologies Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "AIRJW",
+    "name": "AirJoule Technologies Corporation Warrant"
+  },
+  {
+    "symbol": "AIRS",
+    "name": "AirSculpt Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "AIRT",
+    "name": "Air T Inc. Common Stock"
+  },
+  {
+    "symbol": "AIRTP",
+    "name": "Air T Inc. Air T Funding Alpha Income Trust Preferred Securities"
+  },
+  {
+    "symbol": "AISP",
+    "name": "Airship AI Holdings Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AISPW",
+    "name": "Airship AI Holdings Inc. Warrants"
+  },
+  {
+    "symbol": "AITR",
+    "name": "AI TRANSPORTATION ACQUISITION CORP Ordinary shares"
+  },
+  {
+    "symbol": "AITRR",
+    "name": "AI TRANSPORTATION ACQUISITION CORP Right"
+  },
+  {
+    "symbol": "AIXI",
+    "name": "XIAO-I Corporation American Depositary Shares"
+  },
+  {
+    "symbol": "AKAM",
+    "name": "Akamai Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "AKAN",
+    "name": "Akanda Corp. Common Shares"
+  },
+  {
+    "symbol": "AKBA",
+    "name": "Akebia Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "AKRO",
+    "name": "Akero Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "AKTX",
+    "name": "Akari Therapeutics plc ADS"
+  },
+  {
+    "symbol": "AKYA",
+    "name": "Akoya BioSciences Inc. Common Stock"
+  },
+  {
+    "symbol": "ALAB",
+    "name": "Astera Labs Inc. Common Stock"
+  },
+  {
+    "symbol": "ALAR",
+    "name": "Alarum Technologies Ltd. American Depositary Share"
+  },
+  {
+    "symbol": "ALBT",
+    "name": "Avalon GloboCare Corp. Common Stock"
+  },
+  {
+    "symbol": "ALCE",
+    "name": "Alternus Clean Energy Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ALCO",
+    "name": "Alico Inc. Common Stock"
+  },
+  {
+    "symbol": "ALCY",
+    "name": "Alchemy Investments Acquisition Corp 1 Class A Ordinary Shares"
+  },
+  {
+    "symbol": "ALCYU",
+    "name": "Alchemy Investments Acquisition Corp 1 Units"
+  },
+  {
+    "symbol": "ALDF",
+    "name": "Aldel Financial II Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "ALDFU",
+    "name": "Aldel Financial II Inc. Units"
+  },
+  {
+    "symbol": "ALDFW",
+    "name": "Aldel Financial II Inc. Warrants"
+  },
+  {
+    "symbol": "ALDX",
+    "name": "Aldeyra Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ALEC",
+    "name": "Alector Inc. Common Stock"
+  },
+  {
+    "symbol": "ALF",
+    "name": "Centurion Acquisition Corp. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "ALFUU",
+    "name": "Centurion Acquisition Corp. Unit"
+  },
+  {
+    "symbol": "ALFUW",
+    "name": "Centurion Acquisition Corp. Warrant"
+  },
+  {
+    "symbol": "ALGM",
+    "name": "Allegro MicroSystems Inc. Common Stock"
+  },
+  {
+    "symbol": "ALGN",
+    "name": "Align Technology Inc. Common Stock"
+  },
+  {
+    "symbol": "ALGS",
+    "name": "Aligos Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ALGT",
+    "name": "Allegiant Travel Company Common Stock"
+  },
+  {
+    "symbol": "ALHC",
+    "name": "Alignment Healthcare Inc. Common Stock"
+  },
+  {
+    "symbol": "ALKS",
+    "name": "Alkermes plc Ordinary Shares"
+  },
+  {
+    "symbol": "ALKT",
+    "name": "Alkami Technology Inc. Common Stock"
+  },
+  {
+    "symbol": "ALLK",
+    "name": "Allakos Inc. Common Stock"
+  },
+  {
+    "symbol": "ALLO",
+    "name": "Allogene Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ALLR",
+    "name": "Allarity Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ALLT",
+    "name": "Allot Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "ALMS",
+    "name": "Alumis Inc. Common Stock"
+  },
+  {
+    "symbol": "ALNT",
+    "name": "Allient Inc. Common Stock"
+  },
+  {
+    "symbol": "ALNY",
+    "name": "Alnylam Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "ALOT",
+    "name": "AstroNova Inc. Common Stock"
+  },
+  {
+    "symbol": "ALRM",
+    "name": "Alarm.com Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ALRN",
+    "name": "Aileron Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ALRS",
+    "name": "Alerus Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "ALSA",
+    "name": "Alpha Star Acquisition Corporation Ordinary Shares"
+  },
+  {
+    "symbol": "ALSAR",
+    "name": "Alpha Star Acquisition Corporation Rights"
+  },
+  {
+    "symbol": "ALSAW",
+    "name": "Alpha Star Acquisition Corporation Warrants"
+  },
+  {
+    "symbol": "ALT",
+    "name": "Altimmune Inc. Common Stock"
+  },
+  {
+    "symbol": "ALTI",
+    "name": "AlTi Global Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ALTO",
+    "name": "Alto Ingredients Inc. Common Stock"
+  },
+  {
+    "symbol": "ALTR",
+    "name": "Altair Engineering Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ALTS",
+    "name": "ALT5 Sigma Corporation Common Stock"
+  },
+  {
+    "symbol": "ALVO",
+    "name": "Alvotech Ordinary Shares"
+  },
+  {
+    "symbol": "ALVOW",
+    "name": "Alvotech Warrant"
+  },
+  {
+    "symbol": "ALVR",
+    "name": "AlloVir Inc. Common Stock"
+  },
+  {
+    "symbol": "ALXO",
+    "name": "ALX Oncology Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ALZN",
+    "name": "Alzamend Neuro Inc. Common Stock"
+  },
+  {
+    "symbol": "AMAL",
+    "name": "Amalgamated Financial Corp. Common Stock (DE)"
+  },
+  {
+    "symbol": "AMAT",
+    "name": "Applied Materials Inc. Common Stock"
+  },
+  {
+    "symbol": "AMBA",
+    "name": "Ambarella Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "AMCX",
+    "name": "AMC Networks Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AMD",
+    "name": "Advanced Micro Devices Inc. Common Stock"
+  },
+  {
+    "symbol": "AMED",
+    "name": "Amedisys Inc Common Stock"
+  },
+  {
+    "symbol": "AMGN",
+    "name": "Amgen Inc. Common Stock"
+  },
+  {
+    "symbol": "AMIX",
+    "name": "Autonomix Medical Inc. Common Stock"
+  },
+  {
+    "symbol": "AMKR",
+    "name": "Amkor Technology Inc. Common Stock"
+  },
+  {
+    "symbol": "AMLI",
+    "name": "American Lithium Corp. Common Stock"
+  },
+  {
+    "symbol": "AMLX",
+    "name": "Amylyx Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "AMOD",
+    "name": "Alpha Modus Holdings Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AMODW",
+    "name": "Alpha Modus Holdings Inc. Warrant"
+  },
+  {
+    "symbol": "AMPG",
+    "name": "Amplitech Group Inc. Common Stock"
+  },
+  {
+    "symbol": "AMPGW",
+    "name": "Amplitech Group Inc. Warrants"
+  },
+  {
+    "symbol": "AMPH",
+    "name": "Amphastar Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "AMPL",
+    "name": "Amplitude Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AMRK",
+    "name": "A-Mark Precious Metals Inc. Common Stock"
+  },
+  {
+    "symbol": "AMRN",
+    "name": "Amarin Corporation plc"
+  },
+  {
+    "symbol": "AMRX",
+    "name": "Amneal Pharmaceuticals Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AMSC",
+    "name": "American Superconductor Corporation Common Stock"
+  },
+  {
+    "symbol": "AMSF",
+    "name": "AMERISAFE Inc. Common Stock"
+  },
+  {
+    "symbol": "AMST",
+    "name": "Amesite Inc. Common Stock"
+  },
+  {
+    "symbol": "AMTX",
+    "name": "Aemetis Inc. (DE) Common Stock"
+  },
+  {
+    "symbol": "AMWD",
+    "name": "American Woodmark Corporation Common Stock"
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc. Common Stock"
+  },
+  {
+    "symbol": "ANAB",
+    "name": "AnaptysBio Inc. Common Stock"
+  },
+  {
+    "symbol": "ANDE",
+    "name": "Andersons Inc. (The) Common Stock"
+  },
+  {
+    "symbol": "ANEB",
+    "name": "Anebulo Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "ANGH",
+    "name": "Anghami Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "ANGHW",
+    "name": "Anghami Inc. Warrants"
+  },
+  {
+    "symbol": "ANGI",
+    "name": "Angi Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ANGO",
+    "name": "AngioDynamics Inc. Common Stock"
+  },
+  {
+    "symbol": "ANIK",
+    "name": "Anika Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ANIP",
+    "name": "ANI Pharmaceuticals Inc."
+  },
+  {
+    "symbol": "ANIX",
+    "name": "Anixa Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "ANL",
+    "name": "Adlai Nortye Ltd. American Depositary Shares"
+  },
+  {
+    "symbol": "ANNA",
+    "name": "AleAnna Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ANNAW",
+    "name": "AleAnna Inc. Warrant"
+  },
+  {
+    "symbol": "ANNX",
+    "name": "Annexon Inc. Common Stock"
+  },
+  {
+    "symbol": "ANSC",
+    "name": "Agriculture & Natural Solutions Acquisition Corporation Class A Ordinary Shares"
+  },
+  {
+    "symbol": "ANSCW",
+    "name": "Agriculture & Natural Solutions Acquisition Corporation Warrant"
+  },
+  {
+    "symbol": "ANSS",
+    "name": "ANSYS Inc. Common Stock"
+  },
+  {
+    "symbol": "ANTE",
+    "name": "AirNet Technology Inc. American Depositary Shares"
+  },
+  {
+    "symbol": "ANTX",
+    "name": "AN2 Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ANY",
+    "name": "Sphere 3D Corp. Common Shares"
+  },
+  {
+    "symbol": "AOSL",
+    "name": "Alpha and Omega Semiconductor Limited Common Shares"
+  },
+  {
+    "symbol": "AOUT",
+    "name": "American Outdoor Brands Inc. Common Stock "
+  },
+  {
+    "symbol": "APA",
+    "name": "APA Corporation Common Stock"
+  },
+  {
+    "symbol": "APCX",
+    "name": "AppTech Payments Corp. Common Stock"
+  },
+  {
+    "symbol": "APCXW",
+    "name": "AppTech Payments Corp. Warrant"
+  },
+  {
+    "symbol": "APDN",
+    "name": "Applied DNA Sciences Inc. Common Stock"
+  },
+  {
+    "symbol": "APEI",
+    "name": "American Public Education Inc. Common Stock"
+  },
+  {
+    "symbol": "APGE",
+    "name": "Apogee Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "API",
+    "name": "Agora Inc. American Depositary Shares"
+  },
+  {
+    "symbol": "APLD",
+    "name": "Applied Digital Corporation Common Stock"
+  },
+  {
+    "symbol": "APLM",
+    "name": "Apollomics Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "APLMW",
+    "name": "Apollomics Inc. Warrant"
+  },
+  {
+    "symbol": "APLS",
+    "name": "Apellis Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "APLT",
+    "name": "Applied Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "APM",
+    "name": "Aptorum Group Limited Class A Ordinary Shares"
+  },
+  {
+    "symbol": "APOG",
+    "name": "Apogee Enterprises Inc. Common Stock"
+  },
+  {
+    "symbol": "APP",
+    "name": "Applovin Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "APPF",
+    "name": "AppFolio Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "APPN",
+    "name": "Appian Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "APPS",
+    "name": "Digital Turbine Inc. Common Stock"
+  },
+  {
+    "symbol": "APRE",
+    "name": "Aprea Therapeutics Inc. Common stock"
+  },
+  {
+    "symbol": "APTO",
+    "name": "Aptose Biosciences Inc. Common Shares"
+  },
+  {
+    "symbol": "APVO",
+    "name": "Aptevo Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "APWC",
+    "name": "Asia Pacific Wire & Cable Corporation Ltd. Ordinary Shares (Bermuda)"
+  },
+  {
+    "symbol": "APYX",
+    "name": "Apyx Medical Corporation Common Stock"
+  },
+  {
+    "symbol": "AQB",
+    "name": "AquaBounty Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "AQMS",
+    "name": "Aqua Metals Inc. Common Stock"
+  },
+  {
+    "symbol": "AQST",
+    "name": "Aquestive Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "AQU",
+    "name": "Aquaron Acquisition Corp. Common Stock"
+  },
+  {
+    "symbol": "AQUNR",
+    "name": "Aquaron Acquisition Corp. Rights"
+  },
+  {
+    "symbol": "AQUNU",
+    "name": "Aquaron Acquisition Corp. Units"
+  },
+  {
+    "symbol": "ARAY",
+    "name": "Accuray Incorporated Common Stock"
+  },
+  {
+    "symbol": "ARBB",
+    "name": "ARB IOT Group Limited Ordinary Shares"
+  },
+  {
+    "symbol": "ARBE",
+    "name": "Arbe Robotics Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "ARBEW",
+    "name": "Arbe Robotics Ltd. Warrant"
+  },
+  {
+    "symbol": "ARBK",
+    "name": "Argo Blockchain plc American Depositary Shares"
+  },
+  {
+    "symbol": "ARBKL",
+    "name": "Argo Blockchain plc 8.75% Senior Notes due 2026"
+  },
+  {
+    "symbol": "ARCB",
+    "name": "ArcBest Corporation Common Stock"
+  },
+  {
+    "symbol": "ARCC",
+    "name": "Ares Capital Corporation Common Stock"
+  },
+  {
+    "symbol": "ARCT",
+    "name": "Arcturus Therapeutics Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ARDX",
+    "name": "Ardelyx Inc. Common Stock"
+  },
+  {
+    "symbol": "AREB",
+    "name": "American Rebel Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "AREBW",
+    "name": "American Rebel Holdings Inc. Warrants"
+  },
+  {
+    "symbol": "AREC",
+    "name": "American Resources Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "ARGX",
+    "name": "argenx SE American Depositary Shares"
+  },
+  {
+    "symbol": "ARHS",
+    "name": "Arhaus Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ARKO",
+    "name": "ARKO Corp. Common Stock"
+  },
+  {
+    "symbol": "ARKOW",
+    "name": "ARKO Corp. Warrant"
+  },
+  {
+    "symbol": "ARKR",
+    "name": "Ark Restaurants Corp. Common Stock"
+  },
+  {
+    "symbol": "ARLP",
+    "name": "Alliance Resource Partners L.P. Common Units representing Limited Partners Interests"
+  },
+  {
+    "symbol": "ARM",
+    "name": "Arm Holdings plc American Depositary Shares"
+  },
+  {
+    "symbol": "AROW",
+    "name": "Arrow Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "ARQ",
+    "name": "Arq Inc. Common Stock"
+  },
+  {
+    "symbol": "ARQQ",
+    "name": "Arqit Quantum Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "ARQQW",
+    "name": "Arqit Quantum Inc. Warrants"
+  },
+  {
+    "symbol": "ARQT",
+    "name": "Arcutis Biotherapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ARRY",
+    "name": "Array Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "ARTL",
+    "name": "Artelo Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "ARTNA",
+    "name": "Artesian Resources Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "ARTV",
+    "name": "Artiva Biotherapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ARTW",
+    "name": "Art's-Way Manufacturing Co. Inc. Common Stock"
+  },
+  {
+    "symbol": "ARVN",
+    "name": "Arvinas Inc. Common Stock"
+  },
+  {
+    "symbol": "ARWR",
+    "name": "Arrowhead Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "ASLE",
+    "name": "AerSale Corporation Common Stock"
+  },
+  {
+    "symbol": "ASMB",
+    "name": "Assembly Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "ASML",
+    "name": "ASML Holding N.V. New York Registry Shares"
+  },
+  {
+    "symbol": "ASND",
+    "name": "Ascendis Pharma A/S American Depositary Shares"
+  },
+  {
+    "symbol": "ASNS",
+    "name": "Actelis Networks Inc. Common Stock"
+  },
+  {
+    "symbol": "ASO",
+    "name": "Academy Sports and Outdoors Inc. Common Stock"
+  },
+  {
+    "symbol": "ASPCU",
+    "name": "A SPAC III Acquisition Corp. Unit"
+  },
+  {
+    "symbol": "ASPI",
+    "name": "ASP Isotopes Inc. Common Stock"
+  },
+  {
+    "symbol": "ASPS",
+    "name": "Altisource Portfolio Solutions S.A. Common Stock"
+  },
+  {
+    "symbol": "ASRT",
+    "name": "Assertio Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ASRV",
+    "name": "AmeriServ Financial Inc. Common Stock"
+  },
+  {
+    "symbol": "ASST",
+    "name": "Asset Entities Inc. Class B Common Stock"
+  },
+  {
+    "symbol": "ASTC",
+    "name": "Astrotech Corporation (DE) Common Stock"
+  },
+  {
+    "symbol": "ASTE",
+    "name": "Astec Industries Inc. Common Stock"
+  },
+  {
+    "symbol": "ASTH",
+    "name": "Astrana Health Inc. Common Stock"
+  },
+  {
+    "symbol": "ASTI",
+    "name": "Ascent Solar Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "ASTL",
+    "name": "Algoma Steel Group Inc. Common Shares"
+  },
+  {
+    "symbol": "ASTLW",
+    "name": "Algoma Steel Group Inc. Warrant"
+  },
+  {
+    "symbol": "ASTS",
+    "name": "AST SpaceMobile Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ASUR",
+    "name": "Asure Software Inc Common Stock"
+  },
+  {
+    "symbol": "ASYS",
+    "name": "Amtech Systems Inc. Common Stock"
+  },
+  {
+    "symbol": "ATAI",
+    "name": "ATAI Life Sciences N.V. Common Shares"
+  },
+  {
+    "symbol": "ATAT",
+    "name": "Atour Lifestyle Holdings Limited American Depositary Shares"
+  },
+  {
+    "symbol": "ATCOL",
+    "name": "Atlas Corp. 7.125% Notes due 2027"
+  },
+  {
+    "symbol": "ATEC",
+    "name": "Alphatec Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ATER",
+    "name": "Aterian Inc. Common Stock"
+  },
+  {
+    "symbol": "ATEX",
+    "name": "Anterix Inc. Common Stock"
+  },
+  {
+    "symbol": "ATGL",
+    "name": "Alpha Technology Group Limited Ordinary Shares"
+  },
+  {
+    "symbol": "ATHA",
+    "name": "Athira Pharma Inc. Common Stock"
+  },
+  {
+    "symbol": "ATHE",
+    "name": "Alterity Therapeutics Limited American Depositary Shares"
+  },
+  {
+    "symbol": "ATLC",
+    "name": "Atlanticus Holdings Corporation Common Stock"
+  },
+  {
+    "symbol": "ATLCL",
+    "name": "Atlanticus Holdings Corporation 6.125% Senior Notes due 2026"
+  },
+  {
+    "symbol": "ATLCP",
+    "name": "Atlanticus Holdings Corporation 7.625% Series B Cumulative Perpetual Preferred Stock no par value per share"
+  },
+  {
+    "symbol": "ATLCZ",
+    "name": "Atlanticus Holdings Corporation 9.25% Senior Notes due 2029"
+  },
+  {
+    "symbol": "ATLN",
+    "name": "Atlantic International Corp. Common Stock"
+  },
+  {
+    "symbol": "ATLO",
+    "name": "Ames National Corporation Common Stock"
+  },
+  {
+    "symbol": "ATLX",
+    "name": "Atlas Lithium Corporation Common Stock"
+  },
+  {
+    "symbol": "ATMC",
+    "name": "AlphaTime Acquisition Corp Ordinary Shares"
+  },
+  {
+    "symbol": "ATMCR",
+    "name": "AlphaTime Acquisition Corp Right"
+  },
+  {
+    "symbol": "ATMCU",
+    "name": "AlphaTime Acquisition Corp Unit"
+  },
+  {
+    "symbol": "ATMCW",
+    "name": "AlphaTime Acquisition Corp Warrant"
+  },
+  {
+    "symbol": "ATMV",
+    "name": "AlphaVest Acquisition Corp Ordinary Shares"
+  },
+  {
+    "symbol": "ATMVR",
+    "name": "AlphaVest Acquisition Corp Right."
+  },
+  {
+    "symbol": "ATNF",
+    "name": "180 Life Sciences Corp. Common Stock"
+  },
+  {
+    "symbol": "ATNFW",
+    "name": "180 Life Sciences Corp. Warrant"
+  },
+  {
+    "symbol": "ATNI",
+    "name": "ATN International Inc. Common Stock"
+  },
+  {
+    "symbol": "ATOM",
+    "name": "Atomera Incorporated Common Stock"
+  },
+  {
+    "symbol": "ATOS",
+    "name": "Atossa Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ATPC",
+    "name": "Agape ATP Corporation Common Stock"
+  },
+  {
+    "symbol": "ATRA",
+    "name": "Atara Biotherapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ATRC",
+    "name": "AtriCure Inc. Common Stock"
+  },
+  {
+    "symbol": "ATRO",
+    "name": "Astronics Corporation Common Stock"
+  },
+  {
+    "symbol": "ATSG",
+    "name": "Air Transport Services Group Inc"
+  },
+  {
+    "symbol": "ATXG",
+    "name": "Addentax Group Corp. Common Stock"
+  },
+  {
+    "symbol": "ATXI",
+    "name": "Avenue Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ATXS",
+    "name": "Astria Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ATYR",
+    "name": "aTyr Pharma Inc. Common Stock"
+  },
+  {
+    "symbol": "AUBN",
+    "name": "Auburn National Bancorporation Inc. Common Stock"
+  },
+  {
+    "symbol": "AUDC",
+    "name": "AudioCodes Ltd. Common Stock"
+  },
+  {
+    "symbol": "AUID",
+    "name": "authID Inc. Common Stock"
+  },
+  {
+    "symbol": "AUPH",
+    "name": "Aurinia Pharmaceuticals Inc Ordinary Shares"
+  },
+  {
+    "symbol": "AUR",
+    "name": "Aurora Innovation Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AURA",
+    "name": "Aura Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "AUROW",
+    "name": "Aurora Innovation Inc. Warrant"
+  },
+  {
+    "symbol": "AUTL",
+    "name": "Autolus Therapeutics plc American Depositary Share"
+  },
+  {
+    "symbol": "AUUD",
+    "name": "Auddia Inc. Common Stock"
+  },
+  {
+    "symbol": "AUUDW",
+    "name": "Auddia Inc. Warrants"
+  },
+  {
+    "symbol": "AVAH",
+    "name": "Aveanna Healthcare Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "AVAV",
+    "name": "AeroVironment Inc. Common Stock"
+  },
+  {
+    "symbol": "AVBP",
+    "name": "ArriVent BioPharma Inc. Common Stock"
+  },
+  {
+    "symbol": "AVDL",
+    "name": "Avadel Pharmaceuticals plc Ordinary Share"
+  },
+  {
+    "symbol": "AVDX",
+    "name": "AvidXchange Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "AVGO",
+    "name": "Broadcom Inc. Common Stock"
+  },
+  {
+    "symbol": "AVGR",
+    "name": "Avinger Inc. Common Stock"
+  },
+  {
+    "symbol": "AVIR",
+    "name": "Atea Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "AVNW",
+    "name": "Aviat Networks Inc. Common Stock"
+  },
+  {
+    "symbol": "AVO",
+    "name": "Mission Produce Inc. Common Stock"
+  },
+  {
+    "symbol": "AVPT",
+    "name": "AvePoint Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "AVPTW",
+    "name": "AvePoint Inc. Warrant"
+  },
+  {
+    "symbol": "AVR",
+    "name": "Anteris Technologies Global Corp. Common Stock"
+  },
+  {
+    "symbol": "AVT",
+    "name": "Avnet Inc. Common Stock"
+  },
+  {
+    "symbol": "AVTE",
+    "name": "Aerovate Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "AVTX",
+    "name": "Avalo Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "AVXL",
+    "name": "Anavex Life Sciences Corp. Common Stock"
+  },
+  {
+    "symbol": "AWH",
+    "name": "Aspira Women's Health Inc. Common Stock"
+  },
+  {
+    "symbol": "AWRE",
+    "name": "Aware Inc. Common Stock"
+  },
+  {
+    "symbol": "AXDX",
+    "name": "Accelerate Diagnostics Inc. Common Stock"
+  },
+  {
+    "symbol": "AXGN",
+    "name": "Axogen Inc. Common Stock"
+  },
+  {
+    "symbol": "AXON",
+    "name": "Axon Enterprise Inc. Common Stock"
+  },
+  {
+    "symbol": "AXSM",
+    "name": "Axsome Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "AXTI",
+    "name": "AXT Inc Common Stock"
+  },
+  {
+    "symbol": "AYRO",
+    "name": "AYRO Inc. Common Stock"
+  },
+  {
+    "symbol": "AYTU",
+    "name": "Aytu BioPharma Inc.  Common Stock"
+  },
+  {
+    "symbol": "AZ",
+    "name": "A2Z Cust2Mate Solutions Corp. Common Shares"
+  },
+  {
+    "symbol": "AZI",
+    "name": "Autozi Internet Technology (Global) Ltd. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "AZN",
+    "name": "AstraZeneca PLC American Depositary Shares"
+  },
+  {
+    "symbol": "AZPN",
+    "name": "Aspen Technology Inc. Common Stock"
+  },
+  {
+    "symbol": "AZTA",
+    "name": "Azenta Inc."
+  },
+  {
+    "symbol": "BACK",
+    "name": "IMAC Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "BACQ",
+    "name": "Bleichroeder Acquisition Corp. I Class A Ordinary Shares"
+  },
+  {
+    "symbol": "BACQU",
+    "name": "Bleichroeder Acquisition Corp. I Unit"
+  },
+  {
+    "symbol": "BAER",
+    "name": "Bridger Aerospace Group Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "BAERW",
+    "name": "Bridger Aerospace Group Holdings Inc. Warrant"
+  },
+  {
+    "symbol": "BAFN",
+    "name": "BayFirst Financial Corp. Common Stock"
+  },
+  {
+    "symbol": "BAND",
+    "name": "Bandwidth Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BANF",
+    "name": "BancFirst Corporation Common Stock"
+  },
+  {
+    "symbol": "BANFP",
+    "name": "BancFirst Corporation - BFC Capital Trust II Cumulative Trust Preferred Securities"
+  },
+  {
+    "symbol": "BANL",
+    "name": "CBL International Limited Ordinary Shares"
+  },
+  {
+    "symbol": "BANR",
+    "name": "Banner Corporation Common Stock"
+  },
+  {
+    "symbol": "BANX",
+    "name": "ArrowMark Financial Corp. Common Stock"
+  },
+  {
+    "symbol": "BAOS",
+    "name": "Baosheng Media Group Holdings Limited Ordinary shares"
+  },
+  {
+    "symbol": "BASE",
+    "name": "Couchbase Inc. Common Stock"
+  },
+  {
+    "symbol": "BATRA",
+    "name": "Atlanta Braves Holdings Inc. Series A Common Stock"
+  },
+  {
+    "symbol": "BATRK",
+    "name": "Atlanta Braves Holdings Inc. Series C Common Stock"
+  },
+  {
+    "symbol": "BBCP",
+    "name": "Concrete Pumping Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "BBGI",
+    "name": "Beasley Broadcast Group Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BBIO",
+    "name": "BridgeBio Pharma Inc. Common Stock"
+  },
+  {
+    "symbol": "BBLG",
+    "name": "Bone Biologics Corp Common Stock"
+  },
+  {
+    "symbol": "BBLGW",
+    "name": "Bone Biologics Corp Warrants"
+  },
+  {
+    "symbol": "BBSI",
+    "name": "Barrett Business Services Inc. Common Stock"
+  },
+  {
+    "symbol": "BCAB",
+    "name": "BioAtla Inc. Common Stock"
+  },
+  {
+    "symbol": "BCAL",
+    "name": "California BanCorp Common Stock"
+  },
+  {
+    "symbol": "BCAN",
+    "name": "Femto Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "BCAX",
+    "name": "Bicara Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "BCBP",
+    "name": "BCB Bancorp Inc. (NJ) Common Stock"
+  },
+  {
+    "symbol": "BCDA",
+    "name": "BioCardia Inc. Common Stock"
+  },
+  {
+    "symbol": "BCG",
+    "name": "Binah Capital Group Inc. Common Stock"
+  },
+  {
+    "symbol": "BCGWW",
+    "name": "Binah Capital Group Inc. Warrants"
+  },
+  {
+    "symbol": "BCLI",
+    "name": "Brainstorm Cell Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "BCML",
+    "name": "BayCom Corp Common Stock"
+  },
+  {
+    "symbol": "BCOV",
+    "name": "Brightcove Inc. Common Stock"
+  },
+  {
+    "symbol": "BCOW",
+    "name": "1895 Bancorp of Wisconsin Inc. (MD) Common Stock"
+  },
+  {
+    "symbol": "BCPC",
+    "name": "Balchem Corporation Common Stock"
+  },
+  {
+    "symbol": "BCRX",
+    "name": "BioCryst Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "BCTX",
+    "name": "BriaCell Therapeutics Corp. Common Shares"
+  },
+  {
+    "symbol": "BCTXW",
+    "name": "BriaCell Therapeutics Corp. Warrant"
+  },
+  {
+    "symbol": "BCYC",
+    "name": "Bicycle Therapeutics plc American Depositary Shares"
+  },
+  {
+    "symbol": "BDMD",
+    "name": "Baird Medical Investment Holdings Ltd Ordinary Share"
+  },
+  {
+    "symbol": "BDMDW",
+    "name": "Baird Medical Investment Holdings Ltd Warrant"
+  },
+  {
+    "symbol": "BDRX",
+    "name": "Biodexa Pharmaceuticals plc American Depositary Shs"
+  },
+  {
+    "symbol": "BDSX",
+    "name": "Biodesix Inc. Common Stock"
+  },
+  {
+    "symbol": "BDTX",
+    "name": "Black Diamond Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "BEAG",
+    "name": "Bold Eagle Acquisition Corp. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "BEAGR",
+    "name": "Bold Eagle Acquisition Corp. Right"
+  },
+  {
+    "symbol": "BEAGU",
+    "name": "Bold Eagle Acquisition Corp. Units"
+  },
+  {
+    "symbol": "BEAM",
+    "name": "Beam Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "BEAT",
+    "name": "Heartbeam Inc. Common Stock"
+  },
+  {
+    "symbol": "BEATW",
+    "name": "Heartbeam Inc. Warrant"
+  },
+  {
+    "symbol": "BECN",
+    "name": "Beacon Roofing Supply Inc. Common Stock"
+  },
+  {
+    "symbol": "BEEM",
+    "name": "Beam Global Common Stock"
+  },
+  {
+    "symbol": "BELFA",
+    "name": "Bel Fuse Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BELFB",
+    "name": "Bel Fuse Inc. Class B Common Stock"
+  },
+  {
+    "symbol": "BENF",
+    "name": "Beneficient Class A Common Stock"
+  },
+  {
+    "symbol": "BENFW",
+    "name": "Beneficient Warrant"
+  },
+  {
+    "symbol": "BETR",
+    "name": "Better Home & Finance Holding Company Class A Common Stock"
+  },
+  {
+    "symbol": "BFC",
+    "name": "Bank First Corporation Common Stock"
+  },
+  {
+    "symbol": "BFIN",
+    "name": "BankFinancial Corporation Common Stock"
+  },
+  {
+    "symbol": "BFRG",
+    "name": "Bullfrog AI Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "BFRGW",
+    "name": "Bullfrog AI Holdings Inc. Warrants"
+  },
+  {
+    "symbol": "BFRI",
+    "name": "Biofrontera Inc. Common Stock"
+  },
+  {
+    "symbol": "BFRIW",
+    "name": "Biofrontera Inc. Warrants"
+  },
+  {
+    "symbol": "BFST",
+    "name": "Business First Bancshares Inc. Common Stock"
+  },
+  {
+    "symbol": "BGC",
+    "name": "BGC Group Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BGFV",
+    "name": "Big 5 Sporting Goods Corporation Common Stock"
+  },
+  {
+    "symbol": "BGLC",
+    "name": "BioNexus Gene Lab Corp Common stock"
+  },
+  {
+    "symbol": "BGM",
+    "name": "BGM Group Ltd. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "BGNE",
+    "name": "BeiGene Ltd. American Depositary Shares"
+  },
+  {
+    "symbol": "BHAT",
+    "name": "Blue Hat Interactive Entertainment Technology Ordinary Shares"
+  },
+  {
+    "symbol": "BHF",
+    "name": "Brighthouse Financial Inc. Common Stock"
+  },
+  {
+    "symbol": "BHFAL",
+    "name": "Brighthouse Financial Inc. 6.25% Junior Subordinated Debentures due 2058"
+  },
+  {
+    "symbol": "BHFAM",
+    "name": "Brighthouse Financial Inc. Depositary shares each representing a 1/1000th Interest in a Share of 4.625% Non-Cumulative Preferred Stock Series D"
+  },
+  {
+    "symbol": "BHFAN",
+    "name": "Brighthouse Financial Inc. Depositary shares each representing a 1/1000th interest in a share of 5.375% Non-Cumulative Preferred Stock Series C"
+  },
+  {
+    "symbol": "BHFAO",
+    "name": "Brighthouse Financial Inc. Depositary Shares 6.75% Non-Cumulative Preferred Stock Series B"
+  },
+  {
+    "symbol": "BHFAP",
+    "name": "Brighthouse Financial Inc. Depositary Shares 6.6% Non-Cumulative Preferred Stock Series A"
+  },
+  {
+    "symbol": "BHIL",
+    "name": "Benson Hill Inc. Common Stock"
+  },
+  {
+    "symbol": "BHRB",
+    "name": "Burke & Herbert Financial Services Corp. Common Stock"
+  },
+  {
+    "symbol": "BHST",
+    "name": "BioHarvest Sciences Inc. Common Stock"
+  },
+  {
+    "symbol": "BIAF",
+    "name": "bioAffinity Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "BIAFW",
+    "name": "bioAffinity Technologies Inc. Warrant"
+  },
+  {
+    "symbol": "BIDU",
+    "name": "Baidu Inc. ADS"
+  },
+  {
+    "symbol": "BIGC",
+    "name": "BigCommerce Holdings Inc. Series 1 Common Stock"
+  },
+  {
+    "symbol": "BIIB",
+    "name": "Biogen Inc. Common Stock"
+  },
+  {
+    "symbol": "BILI",
+    "name": "Bilibili Inc. American Depositary Shares"
+  },
+  {
+    "symbol": "BIOA",
+    "name": "BioAge Labs Inc. Common Stock"
+  },
+  {
+    "symbol": "BIOX",
+    "name": "Bioceres Crop Solutions Corp. Ordinary Shares"
+  },
+  {
+    "symbol": "BIRD",
+    "name": "Allbirds Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BITF",
+    "name": "Bitfarms Ltd. Common Stock"
+  },
+  {
+    "symbol": "BIVI",
+    "name": "BioVie Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BJDX",
+    "name": "Bluejay Diagnostics Inc. Common Stock"
+  },
+  {
+    "symbol": "BJRI",
+    "name": "BJ's Restaurants Inc. Common Stock"
+  },
+  {
+    "symbol": "BKHA",
+    "name": "Black Hawk Acquisition Corporation Class A Ordinary Shares"
+  },
+  {
+    "symbol": "BKHAU",
+    "name": "Black Hawk Acquisition Corporation Units"
+  },
+  {
+    "symbol": "BKNG",
+    "name": "Booking Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "BKR",
+    "name": "Baker Hughes Company Class A Common Stock"
+  },
+  {
+    "symbol": "BKYI",
+    "name": "BIO-key International Inc. Common Stock"
+  },
+  {
+    "symbol": "BL",
+    "name": "BlackLine Inc. Common Stock"
+  },
+  {
+    "symbol": "BLAC",
+    "name": "Bellevue Life Sciences Acquisition Corp. Common Stock"
+  },
+  {
+    "symbol": "BLBD",
+    "name": "Blue Bird Corporation Common Stock"
+  },
+  {
+    "symbol": "BLBX",
+    "name": "Blackboxstocks Inc. Common Stock"
+  },
+  {
+    "symbol": "BLDE",
+    "name": "Blade Air Mobility Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BLDEW",
+    "name": "Blade Air Mobility Inc. Warrants"
+  },
+  {
+    "symbol": "BLDP",
+    "name": "Ballard Power Systems Inc. Common Shares"
+  },
+  {
+    "symbol": "BLFS",
+    "name": "BioLife Solutions Inc. Common Stock"
+  },
+  {
+    "symbol": "BLFY",
+    "name": "Blue Foundry Bancorp Common Stock"
+  },
+  {
+    "symbol": "BLIN",
+    "name": "Bridgeline Digital Inc. Common Stock"
+  },
+  {
+    "symbol": "BLKB",
+    "name": "Blackbaud Inc. Common Stock"
+  },
+  {
+    "symbol": "BLMN",
+    "name": "Bloomin' Brands Inc. Common Stock"
+  },
+  {
+    "symbol": "BLMZ",
+    "name": "BloomZ Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "BLNK",
+    "name": "Blink Charging Co. Common Stock"
+  },
+  {
+    "symbol": "BLRX",
+    "name": "BioLineRx Ltd. American Depositary Shares"
+  },
+  {
+    "symbol": "BLTE",
+    "name": "Belite Bio Inc American Depositary Shares"
+  },
+  {
+    "symbol": "BLUE",
+    "name": "bluebird bio Inc. Common Stock"
+  },
+  {
+    "symbol": "BLZE",
+    "name": "Backblaze Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BMBL",
+    "name": "Bumble Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BMEA",
+    "name": "Biomea Fusion Inc. Common Stock"
+  },
+  {
+    "symbol": "BMR",
+    "name": "Beamr Imaging Ltd. Ordinary Share"
+  },
+  {
+    "symbol": "BMRA",
+    "name": "Biomerica Inc. Common Stock"
+  },
+  {
+    "symbol": "BMRC",
+    "name": "Bank of Marin Bancorp Common Stock"
+  },
+  {
+    "symbol": "BMRN",
+    "name": "BioMarin Pharmaceutical Inc. Common Stock"
+  },
+  {
+    "symbol": "BNAI",
+    "name": "Brand Engagement Network Inc. Common Stock"
+  },
+  {
+    "symbol": "BNAIW",
+    "name": "Brand Engagement Network Inc. Warrant"
+  },
+  {
+    "symbol": "BNGO",
+    "name": "Bionano Genomics Inc. Common Stock"
+  },
+  {
+    "symbol": "BNIX",
+    "name": "Bannix Acquisition Corp. Common Stock"
+  },
+  {
+    "symbol": "BNIXR",
+    "name": "Bannix Acquisition Corp. Right"
+  },
+  {
+    "symbol": "BNIXW",
+    "name": "Bannix Acquisition Corp. Warrant"
+  },
+  {
+    "symbol": "BNOX",
+    "name": "Bionomics Limited American Depository Shares"
+  },
+  {
+    "symbol": "BNR",
+    "name": "Burning Rock Biotech Limited American Depositary Shares"
+  },
+  {
+    "symbol": "BNRG",
+    "name": "Brenmiller Energy Ltd Ordinary Shares"
+  },
+  {
+    "symbol": "BNTC",
+    "name": "Benitec Biopharma Inc. Common Stock"
+  },
+  {
+    "symbol": "BNTX",
+    "name": "BioNTech SE American Depositary Share"
+  },
+  {
+    "symbol": "BNZI",
+    "name": "Banzai International Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BNZIW",
+    "name": "Banzai International Inc. Warrant"
+  },
+  {
+    "symbol": "BOF",
+    "name": "BranchOut Food Inc. Common Stock"
+  },
+  {
+    "symbol": "BOKF",
+    "name": "BOK Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "BOLD",
+    "name": "Boundless Bio Inc. Common Stock"
+  },
+  {
+    "symbol": "BOLT",
+    "name": "Bolt Biotherapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "BON",
+    "name": "Bon Natural Life Limited Ordinary Shares"
+  },
+  {
+    "symbol": "BOOM",
+    "name": "DMC Global Inc. Common Stock"
+  },
+  {
+    "symbol": "BOSC",
+    "name": "B.O.S. Better Online Solutions Common Stock"
+  },
+  {
+    "symbol": "BOTJ",
+    "name": "Bank of the James Financial Group Inc. Common Stock"
+  },
+  {
+    "symbol": "BOWN",
+    "name": "Bowen Acquisition Corp Ordinary Shares"
+  },
+  {
+    "symbol": "BOWNR",
+    "name": "Bowen Acquisition Corp Rights"
+  },
+  {
+    "symbol": "BOXL",
+    "name": "Boxlight Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "BPMC",
+    "name": "Blueprint Medicines Corporation Common Stock"
+  },
+  {
+    "symbol": "BPOP",
+    "name": "Popular Inc. Common Stock"
+  },
+  {
+    "symbol": "BPOPM",
+    "name": "Popular Inc. Popular Capital Trust II - 6.125% Cumulative Monthly Income Trust Preferred Securities"
+  },
+  {
+    "symbol": "BPRN",
+    "name": "Princeton Bancorp Inc. Common Stock (PA)"
+  },
+  {
+    "symbol": "BPTH",
+    "name": "Bio-Path Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "BPYPM",
+    "name": "Brookfield Property Partners L.P. 6.25% Class A Cumulative Redeemable Preferred Units Series 1"
+  },
+  {
+    "symbol": "BPYPN",
+    "name": "Brookfield Property Partners L.P. 5.750% Class A Cumulative Redeemable Perpetual Preferred Units Series 3"
+  },
+  {
+    "symbol": "BPYPO",
+    "name": "Brookfield Property Partners L.P. 6.375% Class A Cumulative Redeemable Perpetual Preferred Units Series 2"
+  },
+  {
+    "symbol": "BPYPP",
+    "name": "Brookfield Property Partners L.P. 6.50% Class A Cumulative Redeemable Perpetual Preferred Units"
+  },
+  {
+    "symbol": "BRAC",
+    "name": "Broad Capital Acquisition Corp Common Stock"
+  },
+  {
+    "symbol": "BRACR",
+    "name": "Broad Capital Acquisition Corp Rights"
+  },
+  {
+    "symbol": "BRAG",
+    "name": "Bragg Gaming Group Inc. Common Shares"
+  },
+  {
+    "symbol": "BREA",
+    "name": "Brera Holdings PLC Class B Ordinary Shares"
+  },
+  {
+    "symbol": "BRFH",
+    "name": "Barfresh Food Group Inc. Common Stock"
+  },
+  {
+    "symbol": "BRID",
+    "name": "Bridgford Foods Corporation Common Stock"
+  },
+  {
+    "symbol": "BRKL",
+    "name": "Brookline Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "BRKR",
+    "name": "Bruker Corporation Common Stock"
+  },
+  {
+    "symbol": "BRLS",
+    "name": "Borealis Foods Inc. Class A Common Shares"
+  },
+  {
+    "symbol": "BRLSW",
+    "name": "Borealis Foods Inc. Warrant"
+  },
+  {
+    "symbol": "BRLT",
+    "name": "Brilliant Earth Group Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BRNS",
+    "name": "Barinthus Biotherapeutics plc American Depositary Shares"
+  },
+  {
+    "symbol": "BROG",
+    "name": "Brooge Energy Limited Ordinary Shares"
+  },
+  {
+    "symbol": "BRTX",
+    "name": "BioRestorative Therapies Inc. Common Stock (NV)"
+  },
+  {
+    "symbol": "BRY",
+    "name": "Berry Corporation (bry) Common Stock"
+  },
+  {
+    "symbol": "BRZE",
+    "name": "Braze Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BSBK",
+    "name": "Bogota Financial Corp. Common Stock"
+  },
+  {
+    "symbol": "BSET",
+    "name": "Bassett Furniture Industries Incorporated Common Stock"
+  },
+  {
+    "symbol": "BSGM",
+    "name": "BioSig Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "BSII",
+    "name": "Black Spade Acquisition II Co Class A Ordinary Share"
+  },
+  {
+    "symbol": "BSIIU",
+    "name": "Black Spade Acquisition II Co Unit"
+  },
+  {
+    "symbol": "BSIIW",
+    "name": "Black Spade Acquisition II Co Warrant"
+  },
+  {
+    "symbol": "BSLK",
+    "name": "Bolt Projects Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "BSLKW",
+    "name": "Bolt Projects Holdings Inc. Warrant"
+  },
+  {
+    "symbol": "BSRR",
+    "name": "Sierra Bancorp Common Stock"
+  },
+  {
+    "symbol": "BSVN",
+    "name": "Bank7 Corp. Common stock"
+  },
+  {
+    "symbol": "BSY",
+    "name": "Bentley Systems Incorporated Class B Common Stock"
+  },
+  {
+    "symbol": "BTAI",
+    "name": "BioXcel Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "BTBD",
+    "name": "BT Brands Inc. Common Stock"
+  },
+  {
+    "symbol": "BTBDW",
+    "name": "BT Brands Inc. Warrant"
+  },
+  {
+    "symbol": "BTBT",
+    "name": "Bit Digital Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "BTCS",
+    "name": "BTCS Inc. Common Stock"
+  },
+  {
+    "symbol": "BTCT",
+    "name": "BTC Digital Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "BTCTW",
+    "name": "BTC Digital Ltd. Warrant"
+  },
+  {
+    "symbol": "BTDR",
+    "name": "Bitdeer Technologies Group Class A Ordinary Shares"
+  },
+  {
+    "symbol": "BTM",
+    "name": "Bitcoin Depot Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BTMD",
+    "name": "Biote Corp. Class A Common Stock"
+  },
+  {
+    "symbol": "BTMWW",
+    "name": "Bitcoin Depot Inc. Warrant"
+  },
+  {
+    "symbol": "BTOC",
+    "name": "Armlogi Holding Corp. Common Stock"
+  },
+  {
+    "symbol": "BTOG",
+    "name": "Bit Origin Limited Ordinary Shares"
+  },
+  {
+    "symbol": "BTSG",
+    "name": "BrightSpring Health Services Inc. Common Stock"
+  },
+  {
+    "symbol": "BTSGU",
+    "name": "BrightSpring Health Services Inc. Tangible Equity Unit"
+  },
+  {
+    "symbol": "BUJAR",
+    "name": "Bukit Jalil Global Acquisition 1 Ltd. Rights"
+  },
+  {
+    "symbol": "BUJAW",
+    "name": "Bukit Jalil Global Acquisition 1 Ltd. Warrants"
+  },
+  {
+    "symbol": "BUSE",
+    "name": "First Busey Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "BVFL",
+    "name": "BV Financial Inc. Common Stock"
+  },
+  {
+    "symbol": "BVS",
+    "name": "Bioventus Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BWAY",
+    "name": "BrainsWay Ltd. American Depositary Shares"
+  },
+  {
+    "symbol": "BWB",
+    "name": "Bridgewater Bancshares Inc. Common Stock"
+  },
+  {
+    "symbol": "BWBBP",
+    "name": "Bridgewater Bancshares Inc. Depositary Shares Each Representing a 1/100th Interest in a Share of 5.875% Non-Cumulative Perpetual Preferred Stock Series A"
+  },
+  {
+    "symbol": "BWEN",
+    "name": "Broadwind Inc. Common Stock"
+  },
+  {
+    "symbol": "BWFG",
+    "name": "Bankwell Financial Group Inc. Common Stock"
+  },
+  {
+    "symbol": "BWIN",
+    "name": "The Baldwin Insurance Group Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BWMN",
+    "name": "Bowman Consulting Group Ltd. Common Stock"
+  },
+  {
+    "symbol": "BYFC",
+    "name": "Broadway Financial Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "BYND",
+    "name": "Beyond Meat Inc. Common Stock"
+  },
+  {
+    "symbol": "BYNO",
+    "name": "byNordic Acquisition Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "BYNOW",
+    "name": "byNordic Acquisition Corporation Warrant"
+  },
+  {
+    "symbol": "BYRN",
+    "name": "Byrna Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "BYSI",
+    "name": "BeyondSpring Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "BZ",
+    "name": "KANZHUN LIMITED American Depository Shares"
+  },
+  {
+    "symbol": "BZFD",
+    "name": "BuzzFeed Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "BZFDW",
+    "name": "BuzzFeed Inc. Warrant"
+  },
+  {
+    "symbol": "BZUN",
+    "name": "Baozun Inc. American Depositary Shares"
+  },
+  {
+    "symbol": "CAAS",
+    "name": "China Automotive Systems Inc. Common Stock"
+  },
+  {
+    "symbol": "CABA",
+    "name": "Cabaletta Bio Inc. Common Stock"
+  },
+  {
+    "symbol": "CAC",
+    "name": "Camden National Corporation Common Stock"
+  },
+  {
+    "symbol": "CACC",
+    "name": "Credit Acceptance Corporation Common Stock"
+  },
+  {
+    "symbol": "CADL",
+    "name": "Candel Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CAKE",
+    "name": "Cheesecake Factory Incorporated (The) Common Stock"
+  },
+  {
+    "symbol": "CALC",
+    "name": "CalciMedica Inc. Common Stock"
+  },
+  {
+    "symbol": "CALM",
+    "name": "Cal-Maine Foods Inc. Common Stock"
+  },
+  {
+    "symbol": "CAMP",
+    "name": "CAMP4 Therapeutics Corporation Common Stock"
+  },
+  {
+    "symbol": "CAMT",
+    "name": "Camtek Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CAN",
+    "name": "Canaan Inc. American Depositary Shares"
+  },
+  {
+    "symbol": "CAPN",
+    "name": "Cayson Acquisition Corp Ordinary shares"
+  },
+  {
+    "symbol": "CAPR",
+    "name": "Capricor Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CAPT",
+    "name": "Captivision Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "CAPTW",
+    "name": "Captivision Inc. Warrant"
+  },
+  {
+    "symbol": "CAR",
+    "name": "Avis Budget Group Inc. Common Stock"
+  },
+  {
+    "symbol": "CARA",
+    "name": "Cara Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CARE",
+    "name": "Carter Bankshares Inc. Common Stock"
+  },
+  {
+    "symbol": "CARG",
+    "name": "CarGurus Inc. Class A Common Stock "
+  },
+  {
+    "symbol": "CARM",
+    "name": "Carisma Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CART",
+    "name": "Maplebear Inc. Common Stock"
+  },
+  {
+    "symbol": "CARV",
+    "name": "Carver Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "CASH",
+    "name": "Pathward Financial Inc. Common Stock"
+  },
+  {
+    "symbol": "CASI",
+    "name": "CASI Pharmaceuticals Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "CASK",
+    "name": "Heritage Distilling Holding Company Inc. Common Stock"
+  },
+  {
+    "symbol": "CASS",
+    "name": "Cass Information Systems Inc Common Stock"
+  },
+  {
+    "symbol": "CASY",
+    "name": "Casey's General Stores Inc. Common Stock"
+  },
+  {
+    "symbol": "CATY",
+    "name": "Cathay General Bancorp Common Stock"
+  },
+  {
+    "symbol": "CBAT",
+    "name": "CBAK Energy Technology Inc. Common Stock"
+  },
+  {
+    "symbol": "CBFV",
+    "name": "CB Financial Services Inc. Common Stock"
+  },
+  {
+    "symbol": "CBLL",
+    "name": "CeriBell Inc. Common Stock"
+  },
+  {
+    "symbol": "CBNK",
+    "name": "Capital Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "CBRL",
+    "name": "Cracker Barrel Old Country Store Inc Common Stock"
+  },
+  {
+    "symbol": "CBSH",
+    "name": "Commerce Bancshares Inc. Common Stock"
+  },
+  {
+    "symbol": "CBUS",
+    "name": "Cibus Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CCAP",
+    "name": "Crescent Capital BDC Inc. Common stock"
+  },
+  {
+    "symbol": "CCB",
+    "name": "Coastal Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "CCBG",
+    "name": "Capital City Bank Group Common Stock"
+  },
+  {
+    "symbol": "CCCC",
+    "name": "C4 Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CCCS",
+    "name": "CCC Intelligent Solutions Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "CCD",
+    "name": "Calamos Dynamic Convertible & Income Fund Common Stock"
+  },
+  {
+    "symbol": "CCEC",
+    "name": "Capital Clean Energy Carriers Corp. Common Share"
+  },
+  {
+    "symbol": "CCEP",
+    "name": "Coca-Cola Europacific Partners plc Ordinary Shares"
+  },
+  {
+    "symbol": "CCG",
+    "name": "Cheche Group Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CCGWW",
+    "name": "Cheche Group Inc. Warrant"
+  },
+  {
+    "symbol": "CCIR",
+    "name": "Cohen Circle Acquisition Corp. I Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CCIRU",
+    "name": "Cohen Circle Acquisition Corp. I Unit"
+  },
+  {
+    "symbol": "CCIRW",
+    "name": "Cohen Circle Acquisition Corp. I Warrant"
+  },
+  {
+    "symbol": "CCIX",
+    "name": "Churchill Capital Corp IX Ordinary Shares"
+  },
+  {
+    "symbol": "CCLD",
+    "name": "CareCloud Inc. Common Stock"
+  },
+  {
+    "symbol": "CCLDO",
+    "name": "CareCloud Inc. 8.75% Series B Cumulative Redeemable Perpetual Preferred Stock"
+  },
+  {
+    "symbol": "CCLDP",
+    "name": "CareCloud Inc. 11% Series A Cumulative Redeemable Perpetual Preferred Stock"
+  },
+  {
+    "symbol": "CCNE",
+    "name": "CNB Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "CCNEP",
+    "name": "CNB Financial Corporation Depositary Shares each representing a 1/40th ownership interest in a share of 7.125% Series A Fixed-Rate Non-Cumulative Perpetual Preferred Stock"
+  },
+  {
+    "symbol": "CCOI",
+    "name": "Cogent Communications Holdings Inc."
+  },
+  {
+    "symbol": "CCRN",
+    "name": "Cross Country Healthcare Inc. Common Stock $0.0001 Par Value"
+  },
+  {
+    "symbol": "CCSI",
+    "name": "Consensus Cloud Solutions Inc. Common Stock"
+  },
+  {
+    "symbol": "CCTG",
+    "name": "CCSC Technology International Holdings Limited Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CDIO",
+    "name": "Cardio Diagnostics Holdings Inc. Common stock"
+  },
+  {
+    "symbol": "CDIOW",
+    "name": "Cardio Diagnostics Holdings Inc. Warrant"
+  },
+  {
+    "symbol": "CDLX",
+    "name": "Cardlytics Inc. Common Stock"
+  },
+  {
+    "symbol": "CDMO",
+    "name": "Avid Bioservices Inc. Common Stock"
+  },
+  {
+    "symbol": "CDNA",
+    "name": "CareDx Inc. Common Stock"
+  },
+  {
+    "symbol": "CDNS",
+    "name": "Cadence Design Systems Inc. Common Stock"
+  },
+  {
+    "symbol": "CDRO",
+    "name": "Codere Online Luxembourg S.A. Ordinary Shares"
+  },
+  {
+    "symbol": "CDROW",
+    "name": "Codere Online Luxembourg S.A. Warrants"
+  },
+  {
+    "symbol": "CDT",
+    "name": "Conduit Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CDTG",
+    "name": "CDT Environmental Technology Investment Holdings Limited ordinary shares"
+  },
+  {
+    "symbol": "CDTTW",
+    "name": "Conduit Pharmaceuticals Inc. Warrant"
+  },
+  {
+    "symbol": "CDTX",
+    "name": "Cidara Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CDW",
+    "name": "CDW Corporation Common Stock"
+  },
+  {
+    "symbol": "CDXC",
+    "name": "ChromaDex Corporation Common Stock"
+  },
+  {
+    "symbol": "CDXS",
+    "name": "Codexis Inc. Common Stock"
+  },
+  {
+    "symbol": "CDZI",
+    "name": "CADIZ Inc. Common Stock"
+  },
+  {
+    "symbol": "CDZIP",
+    "name": "Cadiz Inc. Depositary Shares"
+  },
+  {
+    "symbol": "CEAD",
+    "name": "CEA Industries Inc. Common Stock"
+  },
+  {
+    "symbol": "CEADW",
+    "name": "CEA Industries Inc. Warrant"
+  },
+  {
+    "symbol": "CECO",
+    "name": "CECO Environmental Corp. Common Stock"
+  },
+  {
+    "symbol": "CEG",
+    "name": "Constellation Energy Corporation Common Stock "
+  },
+  {
+    "symbol": "CELC",
+    "name": "Celcuity Inc. Common Stock"
+  },
+  {
+    "symbol": "CELH",
+    "name": "Celsius Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "CELU",
+    "name": "Celularity Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CELUW",
+    "name": "Celularity Inc. Warrant"
+  },
+  {
+    "symbol": "CELZ",
+    "name": "Creative Medical Technology Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "CENN",
+    "name": "Cenntro Inc. Common Stock"
+  },
+  {
+    "symbol": "CENT",
+    "name": "Central Garden & Pet Company Common Stock"
+  },
+  {
+    "symbol": "CENTA",
+    "name": "Central Garden & Pet Company Class A Common Stock Nonvoting"
+  },
+  {
+    "symbol": "CENX",
+    "name": "Century Aluminum Company Common Stock"
+  },
+  {
+    "symbol": "CEP",
+    "name": "Cantor Equity Partners Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CERO",
+    "name": "CERo Therapeutics Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "CEROW",
+    "name": "CERo Therapeutics Holdings Inc. Warrants"
+  },
+  {
+    "symbol": "CERS",
+    "name": "Cerus Corporation Common Stock"
+  },
+  {
+    "symbol": "CERT",
+    "name": "Certara Inc. Common Stock"
+  },
+  {
+    "symbol": "CETX",
+    "name": "Cemtrex Inc. Common Stock"
+  },
+  {
+    "symbol": "CETY",
+    "name": "Clean Energy Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "CEVA",
+    "name": "CEVA Inc. Common Stock"
+  },
+  {
+    "symbol": "CFB",
+    "name": "CrossFirst Bankshares Inc. Common Stock"
+  },
+  {
+    "symbol": "CFBK",
+    "name": "CF Bankshares Inc. Common Stock"
+  },
+  {
+    "symbol": "CFFI",
+    "name": "C&F Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "CFFN",
+    "name": "Capitol Federal Financial Inc. Common Stock"
+  },
+  {
+    "symbol": "CFFS",
+    "name": "CF Acquisition Corp. VII Class A Common Stock"
+  },
+  {
+    "symbol": "CFFSW",
+    "name": "CF Acquisition Corp. VII Warrant"
+  },
+  {
+    "symbol": "CFLT",
+    "name": "Confluent Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CFSB",
+    "name": "CFSB Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "CG",
+    "name": "The Carlyle Group Inc. Common Stock"
+  },
+  {
+    "symbol": "CGABL",
+    "name": "The Carlyle Group Inc. 4.625% Subordinated Notes due 2061"
+  },
+  {
+    "symbol": "CGBD",
+    "name": "Carlyle Secured Lending Inc. Common Stock"
+  },
+  {
+    "symbol": "CGBDL",
+    "name": "Carlyle Secured Lending Inc. 8.20% Notes due 2028"
+  },
+  {
+    "symbol": "CGBS",
+    "name": "Crown LNG Holdings Limited Ordinary Shares"
+  },
+  {
+    "symbol": "CGBSW",
+    "name": "Crown LNG Holdings Limited Warrants"
+  },
+  {
+    "symbol": "CGC",
+    "name": "Canopy Growth Corporation Common Shares"
+  },
+  {
+    "symbol": "CGEM",
+    "name": "Cullinan Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CGEN",
+    "name": "Compugen Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CGNT",
+    "name": "Cognyte Software Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CGNX",
+    "name": "Cognex Corporation Common Stock"
+  },
+  {
+    "symbol": "CGO",
+    "name": "Calamos Global Total Return Fund Common Stock"
+  },
+  {
+    "symbol": "CGON",
+    "name": "CG Oncology Inc. Common stock"
+  },
+  {
+    "symbol": "CGTL",
+    "name": "Creative Global Technology Holdings Limited Ordinary Shares"
+  },
+  {
+    "symbol": "CGTX",
+    "name": "Cognition Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CHAR",
+    "name": "Charlton Aria Acquisition Corporation Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CHARR",
+    "name": "Charlton Aria Acquisition Corporation Rights"
+  },
+  {
+    "symbol": "CHARU",
+    "name": "Charlton Aria Acquisition Corporation Units"
+  },
+  {
+    "symbol": "CHCI",
+    "name": "Comstock Holding Companies Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CHCO",
+    "name": "City Holding Company Common Stock"
+  },
+  {
+    "symbol": "CHDN",
+    "name": "Churchill Downs Incorporated Common Stock"
+  },
+  {
+    "symbol": "CHEF",
+    "name": "The Chefs' Warehouse Inc. Common Stock"
+  },
+  {
+    "symbol": "CHEK",
+    "name": "Check-Cap Ltd. Ordinary Share"
+  },
+  {
+    "symbol": "CHI",
+    "name": "Calamos Convertible Opportunities and Income Fund Common Stock"
+  },
+  {
+    "symbol": "CHKP",
+    "name": "Check Point Software Technologies Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CHMG",
+    "name": "Chemung Financial Corp Common Stock"
+  },
+  {
+    "symbol": "CHNR",
+    "name": "China Natural Resources Inc. Common Stock"
+  },
+  {
+    "symbol": "CHR",
+    "name": "Cheer Holding Inc. Class A Ordinary Share"
+  },
+  {
+    "symbol": "CHRD",
+    "name": "Chord Energy Corporation Common Stock"
+  },
+  {
+    "symbol": "CHRS",
+    "name": "Coherus BioSciences Inc. Common Stock"
+  },
+  {
+    "symbol": "CHRW",
+    "name": "C.H. Robinson Worldwide Inc. Common Stock"
+  },
+  {
+    "symbol": "CHSCL",
+    "name": "CHS Inc Class B Cumulative Redeemable Preferred Stock Series 4"
+  },
+  {
+    "symbol": "CHSCM",
+    "name": "CHS Inc Class B Reset Rate Cumulative Redeemable Preferred Stock Series 3"
+  },
+  {
+    "symbol": "CHSCN",
+    "name": "CHS Inc Preferred Class B Series 2 Reset Rate"
+  },
+  {
+    "symbol": "CHSCO",
+    "name": "CHS Inc. Class B Cumulative Redeemable Preferred Stock"
+  },
+  {
+    "symbol": "CHSCP",
+    "name": "CHS Inc. 8%  Cumulative Redeemable Preferred Stock"
+  },
+  {
+    "symbol": "CHSN",
+    "name": "Chanson International Holding Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CHTR",
+    "name": "Charter Communications Inc. Class A Common Stock New"
+  },
+  {
+    "symbol": "CHW",
+    "name": "Calamos Global Dynamic Income Fund Common Stock"
+  },
+  {
+    "symbol": "CHX",
+    "name": "ChampionX Corporation Common Stock "
+  },
+  {
+    "symbol": "CHY",
+    "name": "Calamos Convertible and High Income Fund Common Stock"
+  },
+  {
+    "symbol": "CIFR",
+    "name": "Cipher Mining Inc. Common Stock"
+  },
+  {
+    "symbol": "CIFRW",
+    "name": "Cipher Mining Inc. Warrant"
+  },
+  {
+    "symbol": "CIGI",
+    "name": "Colliers International Group Inc. Subordinate Voting Shares"
+  },
+  {
+    "symbol": "CINF",
+    "name": "Cincinnati Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "CING",
+    "name": "Cingulate Inc. Common Stock"
+  },
+  {
+    "symbol": "CINGW",
+    "name": "Cingulate Inc. Warrants"
+  },
+  {
+    "symbol": "CISO",
+    "name": "CISO Global Inc. Common Stock"
+  },
+  {
+    "symbol": "CISS",
+    "name": "C3is Inc. Common Stock"
+  },
+  {
+    "symbol": "CITE",
+    "name": "Cartica Acquisition Corp Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CITEU",
+    "name": "Cartica Acquisition Corp Unit"
+  },
+  {
+    "symbol": "CITEW",
+    "name": "Cartica Acquisition Corp Warrant"
+  },
+  {
+    "symbol": "CIVB",
+    "name": "Civista Bancshares Inc. Common Stock"
+  },
+  {
+    "symbol": "CJET",
+    "name": "Chijet Motor Company Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "CJJD",
+    "name": "China Jo-Jo Drugstores Inc. (Cayman Islands) Ordinary Shares"
+  },
+  {
+    "symbol": "CKPT",
+    "name": "Checkpoint Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CLAR",
+    "name": "Clarus Corporation Common Stock"
+  },
+  {
+    "symbol": "CLBK",
+    "name": "Columbia Financial Inc. Common Stock"
+  },
+  {
+    "symbol": "CLBT",
+    "name": "Cellebrite DI Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CLDX",
+    "name": "Celldex Therapeutics Inc."
+  },
+  {
+    "symbol": "CLEU",
+    "name": "China Liberal Education Holdings Limited Ordinary Shares"
+  },
+  {
+    "symbol": "CLFD",
+    "name": "Clearfield Inc. Common Stock"
+  },
+  {
+    "symbol": "CLGN",
+    "name": "CollPlant Biotechnologies Ltd Ordinary Shares"
+  },
+  {
+    "symbol": "CLIK",
+    "name": "Click Holdings Limited Ordinary Share"
+  },
+  {
+    "symbol": "CLIR",
+    "name": "ClearSign Technologies Corporation Common Stock (DE)"
+  },
+  {
+    "symbol": "CLLS",
+    "name": "Cellectis S.A. American Depositary Shares"
+  },
+  {
+    "symbol": "CLMB",
+    "name": "Climb Global Solutions Inc. Common Stock"
+  },
+  {
+    "symbol": "CLMT",
+    "name": "Calumet Inc. Common Stock"
+  },
+  {
+    "symbol": "CLNE",
+    "name": "Clean Energy Fuels Corp. Common Stock"
+  },
+  {
+    "symbol": "CLNN",
+    "name": "Clene Inc. Common Stock"
+  },
+  {
+    "symbol": "CLNNW",
+    "name": "Clene Inc. Warrant"
+  },
+  {
+    "symbol": "CLOV",
+    "name": "Clover Health Investments Corp. Class A Common Stock"
+  },
+  {
+    "symbol": "CLPS",
+    "name": "CLPS Incorporation Common Stock"
+  },
+  {
+    "symbol": "CLPT",
+    "name": "ClearPoint Neuro Inc. Common Stock"
+  },
+  {
+    "symbol": "CLRB",
+    "name": "Cellectar Biosciences Inc.  Common Stock"
+  },
+  {
+    "symbol": "CLRC",
+    "name": "ClimateRock Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CLRCR",
+    "name": "ClimateRock Right"
+  },
+  {
+    "symbol": "CLRCW",
+    "name": "ClimateRock Warrant"
+  },
+  {
+    "symbol": "CLRO",
+    "name": "ClearOne Inc. (DE) Common Stock"
+  },
+  {
+    "symbol": "CLSD",
+    "name": "Clearside Biomedical Inc. Common Stock"
+  },
+  {
+    "symbol": "CLSK",
+    "name": "CleanSpark Inc. Common Stock"
+  },
+  {
+    "symbol": "CLSKW",
+    "name": "CleanSpark Inc. Warrant"
+  },
+  {
+    "symbol": "CLST",
+    "name": "Catalyst Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "CLWT",
+    "name": "Euro Tech Holdings Company Limited Common Stock"
+  },
+  {
+    "symbol": "CLYM",
+    "name": "Climb Bio Inc. Common Stock"
+  },
+  {
+    "symbol": "CMBM",
+    "name": "Cambium Networks Corporation Ordinary Shares"
+  },
+  {
+    "symbol": "CMCO",
+    "name": "Columbus McKinnon Corporation Common Stock"
+  },
+  {
+    "symbol": "CMCSA",
+    "name": "Comcast Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "CMCT",
+    "name": "Creative Media & Community Trust Corporation Common stock"
+  },
+  {
+    "symbol": "CME",
+    "name": "CME Group Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CMLS",
+    "name": "Cumulus Media Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CMMB",
+    "name": "Chemomab Therapeutics Ltd. American Depositary Share"
+  },
+  {
+    "symbol": "CMND",
+    "name": "Clearmind Medicine Inc. Common Shares"
+  },
+  {
+    "symbol": "CMPO",
+    "name": "CompoSecure Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CMPOW",
+    "name": "CompoSecure Inc. Warrant"
+  },
+  {
+    "symbol": "CMPR",
+    "name": "Cimpress plc Ordinary Shares (Ireland)"
+  },
+  {
+    "symbol": "CMPS",
+    "name": "COMPASS Pathways Plc American Depository Shares"
+  },
+  {
+    "symbol": "CMPX",
+    "name": "Compass Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CMRX",
+    "name": "Chimerix Inc. Common Stock"
+  },
+  {
+    "symbol": "CMTL",
+    "name": "Comtech Telecommunications Corp. Common Stock"
+  },
+  {
+    "symbol": "CNCK",
+    "name": "Coincheck Group N.V. Ordinary Shares"
+  },
+  {
+    "symbol": "CNCKW",
+    "name": "Coincheck Group N.V. Warrants"
+  },
+  {
+    "symbol": "CNDT",
+    "name": "Conduent Incorporated Common Stock "
+  },
+  {
+    "symbol": "CNET",
+    "name": "ZW Data Action Technologies Inc. Common Stock"
+  },
+  {
+    "symbol": "CNEY",
+    "name": "CN Energy Group Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CNFR",
+    "name": "Conifer Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "CNFRZ",
+    "name": "Conifer Holdings Inc. 9.75% Senior Unsecured Notes due 2028"
+  },
+  {
+    "symbol": "CNOB",
+    "name": "ConnectOne Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "CNOBP",
+    "name": "ConnectOne Bancorp Inc. Depositary Shares each representing a 1/40th interest in a share of 5.25% Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock Series A"
+  },
+  {
+    "symbol": "CNSL",
+    "name": "Consolidated Communications Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "CNSP",
+    "name": "CNS Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CNTA",
+    "name": "Centessa Pharmaceuticals plc American Depositary Shares"
+  },
+  {
+    "symbol": "CNTB",
+    "name": "Connect Biopharma Holdings Limited American Depositary Shares"
+  },
+  {
+    "symbol": "CNTM",
+    "name": "ConnectM Technology Solutions Inc. Common Stock"
+  },
+  {
+    "symbol": "CNTX",
+    "name": "Context Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CNTY",
+    "name": "Century Casinos Inc. Common Stock"
+  },
+  {
+    "symbol": "CNVS",
+    "name": "Cineverse Corp. Class A Common Stock"
+  },
+  {
+    "symbol": "CNXC",
+    "name": "Concentrix Corporation Common Stock"
+  },
+  {
+    "symbol": "CNXN",
+    "name": "PC Connection Inc. Common Stock"
+  },
+  {
+    "symbol": "COCH",
+    "name": "Envoy Medical Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "COCHW",
+    "name": "Envoy Medical Inc Warrant"
+  },
+  {
+    "symbol": "COCO",
+    "name": "The Vita Coco Company Inc. Common Stock"
+  },
+  {
+    "symbol": "COCP",
+    "name": "Cocrystal Pharma Inc. Common Stock"
+  },
+  {
+    "symbol": "CODA",
+    "name": "Coda Octopus Group Inc. Common stock"
+  },
+  {
+    "symbol": "CODX",
+    "name": "Co-Diagnostics Inc. Common Stock"
+  },
+  {
+    "symbol": "COEP",
+    "name": "Coeptis Therapeutics Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "COEPW",
+    "name": "Coeptis Therapeutics Holdings Inc. Warrants"
+  },
+  {
+    "symbol": "COFS",
+    "name": "ChoiceOne Financial Services Inc. Common Stock"
+  },
+  {
+    "symbol": "COGT",
+    "name": "Cogent Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "COHU",
+    "name": "Cohu Inc. Common Stock"
+  },
+  {
+    "symbol": "COIN",
+    "name": "Coinbase Global Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "COKE",
+    "name": "Coca-Cola Consolidated Inc. Common Stock"
+  },
+  {
+    "symbol": "COLB",
+    "name": "Columbia Banking System Inc. Common Stock"
+  },
+  {
+    "symbol": "COLL",
+    "name": "Collegium Pharmaceutical Inc. Common Stock"
+  },
+  {
+    "symbol": "COLM",
+    "name": "Columbia Sportswear Company Common Stock"
+  },
+  {
+    "symbol": "COMM",
+    "name": "CommScope Holding Company Inc. Common Stock"
+  },
+  {
+    "symbol": "COO",
+    "name": "The Cooper Companies Inc. Common Stock"
+  },
+  {
+    "symbol": "COOP",
+    "name": "Mr. Cooper Group Inc. Common Stock"
+  },
+  {
+    "symbol": "COOT",
+    "name": "Australian Oilseeds Holdings Limited Ordinary Shares"
+  },
+  {
+    "symbol": "COOTW",
+    "name": "Australian Oilseeds Holdings Limited Warrant"
+  },
+  {
+    "symbol": "CORT",
+    "name": "Corcept Therapeutics Incorporated Common Stock"
+  },
+  {
+    "symbol": "CORZ",
+    "name": "Core Scientific Inc. Common Stock"
+  },
+  {
+    "symbol": "CORZW",
+    "name": "Core Scientific Inc. Tranche 1 Warrants"
+  },
+  {
+    "symbol": "CORZZ",
+    "name": "Core Scientific Inc. Tranche 2 Warrants"
+  },
+  {
+    "symbol": "COSM",
+    "name": "Cosmos Health Inc. Common Stock"
+  },
+  {
+    "symbol": "COST",
+    "name": "Costco Wholesale Corporation Common Stock"
+  },
+  {
+    "symbol": "COYA",
+    "name": "Coya Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CPB",
+    "name": "The Campbell's Company Common Stock"
+  },
+  {
+    "symbol": "CPBI",
+    "name": "Central Plains Bancshares Inc. Common Stock"
+  },
+  {
+    "symbol": "CPHC",
+    "name": "Canterbury Park Holding Corporation 'New' Common Stock"
+  },
+  {
+    "symbol": "CPIX",
+    "name": "Cumberland Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CPOP",
+    "name": "Pop Culture Group Co. Ltd Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CPRT",
+    "name": "Copart Inc. (DE) Common Stock"
+  },
+  {
+    "symbol": "CPRX",
+    "name": "Catalyst Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CPSH",
+    "name": "CPS Technologies Corp. Common Stock"
+  },
+  {
+    "symbol": "CPSS",
+    "name": "Consumer Portfolio Services Inc. Common Stock"
+  },
+  {
+    "symbol": "CPTN",
+    "name": "Cepton Inc. Common Stock"
+  },
+  {
+    "symbol": "CPTNW",
+    "name": "Cepton Inc. Warrant"
+  },
+  {
+    "symbol": "CPZ",
+    "name": "Calamos Long/Short Equity & Dynamic Income Trust Common Stock"
+  },
+  {
+    "symbol": "CRAI",
+    "name": "CRA International Inc. Common Stock"
+  },
+  {
+    "symbol": "CRBP",
+    "name": "Corbus Pharmaceuticals Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "CRBU",
+    "name": "Caribou Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "CRCT",
+    "name": "Cricut Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CRDF",
+    "name": "Cardiff Oncology Inc. Common Stock"
+  },
+  {
+    "symbol": "CRDL",
+    "name": "Cardiol Therapeutics Inc. Class A Common Shares"
+  },
+  {
+    "symbol": "CRDO",
+    "name": "Credo Technology Group Holding Ltd Ordinary Shares"
+  },
+  {
+    "symbol": "CREG",
+    "name": "Smart Powerr Corp. Common Stock"
+  },
+  {
+    "symbol": "CRESW",
+    "name": "Cresud S.A.C.I.F. y A. Warrant"
+  },
+  {
+    "symbol": "CRESY",
+    "name": "Cresud S.A.C.I.F. y A. American Depositary Shares"
+  },
+  {
+    "symbol": "CREV",
+    "name": "Carbon Revolution Public Limited Ordinary Shares"
+  },
+  {
+    "symbol": "CREVW",
+    "name": "Carbon Revolution Public Limited Company Warrant"
+  },
+  {
+    "symbol": "CREX",
+    "name": "Creative Realities Inc. Common Stock"
+  },
+  {
+    "symbol": "CRGO",
+    "name": "Freightos Limited Ordinary shares"
+  },
+  {
+    "symbol": "CRGOW",
+    "name": "Freightos Limited Warrants"
+  },
+  {
+    "symbol": "CRGX",
+    "name": "CARGO Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CRIS",
+    "name": "Curis Inc. Common Stock"
+  },
+  {
+    "symbol": "CRKN",
+    "name": "Crown Electrokinetics Corp. Common Stock"
+  },
+  {
+    "symbol": "CRMD",
+    "name": "CorMedix Inc. Common Stock"
+  },
+  {
+    "symbol": "CRML",
+    "name": "Critical Metals Corp. Ordinary Shares"
+  },
+  {
+    "symbol": "CRMLW",
+    "name": "Critical Metals Corp. Warrants"
+  },
+  {
+    "symbol": "CRMT",
+    "name": "America's Car-Mart Inc Common Stock"
+  },
+  {
+    "symbol": "CRNC",
+    "name": "Cerence Inc. Common Stock"
+  },
+  {
+    "symbol": "CRNT",
+    "name": "Ceragon Networks Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CRNX",
+    "name": "Crinetics Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CRON",
+    "name": "Cronos Group Inc. Common Share"
+  },
+  {
+    "symbol": "CROX",
+    "name": "Crocs Inc. Common Stock"
+  },
+  {
+    "symbol": "CRSP",
+    "name": "CRISPR Therapeutics AG Common Shares"
+  },
+  {
+    "symbol": "CRSR",
+    "name": "Corsair Gaming Inc. Common Stock"
+  },
+  {
+    "symbol": "CRTO",
+    "name": "Criteo S.A. American Depositary Shares"
+  },
+  {
+    "symbol": "CRUS",
+    "name": "Cirrus Logic Inc. Common Stock"
+  },
+  {
+    "symbol": "CRVL",
+    "name": "CorVel Corp. Common Stock"
+  },
+  {
+    "symbol": "CRVO",
+    "name": "CervoMed Inc. Common Stock"
+  },
+  {
+    "symbol": "CRVS",
+    "name": "Corvus Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CRWD",
+    "name": "CrowdStrike Holdings Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CRWS",
+    "name": "Crown Crafts Inc Common Stock"
+  },
+  {
+    "symbol": "CSBR",
+    "name": "Champions Oncology Inc. Common Stock"
+  },
+  {
+    "symbol": "CSCI",
+    "name": "COSCIENS Biopharma Inc. Common Stock"
+  },
+  {
+    "symbol": "CSCO",
+    "name": "Cisco Systems Inc. Common Stock (DE)"
+  },
+  {
+    "symbol": "CSGP",
+    "name": "CoStar Group Inc. Common Stock"
+  },
+  {
+    "symbol": "CSGS",
+    "name": "CSG Systems International Inc. Common Stock"
+  },
+  {
+    "symbol": "CSIQ",
+    "name": "Canadian Solar Inc. Common Shares (ON)"
+  },
+  {
+    "symbol": "CSLM",
+    "name": "CSLM Acquisition Corp. Class A Ordinary Share"
+  },
+  {
+    "symbol": "CSLMR",
+    "name": "CSLM Acquisition Corp. Right"
+  },
+  {
+    "symbol": "CSLMW",
+    "name": "CSLM Acquisition Corp. Warrant"
+  },
+  {
+    "symbol": "CSLR",
+    "name": "Complete Solaria Inc. Common Stock"
+  },
+  {
+    "symbol": "CSLRW",
+    "name": "Complete Solaria Inc. Warrants"
+  },
+  {
+    "symbol": "CSPI",
+    "name": "CSP Inc. Common Stock"
+  },
+  {
+    "symbol": "CSQ",
+    "name": "Calamos Strategic Total Return Common Stock"
+  },
+  {
+    "symbol": "CSTE",
+    "name": "Caesarstone Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CSTL",
+    "name": "Castle Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "CSWC",
+    "name": "Capital Southwest Corporation Common Stock"
+  },
+  {
+    "symbol": "CSWCZ",
+    "name": "Capital Southwest Corporation 7.75% Notes due 2028"
+  },
+  {
+    "symbol": "CSWI",
+    "name": "CSW Industrials Inc. Common Stock"
+  },
+  {
+    "symbol": "CSX",
+    "name": "CSX Corporation Common Stock"
+  },
+  {
+    "symbol": "CTAS",
+    "name": "Cintas Corporation Common Stock"
+  },
+  {
+    "symbol": "CTBI",
+    "name": "Community Trust Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "CTCX",
+    "name": "Carmell Corporation Common Stock"
+  },
+  {
+    "symbol": "CTCXW",
+    "name": "Carmell Corporation Warrant"
+  },
+  {
+    "symbol": "CTHR",
+    "name": "Charles & Colvard Ltd Common Stock"
+  },
+  {
+    "symbol": "CTKB",
+    "name": "Cytek Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "CTLP",
+    "name": "Cantaloupe Inc. Common Stock"
+  },
+  {
+    "symbol": "CTMX",
+    "name": "CytomX Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CTNM",
+    "name": "Contineum Therapeutics Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CTNT",
+    "name": "Cheetah Net Supply Chain Service Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CTOR",
+    "name": "Citius Oncology Inc. Common Stock"
+  },
+  {
+    "symbol": "CTRM",
+    "name": "Castor Maritime Inc. Common Shares"
+  },
+  {
+    "symbol": "CTRN",
+    "name": "Citi Trends Inc. Common Stock"
+  },
+  {
+    "symbol": "CTSH",
+    "name": "Cognizant Technology Solutions Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "CTSO",
+    "name": "Cytosorbents Corporation Common Stock"
+  },
+  {
+    "symbol": "CTXR",
+    "name": "Citius Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CUB",
+    "name": "Lionheart Holdings Class A Ordinary Shares"
+  },
+  {
+    "symbol": "CUBA",
+    "name": "Herzfeld Caribbean Basin Fund Inc. (The) Common Stock"
+  },
+  {
+    "symbol": "CUBWU",
+    "name": "Lionheart Holdings Unit"
+  },
+  {
+    "symbol": "CUBWW",
+    "name": "Lionheart Holdings Warrant"
+  },
+  {
+    "symbol": "CUE",
+    "name": "Cue Biopharma Inc. Common Stock"
+  },
+  {
+    "symbol": "CURI",
+    "name": "CuriosityStream Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CURIW",
+    "name": "CuriosityStream Inc. Warrant"
+  },
+  {
+    "symbol": "CURR",
+    "name": "Currenc Group Inc. Ordinary Shares"
+  },
+  {
+    "symbol": "CUTR",
+    "name": "Cutera Inc. Common Stock"
+  },
+  {
+    "symbol": "CVAC",
+    "name": "CureVac N.V. Ordinary Shares"
+  },
+  {
+    "symbol": "CVBF",
+    "name": "CVB Financial Corporation Common Stock"
+  },
+  {
+    "symbol": "CVCO",
+    "name": "Cavco Industries Inc. Common Stock When Issued"
+  },
+  {
+    "symbol": "CVGI",
+    "name": "Commercial Vehicle Group Inc. Common Stock"
+  },
+  {
+    "symbol": "CVGW",
+    "name": "Calavo Growers Inc. Common Stock"
+  },
+  {
+    "symbol": "CVKD",
+    "name": "Cadrenal Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CVLT",
+    "name": "Commvault Systems Inc. Common Stock"
+  },
+  {
+    "symbol": "CVRX",
+    "name": "CVRx Inc. Common Stock"
+  },
+  {
+    "symbol": "CVV",
+    "name": "CVD Equipment Corporation Common Stock"
+  },
+  {
+    "symbol": "CWBC",
+    "name": "Community West Bancshares Common Stock"
+  },
+  {
+    "symbol": "CWCO",
+    "name": "Consolidated Water Co. Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CWD",
+    "name": "CaliberCos Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CWST",
+    "name": "Casella Waste Systems Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CXAI",
+    "name": "CXApp Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "CXAIW",
+    "name": "CXApp Inc. Warrant"
+  },
+  {
+    "symbol": "CXDO",
+    "name": "Crexendo Inc. Common Stock"
+  },
+  {
+    "symbol": "CYBR",
+    "name": "CyberArk Software Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "CYCC",
+    "name": "Cyclacel Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "CYCCP",
+    "name": "Cyclacel Pharmaceuticals Inc. 6% Convertible Preferred Stock"
+  },
+  {
+    "symbol": "CYCN",
+    "name": "Cyclerion Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CYN",
+    "name": "Cyngn Inc. Common Stock"
+  },
+  {
+    "symbol": "CYRX",
+    "name": "CryoPort Inc. Common Stock"
+  },
+  {
+    "symbol": "CYTH",
+    "name": "Cyclo Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "CYTHW",
+    "name": "Cyclo Therapeutics Inc. Warrant"
+  },
+  {
+    "symbol": "CYTK",
+    "name": "Cytokinetics Incorporated Common Stock"
+  },
+  {
+    "symbol": "CZFS",
+    "name": "Citizens Financial Services Inc. Common Stock"
+  },
+  {
+    "symbol": "CZNC",
+    "name": "Citizens & Northern Corp Common Stock"
+  },
+  {
+    "symbol": "CZR",
+    "name": "Caesars Entertainment Inc. Common Stock"
+  },
+  {
+    "symbol": "CZWI",
+    "name": "Citizens Community Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "DADA",
+    "name": "Dada Nexus Limited American Depositary Shares"
+  },
+  {
+    "symbol": "DAIO",
+    "name": "Data I/O Corporation Common Stock"
+  },
+  {
+    "symbol": "DAKT",
+    "name": "Daktronics Inc. Common Stock"
+  },
+  {
+    "symbol": "DALN",
+    "name": "DallasNews Corporation Series A Common Stock"
+  },
+  {
+    "symbol": "DARE",
+    "name": "Dare Bioscience Inc. Common Stock"
+  },
+  {
+    "symbol": "DASH",
+    "name": "DoorDash Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DATS",
+    "name": "DatChat Inc. Common Stock"
+  },
+  {
+    "symbol": "DATSW",
+    "name": "DatChat Inc. Series A Warrant"
+  },
+  {
+    "symbol": "DAVE",
+    "name": "Dave Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DAVEW",
+    "name": "Dave Inc. Warrants"
+  },
+  {
+    "symbol": "DAWN",
+    "name": "Day One Biopharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "DBVT",
+    "name": "DBV Technologies S.A. American Depositary Shares"
+  },
+  {
+    "symbol": "DBX",
+    "name": "Dropbox Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DCBO",
+    "name": "Docebo Inc. Common Shares"
+  },
+  {
+    "symbol": "DCGO",
+    "name": "DocGo Inc. Common Stock"
+  },
+  {
+    "symbol": "DCOM",
+    "name": "Dime Community Bancshares Inc. Common Stock"
+  },
+  {
+    "symbol": "DCOMG",
+    "name": "Dime Community Bancshares Inc. 9.000% Fixed-to-Floating Rate Subordinated Notes due 2034"
+  },
+  {
+    "symbol": "DCOMP",
+    "name": "Dime Community Bancshares Inc. Fixed-Rate Non-Cumulative Perpetual Preferred Stock Series A"
+  },
+  {
+    "symbol": "DCTH",
+    "name": "Delcath Systems Inc. Common Stock"
+  },
+  {
+    "symbol": "DDI",
+    "name": "DoubleDown Interactive Co. Ltd. American Depository Shares"
+  },
+  {
+    "symbol": "DDOG",
+    "name": "Datadog Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DECA",
+    "name": "Denali Capital Acquisition Corp. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "DECAW",
+    "name": "Denali Capital Acquisition Corp. Warrant"
+  },
+  {
+    "symbol": "DENN",
+    "name": "Denny's Corporation Common Stock"
+  },
+  {
+    "symbol": "DERM",
+    "name": "Journey Medical Corporation Common Stock"
+  },
+  {
+    "symbol": "DEVS",
+    "name": "DevvStream Corp. Common Stock"
+  },
+  {
+    "symbol": "DFLI",
+    "name": "Dragonfly Energy Holdings Corp. Common Stock (NV)"
+  },
+  {
+    "symbol": "DFLIW",
+    "name": "Dragonfly Energy Holdings Corp. Warrant"
+  },
+  {
+    "symbol": "DGHI",
+    "name": "Digihost Technology Inc. Common Subordinate Voting Shares"
+  },
+  {
+    "symbol": "DGICA",
+    "name": "Donegal Group Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DGICB",
+    "name": "Donegal Group Inc. Class B Common Stock"
+  },
+  {
+    "symbol": "DGII",
+    "name": "Digi International Inc. Common Stock"
+  },
+  {
+    "symbol": "DGLY",
+    "name": "Digital Ally Inc. Common Stock"
+  },
+  {
+    "symbol": "DH",
+    "name": "Definitive Healthcare Corp. Class A Common Stock"
+  },
+  {
+    "symbol": "DHAI",
+    "name": "DIH Holdings US Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DHAIW",
+    "name": "DIH Holding US Inc. Warrants"
+  },
+  {
+    "symbol": "DHC",
+    "name": "Diversified Healthcare Trust Common Shares of Beneficial Interest"
+  },
+  {
+    "symbol": "DHCNI",
+    "name": "Diversified Healthcare Trust 5.625% Senior Notes due 2042"
+  },
+  {
+    "symbol": "DHCNL",
+    "name": "Diversified Healthcare Trust 6.25% Senior Notes Due 2046"
+  },
+  {
+    "symbol": "DHIL",
+    "name": "Diamond Hill Investment Group Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DIBS",
+    "name": "1stdibs.com Inc. Common Stock"
+  },
+  {
+    "symbol": "DIOD",
+    "name": "Diodes Incorporated Common Stock"
+  },
+  {
+    "symbol": "DISTR",
+    "name": "Distoken Acquisition Corporation Right"
+  },
+  {
+    "symbol": "DJCO",
+    "name": "Daily Journal Corp. (S.C.) Common Stock"
+  },
+  {
+    "symbol": "DJT",
+    "name": "Trump Media & Technology Group Corp. Common Stock"
+  },
+  {
+    "symbol": "DJTWW",
+    "name": "Trump Media & Technology Group Corp. Warrants"
+  },
+  {
+    "symbol": "DKNG",
+    "name": "DraftKings Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DLHC",
+    "name": "DLH Holdings Corp."
+  },
+  {
+    "symbol": "DLO",
+    "name": "DLocal Limited Class A Common Shares"
+  },
+  {
+    "symbol": "DLPN",
+    "name": "Dolphin Entertainment Inc. Common Stock"
+  },
+  {
+    "symbol": "DLTH",
+    "name": "Duluth Holdings Inc. Class B Common Stock"
+  },
+  {
+    "symbol": "DLTR",
+    "name": "Dollar Tree Inc. Common Stock"
+  },
+  {
+    "symbol": "DMAC",
+    "name": "DiaMedica Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "DMLP",
+    "name": "Dorchester Minerals L.P. Common Units Representing Limited Partnership Interests"
+  },
+  {
+    "symbol": "DMN",
+    "name": "Damon Inc. Common Stock"
+  },
+  {
+    "symbol": "DMRC",
+    "name": "Digimarc Corporation Common Stock"
+  },
+  {
+    "symbol": "DNLI",
+    "name": "Denali Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "DNTH",
+    "name": "Dianthus Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "DNUT",
+    "name": "Krispy Kreme Inc. Common Stock"
+  },
+  {
+    "symbol": "DOCU",
+    "name": "DocuSign Inc. Common Stock"
+  },
+  {
+    "symbol": "DOGZ",
+    "name": "Dogness (International) Corporation Class A Common Stock"
+  },
+  {
+    "symbol": "DOMH",
+    "name": "Dominari Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "DOMO",
+    "name": "Domo Inc. Class B Common Stock"
+  },
+  {
+    "symbol": "DOOO",
+    "name": "BRP Inc. (Recreational Products) Common Subordinate Voting Shares"
+  },
+  {
+    "symbol": "DORM",
+    "name": "Dorman Products Inc. Common Stock"
+  },
+  {
+    "symbol": "DOX",
+    "name": "Amdocs Limited Ordinary Shares"
+  },
+  {
+    "symbol": "DOYU",
+    "name": "DouYu International Holdings Limited ADS"
+  },
+  {
+    "symbol": "DPRO",
+    "name": "Draganfly Inc. Common Shares"
+  },
+  {
+    "symbol": "DRCT",
+    "name": "Direct Digital Holdings Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DRDBU",
+    "name": "Roman DBDR Acquisition Corp. II Unit"
+  },
+  {
+    "symbol": "DRIO",
+    "name": "DarioHealth Corp. Common Stock"
+  },
+  {
+    "symbol": "DRMA",
+    "name": "Dermata Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "DRMAW",
+    "name": "Dermata Therapeutics Inc. Warrant"
+  },
+  {
+    "symbol": "DRRX",
+    "name": "DURECT Corporation Common Stock"
+  },
+  {
+    "symbol": "DRS",
+    "name": "Leonardo DRS Inc. Common Stock"
+  },
+  {
+    "symbol": "DRTS",
+    "name": "Alpha Tau Medical Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "DRTSW",
+    "name": "Alpha Tau Medical Ltd. Warrant"
+  },
+  {
+    "symbol": "DRUG",
+    "name": "Bright Minds Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "DRVN",
+    "name": "Driven Brands Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "DSGN",
+    "name": "Design Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "DSGR",
+    "name": "Distribution Solutions Group Inc. Common Stock"
+  },
+  {
+    "symbol": "DSGX",
+    "name": "Descartes Systems Group Inc. (The) Common Stock"
+  },
+  {
+    "symbol": "DSP",
+    "name": "Viant Technology Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DSWL",
+    "name": "Deswell Industries Inc. Common Shares"
+  },
+  {
+    "symbol": "DSY",
+    "name": "Big Tree Cloud Holdings Limited Ordinary Shares"
+  },
+  {
+    "symbol": "DSYWW",
+    "name": "Big Tree Cloud Holdings Limited Warrants"
+  },
+  {
+    "symbol": "DTCK",
+    "name": "Davis Commodities Limited Ordinary Shares"
+  },
+  {
+    "symbol": "DTI",
+    "name": "Drilling Tools International Corporation Common Stock"
+  },
+  {
+    "symbol": "DTIL",
+    "name": "Precision BioSciences Inc. Common Stock"
+  },
+  {
+    "symbol": "DTSQ",
+    "name": "DT Cloud Star Acquisition Corporation Ordinary Shares"
+  },
+  {
+    "symbol": "DTSQR",
+    "name": "DT Cloud Star Acquisition Corporation Right"
+  },
+  {
+    "symbol": "DTSS",
+    "name": "Datasea Inc. Common Stock"
+  },
+  {
+    "symbol": "DTST",
+    "name": "Data Storage Corporation Common Stock"
+  },
+  {
+    "symbol": "DTSTW",
+    "name": "Data Storage Corporation Warrant"
+  },
+  {
+    "symbol": "DUO",
+    "name": "Fangdd Network Group Ltd. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "DUOL",
+    "name": "Duolingo Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "DUOT",
+    "name": "Duos Technologies Group Inc. Common Stock"
+  },
+  {
+    "symbol": "DVAX",
+    "name": "Dynavax Technologies Corporation Common Stock"
+  },
+  {
+    "symbol": "DWSN",
+    "name": "Dawson Geophysical Company Common Stock"
+  },
+  {
+    "symbol": "DWTX",
+    "name": "Dogwood Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "DXCM",
+    "name": "DexCom Inc. Common Stock"
+  },
+  {
+    "symbol": "DXLG",
+    "name": "Destination XL Group Inc. Common Stock"
+  },
+  {
+    "symbol": "DXPE",
+    "name": "DXP Enterprises Inc. Common Stock"
+  },
+  {
+    "symbol": "DXR",
+    "name": "Daxor Corporation Common Stock"
+  },
+  {
+    "symbol": "DYAI",
+    "name": "Dyadic International Inc. Common Stock"
+  },
+  {
+    "symbol": "DYCQ",
+    "name": "DT Cloud Acquisition Corporation Ordinary Shares"
+  },
+  {
+    "symbol": "DYN",
+    "name": "Dyne Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "DYNX",
+    "name": "Dynamix Corporation Class A Ordinary Shares"
+  },
+  {
+    "symbol": "DYNXU",
+    "name": "Dynamix Corporation Unit"
+  },
+  {
+    "symbol": "DYNXW",
+    "name": "Dynamix Corporation Warrant"
+  },
+  {
+    "symbol": "EA",
+    "name": "Electronic Arts Inc. Common Stock"
+  },
+  {
+    "symbol": "EAST",
+    "name": "Eastside Distilling Inc. Common Stock"
+  },
+  {
+    "symbol": "EBAY",
+    "name": "eBay Inc. Common Stock"
+  },
+  {
+    "symbol": "EBC",
+    "name": "Eastern Bankshares Inc. Common Stock"
+  },
+  {
+    "symbol": "EBMT",
+    "name": "Eagle Bancorp Montana Inc. Common Stock"
+  },
+  {
+    "symbol": "EBON",
+    "name": "Ebang International Holdings Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "EBTC",
+    "name": "Enterprise Bancorp Inc Common Stock"
+  },
+  {
+    "symbol": "ECBK",
+    "name": "ECB Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "ECDA",
+    "name": "ECD Automotive Design Inc. Common Stock"
+  },
+  {
+    "symbol": "ECOR",
+    "name": "electroCore Inc. Common Stock"
+  },
+  {
+    "symbol": "ECPG",
+    "name": "Encore Capital Group Inc Common Stock"
+  },
+  {
+    "symbol": "ECX",
+    "name": "ECARX Holdings Inc. Class A Ordinary shares"
+  },
+  {
+    "symbol": "ECXWW",
+    "name": "ECARX Holdings Inc. Warrants"
+  },
+  {
+    "symbol": "EDAP",
+    "name": "EDAP TMS S.A. American Depositary Shares"
+  },
+  {
+    "symbol": "EDBL",
+    "name": "Edible Garden AG Incorporated Common Stock"
+  },
+  {
+    "symbol": "EDBLW",
+    "name": "Edible Garden AG Incorporated Warrant"
+  },
+  {
+    "symbol": "EDIT",
+    "name": "Editas Medicine Inc. Common Stock"
+  },
+  {
+    "symbol": "EDRY",
+    "name": "EuroDry Ltd. Common Shares "
+  },
+  {
+    "symbol": "EDSA",
+    "name": "Edesa Biotech Inc. Common Shares"
+  },
+  {
+    "symbol": "EDTK",
+    "name": "Skillful Craftsman Education Technology Limited Ordinary Share"
+  },
+  {
+    "symbol": "EDUC",
+    "name": "Educational Development Corporation Common Stock"
+  },
+  {
+    "symbol": "EEFT",
+    "name": "Euronet Worldwide Inc. Common Stock"
+  },
+  {
+    "symbol": "EEIQ",
+    "name": "EpicQuest Education Group International Limited Common Stock"
+  },
+  {
+    "symbol": "EFOI",
+    "name": "Energy Focus Inc. Common Stock"
+  },
+  {
+    "symbol": "EFSC",
+    "name": "Enterprise Financial Services Corporation Common Stock"
+  },
+  {
+    "symbol": "EFSCP",
+    "name": "Enterprise Financial Services Corporation Depositary Shares Each Representing a 1/40th Interest in a Share of 5% Fixed Rate Non-Cumulative Perpetual Preferred Stock Series A"
+  },
+  {
+    "symbol": "EGAN",
+    "name": "eGain Corporation Common Stock"
+  },
+  {
+    "symbol": "EGBN",
+    "name": "Eagle Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "EH",
+    "name": "EHang Holdings Limited ADS"
+  },
+  {
+    "symbol": "EHGO",
+    "name": "Eshallgo Inc. Class A Ordinary Shares"
+  },
+  {
+    "symbol": "EHTH",
+    "name": "eHealth Inc. Common Stock"
+  },
+  {
+    "symbol": "EJH",
+    "name": "E-Home Household Service Holdings Limited Ordinary Shares"
+  },
+  {
+    "symbol": "EKSO",
+    "name": "Ekso Bionics Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ELAB",
+    "name": "Elevai Labs Inc. Common Stock"
+  },
+  {
+    "symbol": "ELBM",
+    "name": "Electra Battery Materials Corporation Common Stock"
+  },
+  {
+    "symbol": "ELDN",
+    "name": "Eledon Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "ELEV",
+    "name": "Elevation Oncology Inc. Common stock"
+  },
+  {
+    "symbol": "ELPW",
+    "name": "Elong Power Holding Limited Class A Ordinary Shares"
+  },
+  {
+    "symbol": "ELSE",
+    "name": "Electro-Sensors Inc. Common Stock"
+  },
+  {
+    "symbol": "ELTK",
+    "name": "Eltek Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "ELTX",
+    "name": "Elicio Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ELUT",
+    "name": "Elutia Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "ELVA",
+    "name": "Electrovaya Inc. Common Shares"
+  },
+  {
+    "symbol": "ELVN",
+    "name": "Enliven Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ELWS",
+    "name": "Earlyworks Co. Ltd. American Depositary Shares"
+  },
+  {
+    "symbol": "EM",
+    "name": "Smart Share Global Limited American Depositary Shares"
+  },
+  {
+    "symbol": "EMBC",
+    "name": "Embecta Corp. Common Stock"
+  },
+  {
+    "symbol": "EMCG",
+    "name": "Embrace Change Acquisition Corp Ordinary Shares"
+  },
+  {
+    "symbol": "EMCGR",
+    "name": "Embrace Change Acquisition Corp Rights"
+  },
+  {
+    "symbol": "EMCGU",
+    "name": "Embrace Change Acquisition Corp Unit"
+  },
+  {
+    "symbol": "EMCGW",
+    "name": "Embrace Change Acquisition Corp Warrants"
+  },
+  {
+    "symbol": "EMKR",
+    "name": "EMCORE Corporation Common Stock"
+  },
+  {
+    "symbol": "EML",
+    "name": "Eastern Company (The) Common Stock"
+  },
+  {
+    "symbol": "ENGN",
+    "name": "enGene Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ENLT",
+    "name": "Enlight Renewable Energy Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "ENLV",
+    "name": "Enlivex Therapeutics Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "ENPH",
+    "name": "Enphase Energy Inc. Common Stock"
+  },
+  {
+    "symbol": "ENSC",
+    "name": "Ensysce Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "ENSG",
+    "name": "The Ensign Group Inc. Common Stock"
+  },
+  {
+    "symbol": "ENTA",
+    "name": "Enanta Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "ENTG",
+    "name": "Entegris Inc. Common Stock"
+  },
+  {
+    "symbol": "ENTO",
+    "name": "Entero Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ENTX",
+    "name": "Entera Bio Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "ENVB",
+    "name": "Enveric Biosciences Inc. Common Stock"
+  },
+  {
+    "symbol": "ENVX",
+    "name": "Enovix Corporation Common Stock"
+  },
+  {
+    "symbol": "EOLS",
+    "name": "Evolus Inc. Common Stock"
+  },
+  {
+    "symbol": "EOSE",
+    "name": "Eos Energy Enterprises Inc. Class A Common Stock"
+  },
+  {
+    "symbol": "EOSEW",
+    "name": "Eos Energy Enterprises Inc. Warrant"
+  },
+  {
+    "symbol": "EPIX",
+    "name": "ESSA Pharma Inc. Common Stock"
+  },
+  {
+    "symbol": "EPOW",
+    "name": "Sunrise New Energy Co. Ltd Class A Ordinary Shares"
+  },
+  {
+    "symbol": "EPRX",
+    "name": "Eupraxia Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "EPSN",
+    "name": "Epsilon Energy Ltd. Common Share"
+  },
+  {
+    "symbol": "EQ",
+    "name": "Equillium Inc. Common Stock"
+  },
+  {
+    "symbol": "EQIX",
+    "name": "Equinix Inc. Common Stock REIT"
+  },
+  {
+    "symbol": "ERAS",
+    "name": "Erasca Inc. Common Stock"
+  },
+  {
+    "symbol": "ERIC",
+    "name": "Ericsson American Depositary Shares"
+  },
+  {
+    "symbol": "ERIE",
+    "name": "Erie Indemnity Company Class A Common Stock"
+  },
+  {
+    "symbol": "ERII",
+    "name": "Energy Recovery Inc. Common Stock"
+  },
+  {
+    "symbol": "ERNA",
+    "name": "Eterna Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ESCA",
+    "name": "Escalade Incorporated Common Stock"
+  },
+  {
+    "symbol": "ESEA",
+    "name": "Euroseas Ltd. Common Stock (Marshall Islands)"
+  },
+  {
+    "symbol": "ESGL",
+    "name": "ESGL Holdings Limited Ordinary Shares"
+  },
+  {
+    "symbol": "ESGLW",
+    "name": "ESGL Holdings Limited Warrants"
+  },
+  {
+    "symbol": "ESGR",
+    "name": "Enstar Group Limited Ordinary Shares"
+  },
+  {
+    "symbol": "ESGRO",
+    "name": "Enstar Group Limited Depository Shares 7.00% Perpetual Non-Cumulative Preference Shares Series E"
+  },
+  {
+    "symbol": "ESGRP",
+    "name": "Enstar Group Limited Depositary Shares Each Representing 1/1000th of an interest in Preference Shares"
+  },
+  {
+    "symbol": "ESLA",
+    "name": "Estrella Immunopharma Inc. Common Stock"
+  },
+  {
+    "symbol": "ESLAW",
+    "name": "Estrella Immunopharma Inc. Warrant"
+  },
+  {
+    "symbol": "ESLT",
+    "name": "Elbit Systems Ltd. Ordinary Shares"
+  },
+  {
+    "symbol": "ESOA",
+    "name": "Energy Services of America Corporation Common Stock"
+  },
+  {
+    "symbol": "ESPR",
+    "name": "Esperion Therapeutics Inc. Common Stock"
+  },
+  {
+    "symbol": "ESQ",
+    "name": "Esquire Financial Holdings Inc. Common Stock"
+  },
+  {
+    "symbol": "ESSA",
+    "name": "ESSA Bancorp Inc. Common Stock"
+  },
+  {
+    "symbol": "ESTA",
+    "name": "Establishment Labs Holdings Inc. Common Shares"
+  },
+  {
+    "symbol": "ETNB",
+    "name": "89bio Inc. Common Stock"
+  },
+  {
+    "symbol": "ETON",
+    "name": "Eton Pharmaceuticals Inc. Common Stock"
+  },
+  {
+    "symbol": "ETSY",
+    "name": "Etsy Inc. Common Stock"
+  },
+  {
+    "symbol": "EU",
+    "name": "enCore Energy Corp. Common Shares"
+  }
+]
