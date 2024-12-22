@@ -1,7 +1,7 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import {
   Card,
@@ -19,32 +19,36 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+
+// Updated chart data for monthly profit and loss
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "January", profit: 5000, loss: 2000 },
+  { month: "February", profit: 6000, loss: 2500 },
+  { month: "March", profit: 7000, loss: 3000 },
+  { month: "April", profit: 4500, loss: 1800 },
+  { month: "May", profit: 8000, loss: 4000 },
+  { month: "June", profit: 7500, loss: 3500 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  profit: {
+    label: "Profit",
     color: "hsl(var(--chart-1))",
   },
-  mobile: {
-    label: "Mobile",
+  loss: {
+    label: "Loss",
     color: "hsl(var(--chart-2))",
   },
 };
 
-export default function MostTransactions() {
+export default function MonthlyProfitLoss() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart - Stacked + Legend</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Monthly Profit and Loss</CardTitle>
+        <CardDescription>
+          Showing monthly profit and loss for the last 6 months
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -57,18 +61,23 @@ export default function MostTransactions() {
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
             />
+            <YAxis
+              tickFormatter={(value) => `$${value}`}
+              tickLine={false}
+              axisLine={false}
+            />
             <ChartTooltip content={<ChartTooltipContent hideLabel />} />
             <ChartLegend content={<ChartLegendContent />} />
             <Bar
-              dataKey="desktop"
+              dataKey="profit"
               stackId="a"
-              fill="var(--color-desktop)"
+              fill="var(--color-profit)"
               radius={[0, 0, 4, 4]}
             />
             <Bar
-              dataKey="mobile"
+              dataKey="loss"
               stackId="a"
-              fill="var(--color-mobile)"
+              fill="var(--color-loss)"
               radius={[4, 4, 0, 0]}
             />
           </BarChart>
@@ -76,11 +85,9 @@ export default function MostTransactions() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Trending up by 10% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
+        <div className="leading-none text-muted-foreground"></div>
       </CardFooter>
     </Card>
   );

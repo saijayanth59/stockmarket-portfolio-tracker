@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
@@ -11,8 +11,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function PerformanceSummary() {
+  const [isLoading, setIsLoading] = useState(true);
   const [pastPL, setPastPL] = useState(68015.0);
   const [positionsPL, setPositionsPL] = useState(1550.0);
   const [totalPL, setTotalPL] = useState(69565.0);
@@ -60,6 +62,32 @@ export default function PerformanceSummary() {
       plPercent: -2.03,
     },
   ];
+
+  useEffect(() => {
+    // Simulate data loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  function getBadgeVariant(status) {
+    switch (status) {
+      case "Target Achieved":
+        return "default";
+      case "Exited":
+        return "secondary";
+      case "Stoploss Hit":
+        return "destructive";
+      default:
+        return "outline";
+    }
+  }
+
+  if (isLoading) {
+    return <LoadingSkeleton />;
+  }
 
   return (
     <Card className="w-full max-w-4xl mx-auto">
@@ -150,15 +178,28 @@ export default function PerformanceSummary() {
   );
 }
 
-function getBadgeVariant(status) {
-  switch (status) {
-    case "Target Achieved":
-      return "default";
-    case "Exited":
-      return "secondary";
-    case "Stoploss Hit":
-      return "destructive";
-    default:
-      return "outline";
-  }
+function LoadingSkeleton() {
+  return (
+    <Card className="w-full max-w-4xl mx-auto">
+      <CardHeader>
+        <Skeleton className="h-8 w-64" />
+      </CardHeader>
+      <CardContent>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          {[1, 2, 3].map((i) => (
+            <Card key={i}>
+              <CardHeader className="pb-2">
+                <Skeleton className="h-4 w-24" />
+              </CardHeader>
+              <CardContent>
+                <Skeleton className="h-8 w-32" />
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <Skeleton className="h-80 w-full" />
+      </CardContent>
+    </Card>
+  );
 }

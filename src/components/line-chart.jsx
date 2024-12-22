@@ -321,32 +321,31 @@ const TopIndexes = () => {
   return (
     <Card>
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
+        <div className="flex flex-1 flex-col justify-center gap-2 px-6 py-5 sm:py-6">
+          <CardTitle>Top Companies Performance</CardTitle>
+          <CardDescription>Showing historical data</CardDescription>
+        </div>
         <div className="flex">
-          {[
-            "sp500",
-            "nasdaq",
-            "dowjones",
-            "russell2000",
-            "ftse100",
-            "nikkei225",
-          ].map((key) => {
-            const chart = key;
-            return (
-              <button
-                key={chart}
-                data-active={activeChart === chart}
-                className="flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
-                onClick={() => setActiveChart(chart)}
-              >
-                <span className="text-xs text-muted-foreground">
-                  {chartConfig[chart].label}
-                </span>
-                <span className="text-lg font-bold leading-none sm:text-3xl">
-                  {stocks.find((stock) => stock.symbol === chart).price}
-                </span>
-              </button>
-            );
-          })}
+          {["sp500", "nasdaq", "dowjones", "russell2000", "ftse100"].map(
+            (key) => {
+              const chart = key;
+              return (
+                <button
+                  key={chart}
+                  data-active={activeChart === chart}
+                  className="flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
+                  onClick={() => setActiveChart(chart)}
+                >
+                  <span className="text-xs text-muted-foreground">
+                    {chartConfig[chart].label}
+                  </span>
+                  <span className="text-lg font-bold leading-none sm:text-3xl">
+                    {stocks.find((stock) => stock.symbol === chart).price}
+                  </span>
+                </button>
+              );
+            }
+          )}
         </div>
       </CardHeader>
       <CardContent className="px-2 sm:p-6">

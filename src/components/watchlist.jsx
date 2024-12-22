@@ -111,7 +111,7 @@ export default function Watchlist() {
   const searchStocks = async (term) => {
     setIsSearching(true);
     setSearchTerm(term);
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    await new Promise((resolve) => setTimeout(resolve, 50));
     setIsSearching(false);
   };
 
@@ -161,7 +161,7 @@ export default function Watchlist() {
                 <ul className="space-y-2">
                   {filteredStocks.map((stock) => (
                     <li
-                      key={stock.id}
+                      key={stock.symbol}
                       className="flex items-center justify-between p-2 bg-secondary rounded-md"
                     >
                       <span>

@@ -1,6 +1,6 @@
 "use client";
-
-import { useState } from "react";
+import stockData from "../utils/us_stocks.json";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,8 +11,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2, Search } from "lucide-react";
 import { format } from "date-fns";
+import { finnhubClient } from "@/utils/stockapi";
+import { Skeleton } from "./ui/skeleton";
+import { checkMarketStatus } from "@/utils/functions";
 
 const today = new Date();
 const tomorrow = new Date(today);
@@ -27,43 +30,63 @@ oneMonth.setMonth(today.getMonth() + 1);
 const oneYear = new Date(today);
 oneYear.setFullYear(today.getFullYear() + 1);
 
-// Mock data for companies
-const companies = [
-  { symbol: "AAPL", name: "Apple Inc." },
-  { symbol: "GOOGL", name: "Alphabet Inc." },
-  { symbol: "MSFT", name: "Microsoft Corporation" },
-  // Add more companies as needed
-];
-
 export default function PlaceOrderPage() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [orderType, setOrderType] = useState(null);
-  const [quantity, setQuantity] = useState("");
+  const [quantity, setQuantity] = useState(1);
   const [entryPrice, setEntryPrice] = useState("");
   const [timeFrame, setTimeFrame] = useState("Tomorrow");
   const [stopLoss, setStopLoss] = useState("");
   const [target, setTarget] = useState("");
+  const [isFetchingStock, setIsFetchingStock] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
+  const [isMarketClosed, setIsMarketClosed] = useState(false);
 
-  const filteredCompanies = companies.filter(
-    (company) =>
-      company.symbol.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      company.name.toLowerCase().includes(searchTerm.toLowerCase())
+  useEffect(() => {
+    setIsMarketClosed(checkMarketStatus());
+  }, []);
+
+  const searchStocks = async (term) => {
+    setIsSearching(true);
+    setSearchTerm(term);
+    await new Promise((resolve) => setTimeout(resolve, 50));
+    setIsSearching(false);
+  };
+
+  const handleStockSelect = async (stock) => {
+    setIsFetchingStock(true);
+    finnhubClient.quote(stock.symbol, (error, data) => {
+      if (error) {
+        console.error("Error fetching stock data:", error);
+      } else {
+        setSelectedCompany({ ...data, ...stock });
+      }
+      setIsFetchingStock(false);
+    });
+    setSearchTerm("");
+  };
+
+  const filteredStocks = stockData.filter(
+    (stock) =>
+      stock.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      stock.symbol.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handlePlaceOrder = () => {
-    // Implement order placement logic here
-    console.log("Order placed:", {
-      selectedCompany,
+    const data = {
+      ...selectedCompany,
       orderType,
       quantity,
-      entryPrice,
+      entryPrice: entryPrice == "" ? selectedCompany.c : entryPrice,
       timeFrame,
       stopLoss,
       target,
-    });
-    router.push("/user/positions"); // Redirect to home page after placing order
+    };
+
+    console.log("Order placed:", data);
+    // router.push("/user/positions");
   };
 
   return (
@@ -80,35 +103,72 @@ export default function PlaceOrderPage() {
         <div className="relative">
           <Input
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search for a company"
+            onChange={(e) => searchStocks(e.target.value)}
+            placeholder="Search for US stocks"
           />
+
           {searchTerm && (
-            <ul className="absolute left-0 right-0 border border-gray-300 rounded-lg mt-2 bg-white max-h-40 overflow-y-auto z-10 shadow-lg">
-              {filteredCompanies.map((company, index) => (
-                <li
-                  key={index}
-                  onClick={() => {
-                    setSelectedCompany(company.symbol);
-                    setSearchTerm("");
-                  }}
-                  className="cursor-pointer px-4 py-2 bg-neutral-900"
-                >
-                  {company.symbol} - {company.name}
-                </li>
-              ))}
-              {filteredCompanies.length === 0 && (
-                <li className="px-4 py-2 text-gray-500">No companies found</li>
+            <>
+              {isSearching ? (
+                <div className="space-y-2">
+                  {[1, 2, 3].map((i) => (
+                    <Skeleton key={i} className="h-10 w-full" />
+                  ))}
+                </div>
+              ) : (
+                <ul className="absolute left-0 right-0 border border-gray-300 rounded-lg mt-2 bg-white max-h-40 overflow-y-auto z-10 shadow-lg">
+                  {filteredStocks.map((company, index) => (
+                    <li
+                      key={index}
+                      onClick={() => {
+                        handleStockSelect(company);
+                      }}
+                      className="cursor-pointer px-4 py-2 bg-neutral-900"
+                    >
+                      {company.symbol} - {company.name}
+                    </li>
+                  ))}
+                  {filteredStocks.length === 0 && (
+                    <li className="px-4 py-2 text-gray-500">
+                      No companies found
+                    </li>
+                  )}
+                </ul>
               )}
-            </ul>
+            </>
           )}
         </div>
+        {isMarketClosed && (
+          <div className="bg-gray-100 p-4 rounded-lg text-sm text-gray-600">
+            <p>⚠️ US Markets are closed. You're placing an AMO.</p>
+            <p>Your order will execute once the market opens.</p>
+          </div>
+        )}
 
-        {/* <div className="bg-gray-100 p-4 rounded-lg text-sm text-gray-600">
-          <p>⚠️ Markets are closed. You're placing an AMO.</p>
-          <p>Your order will execute once the market opens.</p>
-        </div> */}
-        {selectedCompany && <h2 className="text-xl">{selectedCompany}</h2>}
+        {isFetchingStock ? (
+          <Skeleton key={14} className="h-40 w-full" />
+        ) : (
+          selectedCompany && (
+            <div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-900 mt-4">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                Selected Company
+              </h2>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="">Symbol:</span> {selectedCompany.symbol}
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="">Name:</span> {selectedCompany.name}
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="">Current Price:</span> ₹{selectedCompany.c}
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="">Percentage Change:</span>{" "}
+                {selectedCompany.dp.toFixed(2)}%
+              </p>
+            </div>
+          )
+        )}
 
         <div className="flex justify-between gap-4">
           <Button
@@ -237,10 +297,10 @@ export default function PlaceOrderPage() {
           </p>
           <Button
             onClick={handlePlaceOrder}
-            disabled={!selectedCompany || !orderType}
+            disabled={!selectedCompany || !orderType || !quantity}
             className="w-full md:w-auto"
           >
-            Place an AMO
+            Place Order
           </Button>
         </div>
       </div>

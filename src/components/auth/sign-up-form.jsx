@@ -19,9 +19,9 @@ export function SignUpForm({ onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
+
     console.log("Sign up:", { email, username, password });
-    // For now, we'll just close the form
+
     onClose();
   };
 

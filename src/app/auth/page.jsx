@@ -14,7 +14,14 @@ import {
 import { SignUpForm } from "@/components/auth/sign-up-form";
 import { SignInForm } from "@/components/auth/sign-in-form";
 import { AnonymousDialog } from "@/components/auth/anonymous-dialog";
-import { BarChart, TrendingUp, Eye, Newspaper } from "lucide-react";
+import {
+  BarChart,
+  TrendingUp,
+  Eye,
+  Newspaper,
+  CandlestickChart,
+  History,
+} from "lucide-react";
 
 export default function AuthPage() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -26,9 +33,8 @@ export default function AuthPage() {
     { icon: TrendingUp, text: "Buy and sell stocks" },
     { icon: Eye, text: "Customizable watchlists" },
     { icon: Newspaper, text: "Latest financial news" },
-    { icon: TrendingUp, text: "Buy and sell stocks" },
-    { icon: Eye, text: "Customizable watchlists" },
-    { icon: Newspaper, text: "Latest financial news" },
+    { icon: CandlestickChart, text: "Personalized Dashboard" },
+    { icon: History, text: "History tracker" },
   ];
 
   return (

@@ -1,10 +1,17 @@
 "use client";
-import { Plus, LogOut, CandlestickChart, History, Gauge } from "lucide-react";
+import {
+  Plus,
+  LogOut,
+  CandlestickChart,
+  History,
+  Gauge,
+  BarChart,
+  TrendingUp,
+  Newspaper,
+} from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const SIDEBAR_KEYBOARD_SHORTCUT = "b";
-
 import {
   Sidebar,
   SidebarContent,
@@ -19,12 +26,17 @@ import {
 } from "@/components/ui/sidebar";
 import { Separator } from "./ui/separator";
 
-// Menu items.
+// Menu items in user-centric order.
 const items = [
+  {
+    title: "Dashboard",
+    url: "/user/dashboard",
+    icon: Gauge,
+  },
   {
     title: "Buy/Sell",
     url: "/user/transaction",
-    icon: Plus,
+    icon: TrendingUp,
   },
   {
     title: "Positions",
@@ -32,19 +44,25 @@ const items = [
     icon: CandlestickChart,
   },
   {
+    title: "Watchlist",
+    url: "/user/watchlist",
+    icon: BarChart,
+  },
+  {
     title: "Performance",
     url: "/user/performance",
     icon: History,
   },
   {
-    title: "Dashboard",
-    url: "/user/dashboard",
-    icon: Gauge,
+    title: "News",
+    url: "/user/news",
+    icon: Newspaper,
   },
 ];
 
 export function AppSidebar() {
   const pathname = usePathname();
+
   return (
     <Sidebar variant="inset">
       <SidebarHeader>
@@ -80,10 +98,10 @@ export function AppSidebar() {
               <Separator orientation="horizontal" className="my-2" />
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <button>
+                  <Link href="/auth">
                     <LogOut />
                     <span>Logout</span>
-                  </button>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
