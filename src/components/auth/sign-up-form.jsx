@@ -11,18 +11,37 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { signUp, signIn } from "@/utils/api";
+import { useAuth } from "@/context/AuthContext";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export function SignUpForm({ onClose }) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
 
-    console.log("Sign up:", { email, username, password });
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      await signUp({ username, password, email });
+      toast.success("Sign Up successful Logging in...");
+      const userData = await signIn({ username, password });
 
-    onClose();
+      login(userData);
+      onClose();
+      console.log("Signed in successfully:", userData);
+      router.push("/user/dashboard");
+    } catch (error) {
+      toast.error(error.message || "Sign-in failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

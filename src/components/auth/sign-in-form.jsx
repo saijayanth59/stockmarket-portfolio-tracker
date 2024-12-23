@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,17 +11,34 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { signIn } from "@/utils/api";
+import { useAuth } from "@/context/AuthContext";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export function SignInForm({ onClose }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const router = useRouter();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log("Sign in:", { username, password });
-    // For now, we'll just close the form
-    onClose();
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      const userData = await signIn({ username, password });
+      toast.success("Sign in successful!");
+
+      login(userData);
+      onClose();
+      console.log("Signed in successfully:", userData);
+      router.push("/user/dashboard");
+    } catch (error) {
+      toast.error(error.message || "Sign-in failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

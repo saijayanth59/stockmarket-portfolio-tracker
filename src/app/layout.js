@@ -2,16 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { ThemeToggleButton } from "@/components/theme-toggle-button";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { AuthProvider } from "@/context/AuthContext";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Create Next App",
@@ -28,7 +20,8 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Toaster position="top-right" reverseOrder={false} />
+          <AuthProvider>{children}</AuthProvider>
           <ThemeToggleButton classes="fixed right-7 bottom-5" />
         </ThemeProvider>
       </body>

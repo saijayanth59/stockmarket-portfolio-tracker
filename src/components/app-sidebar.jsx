@@ -68,13 +68,13 @@ export function AppSidebar() {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className="h-12">
+            <SidebarMenuButton asChild className="h-12 mb-3">
               <Avatar>
                 <AvatarImage
                   src="https://github.com/shadcn.png"
                   className="w-8 h-8 mr-2"
                 />
-                <span>Admin</span>
+                <span className="text-xl">StockTracker</span>
               </Avatar>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -108,6 +108,21 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild className="h-12 mb-3">
+              <Avatar>
+                <AvatarImage
+                  src="https://github.com/shadcn.png"
+                  className="w-8 h-8 mr-2"
+                />
+                <span>Admin</span>
+              </Avatar>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
     </Sidebar>
   );
 }

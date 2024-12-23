@@ -16,6 +16,8 @@ import { format } from "date-fns";
 import { finnhubClient } from "@/utils/stockapi";
 import { Skeleton } from "./ui/skeleton";
 import { checkMarketStatus } from "@/utils/functions";
+import { createOrder } from "@/utils/api";
+import toast from "react-hot-toast";
 
 const today = new Date();
 const tomorrow = new Date(today);
@@ -74,19 +76,29 @@ export default function PlaceOrderPage() {
       stock.symbol.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const handlePlaceOrder = () => {
-    const data = {
-      ...selectedCompany,
-      orderType,
-      quantity,
-      entryPrice: entryPrice == "" ? selectedCompany.c : entryPrice,
-      timeFrame,
-      stopLoss,
-      target,
-    };
+  const handlePlaceOrder = async () => {
+    try {
+      const data = {
+        type: orderType.toLowerCase(),
+        quantity,
+        price: entryPrice == "" ? selectedCompany.c : entryPrice,
+        timeframe: timeFrame,
+        stoploss: stopLoss,
+        target,
+        change: selectedCompany.d,
+        percentageChange: selectedCompany.dp,
+        prevClose: selectedCompany.pc,
+        name: selectedCompany.name,
+        symbol: selectedCompany.symbol,
+      };
 
-    console.log("Order placed:", data);
-    // router.push("/user/positions");
+      await createOrder(data);
+      router.push("/user/positions");
+      toast.success("Order placed");
+    } catch (err) {
+      console.log(err.message);
+      toast.error(err.message);
+    }
   };
 
   return (
@@ -291,10 +303,7 @@ export default function PlaceOrderPage() {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-6">
-          <p className="text-sm text-gray-500">
-            Available Margin: ₹7,82,415.00
-          </p>
+        <div className="flex justify-end items-center mt-6">
           <Button
             onClick={handlePlaceOrder}
             disabled={!selectedCompany || !orderType || !quantity}

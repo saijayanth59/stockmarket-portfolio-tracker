@@ -19,7 +19,8 @@ import {
 import { EditOrderDialog } from "../components/edit-order-dialog";
 import { ConfirmationDialog } from "./confirmation-dialog";
 import { Skeleton } from "@/components/ui/skeleton";
-import { finnhubClient } from "@/utils/stockapi";
+import { getOrders } from "@/utils/api";
+import toast from "react-hot-toast";
 
 const totalPortfolio = 100000;
 
@@ -27,42 +28,42 @@ const companies = [
   {
     symbol: "BINANCE:BTCUSDT",
     quantity: 1,
-    purchasedPrice: 1000,
+    price: 1000,
     ltp: 1000,
-    orderType: "buy",
-    orderValidity: "day",
+    type: "buy",
+    timeframe: "day",
   },
   {
     symbol: "TSLA",
     quantity: 1,
-    purchasedPrice: 50,
+    price: 50,
     ltp: 1000,
-    orderType: "buy",
-    orderValidity: "day",
+    type: "buy",
+    timeframe: "day",
   },
   {
     symbol: "GOOGL",
     quantity: 1,
-    purchasedPrice: 50,
+    price: 50,
     ltp: 1000,
-    orderType: "buy",
-    orderValidity: "day",
+    type: "buy",
+    timeframe: "day",
   },
   {
     symbol: "INFY",
     quantity: -1,
-    purchasedPrice: 50,
+    price: 50,
     ltp: 70,
-    orderType: "sell",
-    orderValidity: "day",
+    type: "sell",
+    timeframe: "day",
   },
   {
     symbol: "AAPL",
     quantity: -1,
-    purchasedPrice: 50,
+    price: 50,
     ltp: 70,
-    orderType: "sell",
-    orderValidity: "day",
+    type: "sell",
+    timeframe: "day",
   },
 ];
 
@@ -77,21 +78,23 @@ export default function Positions() {
   const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false);
   const [stocks, setStocks] = useState([...companies]);
   const [isLoading, setIsLoading] = useState(true);
-
+  console.log(stocks);
   const investedMargin = Math.abs(
     stocks.reduce((acc, stock) => {
-      return acc + stock.purchasedPrice * stock.quantity;
+      return acc + stock.price * stock.quantity;
     }, 0)
   );
 
   const updatedStocks = stocks.map((stock) => {
-    const currentProfit = (stock.ltp - stock.purchasedPrice) * stock.quantity;
-    const currentProfitPercentage =
-      (currentProfit / stock.purchasedPrice) * 100;
+    const ltp = stock.ltp ? stock.ltp : stock.price;
+    const currentProfit = (ltp - stock.price) * stock.quantity;
+    const currentProfitPercentage = (currentProfit / stock.price) * 100;
+
     return {
       ...stock,
       currentProfit,
       currentProfitPercentage,
+      ltp,
     };
   });
 
@@ -106,22 +109,19 @@ export default function Positions() {
 
   useEffect(() => {
     setIsLoading(true);
-    function connectWebSocket() {
-      socket = new WebSocket(socketUrl);
 
+    function connectWebSocket(companies) {
+      socket = new WebSocket(socketUrl);
+      const symbolsToSubscribe = companies.map((company) => company.symbol);
       socket.addEventListener("open", function () {
-        socket.send(
-          JSON.stringify({ type: "subscribe", symbol: "BINANCE:BTCUSDT" })
-        );
-        socket.send(JSON.stringify({ type: "subscribe", symbol: "TSLA" }));
-        socket.send(JSON.stringify({ type: "subscribe", symbol: "GOOGL" }));
-        socket.send(JSON.stringify({ type: "subscribe", symbol: "INFY" }));
-        socket.send(JSON.stringify({ type: "subscribe", symbol: "AAPL" }));
+        symbolsToSubscribe.forEach((symbol) => {
+          socket.send(JSON.stringify({ type: "subscribe", symbol }));
+        });
       });
 
       socket.addEventListener("message", function (event) {
         const data = JSON.parse(event.data);
-
+        console.log(data);
         if (data.type === "trade") {
           const updatedPrice = data.data[0]?.p;
           const updatedSymbol = data.data[0]?.s;
@@ -139,23 +139,35 @@ export default function Positions() {
         }
       });
 
-      return () => {
-        if (socket) socket.close();
-      };
+      return () => {};
     }
 
-    connectWebSocket();
+    async function fetchOrders() {
+      try {
+        const res = await getOrders();
+        setStocks(res);
+        connectWebSocket(res);
+      } catch (err) {
+        toast.error(err.message);
+        console.log(err.message);
+      }
+    }
+    fetchOrders();
+
     const timer = setTimeout(() => setIsLoading(false), 2000); // Simulate loading for 2 seconds
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      if (socket) socket.close();
+    };
   }, []);
 
   const handleOpenEditOrderDialog = (company) => {
     setSelectedOrder({
       symbol: company.symbol,
-      type: company.orderType,
+      type: company.type,
       quantity: Math.abs(company.quantity),
-      price: company.purchasedPrice,
-      validity: company.orderValidity,
+      price: company.price,
+      validity: company.timeframe,
     });
     setEditOrderDialogOpen(true);
   };
@@ -262,7 +274,7 @@ export default function Positions() {
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span>price: ₹{company.purchasedPrice.toFixed(2)}</span>
+                    <span>price: ₹{company.price.toFixed(2)}</span>
                     <span>LTP: ₹{company.ltp.toFixed(2)}</span>
                   </div>
                 </CardContent>
@@ -341,8 +353,8 @@ export default function Positions() {
                           {Math.abs(company.currentProfit).toFixed(2)}%
                         </span>
                       </div>
-                      <div>Order Type: {company.orderType}</div>
-                      <div>Validity: {company.orderValidity}</div>
+                      <div>Order Type: {company.type}</div>
+                      <div>Validity: {company.timeframe}</div>
                     </div>
                   </CardContent>
                 )}

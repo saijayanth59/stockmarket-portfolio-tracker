@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -22,11 +22,20 @@ import {
   CandlestickChart,
   History,
 } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
 
 export default function AuthPage() {
   const [showSignUp, setShowSignUp] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
   const [showAnonymousDialog, setShowAnonymousDialog] = useState(false);
+  const { user } = useAuth();
+  const router = useRouter();
+  useEffect(() => {
+    if (user) {
+      router.push("/user/dashboard");
+    }
+  }, [user, router]);
 
   const features = [
     { icon: BarChart, text: "Real-time market data" },
