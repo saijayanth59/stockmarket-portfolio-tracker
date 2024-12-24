@@ -19,8 +19,9 @@ import {
 import { EditOrderDialog } from "../components/edit-order-dialog";
 import { ConfirmationDialog } from "./confirmation-dialog";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getOrders } from "@/utils/api";
+import { getOrders, updateOrder } from "@/utils/api";
 import toast from "react-hot-toast";
+import { finnhubClient } from "@/utils/stockapi";
 
 const totalPortfolio = 100000;
 
@@ -76,7 +77,7 @@ export default function Positions() {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [orderToExit, setOrderToExit] = useState(null);
   const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false);
-  const [stocks, setStocks] = useState([...companies]);
+  const [stocks, setStocks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   console.log(stocks);
   const investedMargin = Math.abs(
@@ -145,7 +146,23 @@ export default function Positions() {
     async function fetchOrders() {
       try {
         const res = await getOrders();
-        setStocks(res);
+        await res.forEach((stock) => {
+          finnhubClient.quote(stock.symbol, (error, data, response) => {
+            console.log("from", data);
+            setStocks((prev) => {
+              const idx = prev.findIndex(
+                (item) => item.symbol === stock.symbol
+              );
+              if (idx != -1) {
+                return prev;
+              }
+              return [...prev, { ...stock, ...{ ltp: data.c } }];
+            });
+            if (error) {
+              console.log(error);
+            }
+          });
+        });
         connectWebSocket(res);
       } catch (err) {
         toast.error(err.message);
@@ -163,6 +180,7 @@ export default function Positions() {
 
   const handleOpenEditOrderDialog = (company) => {
     setSelectedOrder({
+      id: company._id,
       symbol: company.symbol,
       type: company.type,
       quantity: Math.abs(company.quantity),
@@ -177,9 +195,24 @@ export default function Positions() {
     setConfirmationDialogOpen(true);
   };
 
-  const confirmExit = () => {
-    console.log("Exiting order:", orderToExit);
-    setConfirmationDialogOpen(false);
+  const confirmExit = async () => {
+    try {
+      const res = await updateOrder(orderToExit._id, {
+        exitPrice: orderToExit.ltp,
+        status: "exited",
+      });
+      console.log(res);
+      setStocks((prev) => {
+        const updatedStocks = prev.filter(
+          (stock) => stock.symbol !== res.symbol
+        );
+        return updatedStocks;
+      });
+      toast.success("Order Exited");
+      setConfirmationDialogOpen(false);
+    } catch (err) {
+      toast.error(err.message);
+    }
   };
 
   return (
@@ -207,7 +240,7 @@ export default function Positions() {
                       positionsPL >= 0 ? "text-green-500" : "text-red-500"
                     }`}
                   >
-                    {positionsPL >= 0 ? "+" : ""}₹{positionsPL.toFixed(2)}
+                    {positionsPL >= 0 ? "+" : ""}₹{positionsPL.toFixed(5)}
                   </p>
                   <p className="text-sm text-muted-foreground">Positions P&L</p>
                 </div>
@@ -252,7 +285,7 @@ export default function Positions() {
                       }`}
                     >
                       {company.currentProfit >= 0 ? "+" : ""}₹
-                      {company.currentProfit.toFixed(2)}
+                      {company.currentProfit.toFixed(5)}
                     </span>
                   </div>
                 </CardHeader>
@@ -355,6 +388,8 @@ export default function Positions() {
                       </div>
                       <div>Order Type: {company.type}</div>
                       <div>Validity: {company.timeframe}</div>
+                      <div>Target: {company.target}</div>
+                      <div>Stopless: {company.stoploss}</div>
                     </div>
                   </CardContent>
                 )}
@@ -369,6 +404,7 @@ export default function Positions() {
           isOpen={editOrderDialogOpen}
           onClose={() => setEditOrderDialogOpen(false)}
           order={selectedOrder}
+          setStocks={setStocks}
         />
       )}
 

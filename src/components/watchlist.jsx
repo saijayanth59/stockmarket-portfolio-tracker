@@ -23,6 +23,8 @@ import {
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { finnhubClient } from "@/utils/stockapi";
+import { getWatchlist, addToWatchlist } from "@/utils/api";
+import toast from "react-hot-toast";
 const socketUrl =
   "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
 
@@ -49,15 +51,14 @@ export default function Watchlist() {
   let socket = null;
 
   useEffect(() => {
-    function connectWebSocket() {
+    function connectWebSocket(companies) {
       socket = new WebSocket(socketUrl);
-
+      const symbolsToSubscribe = companies.map((company) => company.symbol);
       socket.addEventListener("open", function () {
-        socket.send(
-          JSON.stringify({ type: "subscribe", symbol: "BINANCE:BTCUSDT" })
-        );
+        symbolsToSubscribe.forEach((symbol) => {
+          socket.send(JSON.stringify({ type: "subscribe", symbol }));
+        });
       });
-
       socket.addEventListener("message", function (event) {
         const data = JSON.parse(event.data);
 
@@ -78,28 +79,57 @@ export default function Watchlist() {
         }
       });
 
-      return () => {
-        if (socket) socket.close();
-      };
+      return () => {};
     }
 
-    connectWebSocket();
+    async function fetchWatchlist() {
+      try {
+        const res = await getWatchlist();
+        await res.forEach((stock) => {
+          finnhubClient.quote(stock.symbol, (error, data, response) => {
+            console.log("from", data);
+            setWatchlist((prev) => {
+              const idx = prev.findIndex(
+                (item) => item.symbol === stock.symbol
+              );
+              if (idx != -1) {
+                return prev;
+              }
+              return [...prev, { ...stock, ...data }];
+            });
+            if (error) {
+              console.log(error);
+            }
+          });
+        });
+        connectWebSocket(res);
+      } catch (err) {
+        toast.error(err.message);
+        console.log(err.message);
+      }
+    }
+    fetchWatchlist();
   }, []);
 
-  const addToWatchlist = async (stock) => {
-    setIsAdding(true);
-    // Simulate API call
-    if (!watchlist.some((item) => item.symbol === stock.symbol)) {
-      finnhubClient.quote(stock.symbol, (error, data, response) => {
-        console.log("from", data);
-        setWatchlist((prev) => [...prev, { ...data, ...stock }]);
-        if (error) {
-          console.log(error);
-        }
-      });
+  const handleAddToWatchlist = async (stock) => {
+    try {
+      setIsAdding(true);
+      if (!watchlist.some((item) => item.symbol === stock.symbol)) {
+        finnhubClient.quote(stock.symbol, (error, data, response) => {
+          console.log("from", data);
+          // addToWatchlist({});
+          setWatchlist((prev) => [...prev, { ...data, ...stock }]);
+          if (error) {
+            console.log(error);
+          }
+        });
+      }
+      setSearchTerm("");
+      setIsAdding(false);
+    } catch (err) {
+      toast.error("adding stock to watchlist failed");
+      console.log(err.message);
     }
-    setSearchTerm("");
-    setIsAdding(false);
   };
 
   const removeFromWatchlist = async (id) => {
@@ -170,7 +200,7 @@ export default function Watchlist() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => addToWatchlist(stock)}
+                        onClick={() => handleAddToWatchlist(stock)}
                         disabled={isAdding}
                       >
                         {isAdding ? (

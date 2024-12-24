@@ -11,15 +11,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { updateOrder } from "@/utils/api";
+import toast from "react-hot-toast";
 
-export function EditOrderDialog({ isOpen, onClose, order }) {
+export function EditOrderDialog({ isOpen, onClose, order, setStocks }) {
   const [quantity, setQuantity] = useState(order.quantity.toString());
   const [orderValidity, setOrderValidity] = useState(order.validity);
   const [target, setTarget] = useState(""); // New field for target
@@ -32,17 +27,36 @@ export function EditOrderDialog({ isOpen, onClose, order }) {
     setStopLoss(""); // Reset stop loss field when order changes
   }, [order]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle order update logic here
-    console.log("Order updated:", {
-      symbol: order.symbol,
-      quantity,
-      orderValidity,
-      target,
-      stopLoss,
-    });
-    onClose();
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      console.log("Order updated:", {
+        quantity,
+        target,
+        stopLoss,
+      });
+      const res = await updateOrder(order.id, {
+        quantity: quantity ? quantity : order.quantity,
+        target: target ? target : order.target,
+        stoploss: stopLoss ? stopLoss : order.stoploss,
+      });
+      setStocks((prev) => {
+        const updatedStocks = prev.map((stock) => {
+          if (stock.symbol === res.symbol) {
+            return {
+              ...res,
+              ltp: stock.ltp,
+            };
+          }
+          return stock;
+        });
+        return updatedStocks;
+      });
+      toast.success("Order updated successfully");
+      onClose();
+    } catch (err) {
+      toast.error(err.message);
+    }
   };
 
   return (
@@ -61,24 +75,11 @@ export function EditOrderDialog({ isOpen, onClose, order }) {
                 id="quantity"
                 type="number"
                 value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
+                onChange={(e) => {
+                  setQuantity(e.target.value);
+                }}
                 className="col-span-3"
               />
-            </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="validity" className="text-right">
-                Validity
-              </Label>
-              <Select onValueChange={setOrderValidity} value={orderValidity}>
-                <SelectTrigger className="col-span-3">
-                  <SelectValue placeholder="Select validity" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="day">Day</SelectItem>
-                  <SelectItem value="ioc">Immediate or Cancel</SelectItem>
-                  <SelectItem value="gtc">Good Till Cancelled</SelectItem>
-                </SelectContent>
-              </Select>
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="target" className="text-right">

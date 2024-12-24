@@ -25,6 +25,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Separator } from "./ui/separator";
+import { useAuth } from "@/context/AuthContext";
 
 // Menu items in user-centric order.
 const items = [
@@ -62,6 +63,7 @@ const items = [
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const { logout } = useAuth();
 
   return (
     <Sidebar variant="inset">
@@ -97,11 +99,9 @@ export function AppSidebar() {
               ))}
               <Separator orientation="horizontal" className="my-2" />
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <Link href="/auth">
-                    <LogOut />
-                    <span>Logout</span>
-                  </Link>
+                <SidebarMenuButton>
+                  <LogOut />
+                  <span onClick={() => logout()}>Logout</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>

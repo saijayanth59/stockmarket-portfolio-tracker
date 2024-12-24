@@ -78,3 +78,72 @@ export const getOrders = async () => {
     throw new Error(error.response?.data?.message || "Failed to fetch orders");
   }
 };
+
+export async function updateOrder(orderId, updatedData) {
+  try {
+    const token = localStorage.getItem("token");
+    const response = await axios.put(
+      `${process.env.NEXT_PUBLIC_API_URL}/order/${orderId}/`,
+      updatedData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    console.log("Order updated successfully:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error(
+      "Error updating order:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+}
+
+export const getWatchlist = async () => {
+  try {
+    const token = localStorage.getItem("token");
+
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/watchlist/user/`;
+
+    const response = await axios.get(apiUrl, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching watchlist:", error.message);
+    throw new Error(
+      error.response?.data?.message || "Failed to fetch watchlist"
+    );
+  }
+};
+
+export const addToWatchlist = async (data) => {
+  try {
+    const token = localStorage.getItem("token");
+
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/watchlist/`;
+
+    const response = await axios.post(apiUrl, data, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Error add to watchlist:", error.message);
+    throw new Error(
+      error.response?.data?.message || "adding to watchlist failed"
+    );
+  }
+};
