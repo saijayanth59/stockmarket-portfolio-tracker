@@ -22,51 +22,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getOrders, updateOrder } from "@/utils/api";
 import toast from "react-hot-toast";
 import { finnhubClient } from "@/utils/stockapi";
-
-const totalPortfolio = 100000;
-
-const companies = [
-  {
-    symbol: "BINANCE:BTCUSDT",
-    quantity: 1,
-    price: 1000,
-    ltp: 1000,
-    type: "buy",
-    timeframe: "day",
-  },
-  {
-    symbol: "TSLA",
-    quantity: 1,
-    price: 50,
-    ltp: 1000,
-    type: "buy",
-    timeframe: "day",
-  },
-  {
-    symbol: "GOOGL",
-    quantity: 1,
-    price: 50,
-    ltp: 1000,
-    type: "buy",
-    timeframe: "day",
-  },
-  {
-    symbol: "INFY",
-    quantity: -1,
-    price: 50,
-    ltp: 70,
-    type: "sell",
-    timeframe: "day",
-  },
-  {
-    symbol: "AAPL",
-    quantity: -1,
-    price: 50,
-    ltp: 70,
-    type: "sell",
-    timeframe: "day",
-  },
-];
+import { useAuth } from "@/context/AuthContext";
 
 const socketUrl =
   "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
@@ -79,6 +35,7 @@ export default function Positions() {
   const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false);
   const [stocks, setStocks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { user } = useAuth();
   console.log(stocks);
   const investedMargin = Math.abs(
     stocks.reduce((acc, stock) => {
@@ -103,14 +60,12 @@ export default function Positions() {
     return acc + stock.currentProfit;
   }, 0);
 
-  const currentProtofolio = totalPortfolio + positionsPL;
-  const availableMargin = totalPortfolio - investedMargin;
+  const currentProtofolio = user.portfolioValue + positionsPL;
+  const availableMargin = user.portfolioValue - investedMargin;
 
   let socket = null;
 
   useEffect(() => {
-    setIsLoading(true);
-
     function connectWebSocket(companies) {
       socket = new WebSocket(socketUrl);
       const symbolsToSubscribe = companies.map((company) => company.symbol);
@@ -145,6 +100,7 @@ export default function Positions() {
 
     async function fetchOrders() {
       try {
+        setIsLoading(true);
         const res = await getOrders();
         await res.forEach((stock) => {
           finnhubClient.quote(stock.symbol, (error, data, response) => {
@@ -164,6 +120,7 @@ export default function Positions() {
           });
         });
         connectWebSocket(res);
+        setIsLoading(false);
       } catch (err) {
         toast.error(err.message);
         console.log(err.message);
@@ -171,9 +128,7 @@ export default function Positions() {
     }
     fetchOrders();
 
-    const timer = setTimeout(() => setIsLoading(false), 2000); // Simulate loading for 2 seconds
     return () => {
-      clearTimeout(timer);
       if (socket) socket.close();
     };
   }, []);
@@ -370,7 +325,7 @@ export default function Positions() {
                         </span>
                       </div>
                       <div>
-                        Day Change %:{" "}
+                        Profit Percent Change %:{" "}
                         <span
                           className={
                             company.currentProfit >= 0
@@ -383,7 +338,8 @@ export default function Positions() {
                           ) : (
                             <ArrowDownIcon className="inline w-4 h-4" />
                           )}
-                          {Math.abs(company.currentProfit).toFixed(2)}%
+                          {Math.abs(company.currentProfitPercentage).toFixed(2)}
+                          %
                         </span>
                       </div>
                       <div>Order Type: {company.type}</div>

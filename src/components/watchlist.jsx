@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { finnhubClient } from "@/utils/stockapi";
-import { getWatchlist, addToWatchlist } from "@/utils/api";
+import { getWatchlist, addToWatchlist, removeFromWatchlist } from "@/utils/api";
 import toast from "react-hot-toast";
 const socketUrl =
   "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
@@ -58,6 +58,9 @@ export default function Watchlist() {
         symbolsToSubscribe.forEach((symbol) => {
           socket.send(JSON.stringify({ type: "subscribe", symbol }));
         });
+        socket.send(
+          JSON.stringify({ type: "subscribe", symbol: "BINANCE:BTCUSDT" })
+        );
       });
       socket.addEventListener("message", function (event) {
         const data = JSON.parse(event.data);
@@ -117,14 +120,25 @@ export default function Watchlist() {
       if (!watchlist.some((item) => item.symbol === stock.symbol)) {
         finnhubClient.quote(stock.symbol, (error, data, response) => {
           console.log("from", data);
-          // addToWatchlist({});
+          addToWatchlist({
+            ...stock,
+            currentPrice: data.c,
+            priceChange: data.d,
+            percentChange: data.dp,
+            open: data.o,
+            high: data.h,
+            low: data.l,
+            previousClosePrice: data.pc,
+          });
           setWatchlist((prev) => [...prev, { ...data, ...stock }]);
+          toast.success("Stock added to watchlist");
           if (error) {
             console.log(error);
           }
         });
       }
       setSearchTerm("");
+
       setIsAdding(false);
     } catch (err) {
       toast.error("adding stock to watchlist failed");
@@ -132,10 +146,10 @@ export default function Watchlist() {
     }
   };
 
-  const removeFromWatchlist = async (id) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    setWatchlist(watchlist.filter((stock) => stock.id !== id));
+  const handleRemoveFromWatchlist = async (id) => {
+    await removeFromWatchlist(id);
+    toast.success("Stock removed from watchlist");
+    setWatchlist(watchlist.filter((stock) => stock.symbol !== id));
   };
 
   const searchStocks = async (term) => {
@@ -240,7 +254,7 @@ export default function Watchlist() {
                   </TableRow>
                 ))
               : watchlist.map((stock) => (
-                  <TableRow key={stock.id}>
+                  <TableRow key={stock._id}>
                     <TableCell className="font-medium">
                       {stock.symbol}
                     </TableCell>
@@ -276,7 +290,7 @@ export default function Watchlist() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => removeFromWatchlist(stock.id)}
+                        onClick={() => handleRemoveFromWatchlist(stock.symbol)}
                       >
                         <X className="h-4 w-4" />
                       </Button>

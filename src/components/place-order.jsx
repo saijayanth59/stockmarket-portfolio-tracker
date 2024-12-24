@@ -80,7 +80,7 @@ export default function PlaceOrderPage() {
     try {
       const data = {
         type: orderType.toLowerCase(),
-        quantity,
+        quantity: orderType == "Buy" ? quantity : -quantity,
         price: entryPrice == "" ? selectedCompany.c : entryPrice,
         timeframe: timeFrame,
         stoploss: stopLoss,

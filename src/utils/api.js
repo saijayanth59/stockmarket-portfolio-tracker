@@ -79,6 +79,26 @@ export const getOrders = async () => {
   }
 };
 
+export const getAllOrders = async () => {
+  try {
+    const token = localStorage.getItem("token");
+
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/order/user/`;
+
+    const response = await axios.get(apiUrl, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching orders:", error.message);
+    throw new Error(error.response?.data?.message || "Failed to fetch orders");
+  }
+};
+
 export async function updateOrder(orderId, updatedData) {
   try {
     const token = localStorage.getItem("token");
@@ -144,6 +164,28 @@ export const addToWatchlist = async (data) => {
     console.error("Error add to watchlist:", error.message);
     throw new Error(
       error.response?.data?.message || "adding to watchlist failed"
+    );
+  }
+};
+
+export const removeFromWatchlist = async (id) => {
+  try {
+    const token = localStorage.getItem("token");
+
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/watchlist/${id}/`;
+
+    const response = await axios.delete(apiUrl, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Error removing from watchlist:", error.message);
+    throw new Error(
+      error.response?.data?.message || "removing from watchlist failed"
     );
   }
 };

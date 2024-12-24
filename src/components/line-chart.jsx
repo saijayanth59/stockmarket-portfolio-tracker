@@ -23,6 +23,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { fetchMonthlyAdjustedData } from "@/utils/stockapi";
 
 const chartData = [
   {
@@ -272,6 +273,8 @@ const TopIndexes = () => {
   const [stocks, setStocks] = useState([...companies]);
 
   let socket = null;
+
+  console.log(fetchMonthlyAdjustedData("AAPL"));
 
   useEffect(() => {
     function connectWebSocket() {

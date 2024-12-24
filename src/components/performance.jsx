@@ -12,73 +12,46 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import { getAllOrders } from "@/utils/api";
 
 export default function PerformanceSummary() {
   const [isLoading, setIsLoading] = useState(true);
-  const [pastPL, setPastPL] = useState(68015.0);
-  const [positionsPL, setPositionsPL] = useState(1550.0);
-  const [totalPL, setTotalPL] = useState(69565.0);
-  const [totalPLPercent, setTotalPLPercent] = useState(6.96);
+  const [trades, setTrades] = useState([]);
 
-  const trades = [
-    {
-      name: "NTPC",
-      qty: 100,
-      type: "S",
-      status: "Target Achieved",
-      pl: 1005.0,
-      plPercent: 2.36,
-    },
-    {
-      name: "NIFTY 11JUL24 24000 CE",
-      qty: 2500,
-      type: "B",
-      status: "Exited",
-      pl: 71750.0,
-      plPercent: 7.36,
-    },
-    {
-      name: "SBILIFE",
-      qty: 100,
-      type: "S",
-      status: "Validity Over",
-      pl: -410.0,
-      plPercent: -0.28,
-    },
-    {
-      name: "BHARTIARTL",
-      qty: 100,
-      type: "S",
-      status: "Stoploss Hit",
-      pl: -2895.0,
-      plPercent: -2.03,
-    },
-    {
-      name: "TECHM",
-      qty: 100,
-      type: "S",
-      status: "Stoploss Hit",
-      pl: -1435.0,
-      plPercent: -2.03,
-    },
-  ];
+  const pastPL = trades.reduce((acc, trade) => {
+    return trade.status !== "active"
+      ? acc + (trade.price - trade.exitPrice) * trade.quantity
+      : acc;
+  }, 0);
+
+  const positionsPL = trades.reduce((acc, trade) => {
+    return trade.status === "active"
+      ? acc + (trade.price - trade.prevClose) * trade.quantity
+      : acc;
+  }, 0);
+
+  console.log(positionsPL, pastPL);
 
   useEffect(() => {
-    // Simulate data loading
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+    const fetchOrders = async () => {
+      try {
+        const res = await getAllOrders();
+        setTrades(res);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchOrders();
+    setIsLoading(false);
   }, []);
 
   function getBadgeVariant(status) {
     switch (status) {
-      case "Target Achieved":
+      case "target achieved":
         return "default";
-      case "Exited":
+      case "exited":
         return "secondary";
-      case "Stoploss Hit":
+      case "stoploss hit":
         return "destructive";
       default:
         return "outline";
@@ -106,14 +79,7 @@ export default function PerformanceSummary() {
             </CardHeader>
             <CardContent>
               <p className="text-2xl font-bold">
-                ₹{totalPL.toFixed(2)}
-                <span
-                  className={`text-sm ml-1 ${
-                    totalPLPercent >= 0 ? "text-green-500" : "text-red-500"
-                  }`}
-                >
-                  ({totalPLPercent.toFixed(2)}%)
-                </span>
+                ${(pastPL + positionsPL).toFixed(3)}
               </p>
             </CardContent>
           </Card>
@@ -124,7 +90,7 @@ export default function PerformanceSummary() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">₹{pastPL.toFixed(2)}</p>
+              <p className="text-2xl font-bold">${pastPL.toFixed(2)}</p>
             </CardContent>
           </Card>
           <Card>
@@ -134,7 +100,7 @@ export default function PerformanceSummary() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-2xl font-bold">₹{positionsPL.toFixed(2)}</p>
+              <p className="text-2xl font-bold">${positionsPL.toFixed(2)}</p>
             </CardContent>
           </Card>
         </div>
@@ -153,8 +119,8 @@ export default function PerformanceSummary() {
             {trades.map((trade, index) => (
               <TableRow key={index}>
                 <TableCell className="font-medium">{trade.name}</TableCell>
-                <TableCell>{trade.qty}</TableCell>
-                <TableCell>{trade.type}</TableCell>
+                <TableCell>{trade.quantity}</TableCell>
+                <TableCell>{trade.type[0].toUpperCase()}</TableCell>
                 <TableCell>
                   <Badge variant={getBadgeVariant(trade.status)}>
                     {trade.status}
@@ -163,10 +129,24 @@ export default function PerformanceSummary() {
                 <TableCell className="text-right">
                   <span
                     className={
-                      trade.pl >= 0 ? "text-green-500" : "text-red-500"
+                      (trade.price -
+                        (trade.status == "active"
+                          ? trade.prevClose
+                          : trade.exitPrice)) *
+                        trade.quantity >=
+                      0
+                        ? "text-green-500"
+                        : "text-red-500"
                     }
                   >
-                    ₹{trade.pl.toFixed(2)} ({trade.plPercent.toFixed(2)}%)
+                    $
+                    {(
+                      (trade.price -
+                        (trade.status == "active"
+                          ? trade.prevClose
+                          : trade.exitPrice)) *
+                      trade.quantity
+                    ).toFixed(2)}
                   </span>
                 </TableCell>
               </TableRow>
