@@ -189,3 +189,15 @@ export const removeFromWatchlist = async (id) => {
     );
   }
 };
+
+export const getHistory = async (symbol) => {
+  try {
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_HISTORY_API_KEY}/?q=${symbol}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching history:", error.message);
+    throw new Error(error.response?.data?.message || "Failed to fetch history");
+  }
+};

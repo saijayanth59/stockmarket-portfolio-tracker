@@ -13,35 +13,25 @@ import { useState } from "react";
 import { Skeleton } from "../ui/skeleton";
 
 // Extended dummy data
-const stockDataArray = [
-  { date: "1999-12-31", price: 102.81 },
-  { date: "2000-01-03", price: 115.5 },
-  { date: "2000-01-10", price: 120.5 },
-  { date: "2000-01-17", price: 124.0 },
-  { date: "2000-01-24", price: 128.75 },
-  { date: "2000-01-31", price: 134.25 },
-  { date: "2000-02-07", price: 138.5 },
-  { date: "2000-02-14", price: 144.0 },
-  { date: "2000-02-21", price: 148.25 },
-  { date: "2000-02-28", price: 153.75 },
-];
 
-export default function StockPriceAreaChart({ symbol, data }) {
+export default function StockPriceAreaChart({ symbol, data, idx }) {
   if (data.length == 0) {
     return <Skeleton className="w-full h-[200px]" />;
   }
-  console.log(data);
-  const minPrice = Math.min(...stockDataArray.map((data) => data.price));
-  const maxPrice = Math.max(...stockDataArray.map((data) => data.price));
-  const yAxisDomain = [minPrice * 0.95, maxPrice * 1.05]; // Add 5% padding to top and bottom
-  console.log(symbol);
+  const stockDataArray = data.map((item) => ({
+    date: item.Date,
+    price: item.High,
+  }));
+  const minPrice = Math.min(...stockDataArray.map((data) => data.Low));
+  const maxPrice = Math.max(...stockDataArray.map((data) => data.High));
+  const yAxisDomain = [minPrice * 0.95, maxPrice * 1.05];
 
   return (
     <ChartContainer
       config={{
         price: {
           label: "Price",
-          color: "hsl(var(--chart-1))",
+          color: `hsl(var(--chart-${idx + 1}))`,
         },
       }}
       className="aspect-auto h-[250px] w-full"
@@ -55,12 +45,12 @@ export default function StockPriceAreaChart({ symbol, data }) {
             <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
               <stop
                 offset="5%"
-                stopColor="hsl(var(--chart-1))"
+                stopColor={`hsl(var(--chart-${idx + 1}))`}
                 stopOpacity={0.8}
               />
               <stop
                 offset="95%"
-                stopColor="hsl(var(--chart-1))"
+                stopColor={`hsl(var(--chart-${idx + 1}))`}
                 stopOpacity={0}
               />
             </linearGradient>
@@ -112,7 +102,7 @@ export default function StockPriceAreaChart({ symbol, data }) {
           <Area
             type="monotone"
             dataKey="price"
-            stroke="hsl(var(--chart-1))"
+            stroke={`hsl(var(--chart-${idx + 1}))`}
             fillOpacity={1}
             fill="url(#colorPrice)"
           />

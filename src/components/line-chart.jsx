@@ -9,39 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { fetchMonthlyAdjustedData, finnhubClient } from "@/utils/stockapi";
+import { finnhubClient } from "@/utils/stockapi";
 import StockPriceAreaChart from "./dashboard/stock-area-chart";
 import { Skeleton } from "./ui/skeleton";
-
-const chartConfig = {
-  views: {
-    label: "Price",
-  },
-  sp500: {
-    label: "sp500",
-    color: "hsl(var(--chart-1))",
-  },
-  nasdaq: {
-    label: "Nasdaq",
-    color: "hsl(var(--chart-2))",
-  },
-  dowjones: {
-    label: "Dow Jones",
-    color: "hsl(var(--chart-3))",
-  },
-  russell2000: {
-    label: "Russell 2000",
-    color: "hsl(var(--chart-4))",
-  },
-  ftse100: {
-    label: "FTSE 100",
-    color: "hsl(var(--chart-5))",
-  },
-  nikkei225: {
-    label: "Nikkei 225",
-    color: "hsl(var(--chart-6))",
-  },
-};
+import { getHistory } from "@/utils/api";
 
 const socketUrl =
   "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
@@ -71,6 +42,7 @@ const TopIndexes = () => {
   const [history, setHistory] = useState(INITIAL);
   const [isLoading, setIsLoading] = useState(false);
   let socket = null;
+  // console.log(getHistory("AAPL"));
   useEffect(() => {
     function connectWebSocket() {
       socket = new WebSocket(socketUrl);
@@ -136,12 +108,11 @@ const TopIndexes = () => {
     async function fetchHistory() {
       try {
         for (const symbol of top) {
-          const data = await fetchMonthlyAdjustedData(symbol);
-          console.log("Loading", data);
+          const res = await getHistory(symbol);
           setHistory((prev) => ({
             ...prev,
-            symbol: {
-              history: data["Monthly Adjusted Time Series"],
+            [symbol]: {
+              history: res,
             },
           }));
         }
@@ -151,7 +122,7 @@ const TopIndexes = () => {
     }
 
     fetchData();
-    // fetchHistory();
+    fetchHistory();
 
     return () => {
       if (socket) socket.close();
@@ -160,6 +131,7 @@ const TopIndexes = () => {
   if (data.length == 0) {
     return <Skeleton className="w-full h-[300px]" />;
   }
+  console.log("main", history);
   return (
     <Card>
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
@@ -189,6 +161,7 @@ const TopIndexes = () => {
         <StockPriceAreaChart
           symbol={activeChart}
           data={history[activeChart].history}
+          idx={top.indexOf(activeChart)}
         />
       </CardContent>
     </Card>
