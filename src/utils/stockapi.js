@@ -13,7 +13,7 @@ export async function getQuote(q) {
 }
 
 export async function fetchMonthlyAdjustedData(symbol) {
-  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=${symbol}&apikey=GXDHFBZRRKL09S2R`;
+  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=${symbol}&apikey=QCPZ9SKV1F1EO4FL`;
 
   try {
     const response = await axios.get(url, {
@@ -21,7 +21,7 @@ export async function fetchMonthlyAdjustedData(symbol) {
         "User-Agent": "axios",
       },
     });
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   } catch (error) {
     throw error;
