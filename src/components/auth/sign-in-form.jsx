@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,6 +15,7 @@ import { signIn } from "@/utils/api";
 import { useAuth } from "@/context/AuthContext";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import SubmitButton from "@/components/submit-button";
 
 export function SignInForm({ onClose }) {
   const [username, setUsername] = useState("");
@@ -75,7 +76,12 @@ export function SignInForm({ onClose }) {
             <Button type="button" variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit">Sign In</Button>
+            <SubmitButton
+              text="Sign In"
+              disabled={loading}
+              onClick={handleSubmit}
+              isLoading={loading}
+            />
           </CardFooter>
         </form>
       </div>

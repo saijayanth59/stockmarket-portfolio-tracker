@@ -8,8 +8,15 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import SubmitButton from "./submit-button";
 
-export function ConfirmationDialog({ isOpen, onClose, onConfirm, message }) {
+export function ConfirmationDialog({
+  isOpen,
+  onClose,
+  onConfirm,
+  message,
+  submitting,
+}) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
@@ -23,9 +30,13 @@ export function ConfirmationDialog({ isOpen, onClose, onConfirm, message }) {
           <Button variant="outline" onClick={onClose}>
             Cancel
           </Button>
-          <Button variant="destructive" onClick={onConfirm}>
-            Confirm
-          </Button>
+          <SubmitButton
+            variant="destructive"
+            text="Confirm"
+            disabled={submitting}
+            onClick={onConfirm}
+            isLoading={submitting}
+          />
         </DialogFooter>
       </DialogContent>
     </Dialog>

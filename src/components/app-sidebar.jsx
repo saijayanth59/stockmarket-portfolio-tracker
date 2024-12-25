@@ -63,7 +63,7 @@ const items = [
 
 export function AppSidebar() {
   const pathname = usePathname();
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
 
   return (
     <Sidebar variant="inset">
@@ -99,9 +99,9 @@ export function AppSidebar() {
               ))}
               <Separator orientation="horizontal" className="my-2" />
               <SidebarMenuItem>
-                <SidebarMenuButton>
+                <SidebarMenuButton onClick={() => logout()}>
                   <LogOut />
-                  <span onClick={() => logout()}>Logout</span>
+                  <span>Logout</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>

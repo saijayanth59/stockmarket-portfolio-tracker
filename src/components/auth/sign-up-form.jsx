@@ -15,6 +15,7 @@ import { signUp, signIn } from "@/utils/api";
 import { useAuth } from "@/context/AuthContext";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import SubmitButton from "../submit-button";
 
 export function SignUpForm({ onClose }) {
   const [email, setEmail] = useState("");
@@ -89,7 +90,12 @@ export function SignUpForm({ onClose }) {
             <Button type="button" variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit">Sign Up</Button>
+            <SubmitButton
+              text="Sign Up"
+              disabled={loading}
+              onClick={handleSubmit}
+              isLoading={loading}
+            />
           </CardFooter>
         </form>
       </div>

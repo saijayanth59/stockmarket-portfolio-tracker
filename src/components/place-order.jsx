@@ -18,6 +18,7 @@ import { Skeleton } from "./ui/skeleton";
 import { checkMarketStatus } from "@/utils/functions";
 import { createOrder } from "@/utils/api";
 import toast from "react-hot-toast";
+import SubmitButton from "./submit-button";
 
 const today = new Date();
 const tomorrow = new Date(today);
@@ -45,6 +46,7 @@ export default function PlaceOrderPage() {
   const [isFetchingStock, setIsFetchingStock] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [isMarketClosed, setIsMarketClosed] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     setIsMarketClosed(checkMarketStatus());
@@ -78,6 +80,7 @@ export default function PlaceOrderPage() {
 
   const handlePlaceOrder = async () => {
     try {
+      setSubmitting(true);
       const data = {
         type: orderType.toLowerCase(),
         quantity: orderType == "Buy" ? quantity : -quantity,
@@ -98,6 +101,8 @@ export default function PlaceOrderPage() {
     } catch (err) {
       console.log(err.message);
       toast.error(err.message);
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -304,13 +309,12 @@ export default function PlaceOrderPage() {
         </div>
 
         <div className="flex justify-end items-center mt-6">
-          <Button
+          <SubmitButton
+            text="Place Order"
+            disabled={!selectedCompany || !orderType || !quantity || submitting}
             onClick={handlePlaceOrder}
-            disabled={!selectedCompany || !orderType || !quantity}
-            className="w-full md:w-auto"
-          >
-            Place Order
-          </Button>
+            isLoading={submitting}
+          />
         </div>
       </div>
     </div>

@@ -34,7 +34,8 @@ export default function Positions() {
   const [orderToExit, setOrderToExit] = useState(null);
   const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false);
   const [stocks, setStocks] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [exiting, setExiting] = useState(false);
   const { user } = useAuth();
   console.log(stocks);
   const investedMargin = Math.abs(
@@ -120,10 +121,11 @@ export default function Positions() {
           });
         });
         connectWebSocket(res);
-        setIsLoading(false);
       } catch (err) {
         toast.error(err.message);
         console.log(err.message);
+      } finally {
+        setIsLoading(false);
       }
     }
     fetchOrders();
@@ -152,6 +154,7 @@ export default function Positions() {
 
   const confirmExit = async () => {
     try {
+      setExiting(true);
       const res = await updateOrder(orderToExit._id, {
         exitPrice: orderToExit.ltp,
         status: "exited",
@@ -167,6 +170,8 @@ export default function Positions() {
       setConfirmationDialogOpen(false);
     } catch (err) {
       toast.error(err.message);
+    } finally {
+      setExiting(false);
     }
   };
 
@@ -371,6 +376,7 @@ export default function Positions() {
           onConfirm={confirmExit}
           title="Confirm Exit"
           message={`Are you sure you want to exit the position for ${orderToExit.symbol}?`}
+          submitting={exiting}
         />
       )}
     </div>

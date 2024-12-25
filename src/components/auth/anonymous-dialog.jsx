@@ -10,12 +10,36 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { AlertTriangle } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
+import { useState } from "react";
+import SubmitButton from "../submit-button";
+import toast from "react-hot-toast";
+import { signIn } from "@/utils/api";
+import { useRouter } from "next/navigation";
 
 export function AnonymousDialog({ open, onClose }) {
-  const handleContinue = () => {
-    // Here you would typically handle the demo mode
-    console.log("Continuing with demo mode");
-    onClose();
+  const { login } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  const handleSubmit = async () => {
+    try {
+      setLoading(true);
+      const userData = await signIn({
+        username: "anonymous",
+        password: "password",
+      });
+      toast.success("Sign in successful!");
+
+      login(userData);
+      onClose();
+      console.log("Signed in successfully:", userData);
+      router.push("/user/dashboard");
+    } catch (error) {
+      toast.error(error.message || "Sign-in failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -48,9 +72,12 @@ export function AnonymousDialog({ open, onClose }) {
           <Button type="button" variant="secondary" onClick={onClose}>
             Go Back
           </Button>
-          <Button type="button" onClick={handleContinue}>
-            Continue to Demo
-          </Button>
+          <SubmitButton
+            text="Continue in Demo Mode"
+            disabled={loading}
+            onClick={handleSubmit}
+            isLoading={loading}
+          />
         </DialogFooter>
       </DialogContent>
     </Dialog>

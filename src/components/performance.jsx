@@ -15,34 +15,23 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getAllOrders } from "@/utils/api";
 
 export default function PerformanceSummary() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [trades, setTrades] = useState([]);
-
-  const pastPL = trades.reduce((acc, trade) => {
-    return trade.status !== "active"
-      ? acc + (trade.price - trade.exitPrice) * trade.quantity
-      : acc;
-  }, 0);
-
-  const positionsPL = trades.reduce((acc, trade) => {
-    return trade.status === "active"
-      ? acc + (trade.price - trade.prevClose) * trade.quantity
-      : acc;
-  }, 0);
-
-  console.log(positionsPL, pastPL);
+  const [isLoading, setIsLoading] = useState(false);
+  const [trades, setTrades] = useState(null);
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
+        setIsLoading(true);
         const res = await getAllOrders();
         setTrades(res);
       } catch (err) {
         console.log(err);
+      } finally {
+        setIsLoading(false);
       }
     };
+
     fetchOrders();
-    setIsLoading(false);
   }, []);
 
   function getBadgeVariant(status) {
@@ -58,9 +47,23 @@ export default function PerformanceSummary() {
     }
   }
 
-  if (isLoading) {
+  if (trades === null || isLoading) {
     return <LoadingSkeleton />;
   }
+
+  const pastPL = trades.reduce((acc, trade) => {
+    return trade.status !== "active"
+      ? acc + (trade.price - trade.exitPrice) * trade.quantity
+      : acc;
+  }, 0);
+
+  const positionsPL = trades.reduce((acc, trade) => {
+    return trade.status === "active"
+      ? acc + (trade.price - trade.prevClose) * trade.quantity
+      : acc;
+  }, 0);
+
+  console.log(positionsPL, pastPL);
 
   return (
     <Card className="w-full max-w-4xl mx-auto">
@@ -117,7 +120,7 @@ export default function PerformanceSummary() {
           </TableHeader>
           <TableBody>
             {trades.map((trade, index) => (
-              <TableRow key={index}>
+              <TableRow key={trade._id}>
                 <TableCell className="font-medium">{trade.name}</TableCell>
                 <TableCell>{trade.quantity}</TableCell>
                 <TableCell>{trade.type[0].toUpperCase()}</TableCell>

@@ -38,6 +38,7 @@ const INITIAL_DATA = [
     l: 0,
     o: 0,
     pc: 0,
+    name: "Bitcoin",
   },
 ];
 

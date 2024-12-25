@@ -274,7 +274,7 @@ const TopIndexes = () => {
 
   let socket = null;
 
-  console.log(fetchMonthlyAdjustedData("AAPL"));
+  // console.log(fetchMonthlyAdjustedData("AAPL"));
 
   useEffect(() => {
     function connectWebSocket() {
