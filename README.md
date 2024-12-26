@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple Portfolio Tracker Application
 
-## Getting Started
+The objective is to build a **Simple Portfolio Tracker Application** that enables users to:
 
-First, run the development server:
+1. Add, view, edit, and delete stock holdings.
+2. Track the total portfolio value based on real-time stock prices.
+3. View a dashboard displaying key portfolio metrics such as:
+   - Total value
+   - Top-performing stock
+   - Portfolio distribution
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The solution integrates **real-time stock data**, **RESTful API design**, and features a responsive UI/UX. It also supports secure deployment for accessibility.
+
+---
+
+## Features and Additional Functionalities
+
+### Core Features Implemented:
+
+1. **Portfolio Management:**
+   - Add, edit, and delete stock holdings.
+   - Track portfolio value dynamically based on real-time stock prices.
+2. **Dashboard:**
+   - Displays top-performing stocks.
+   - Provides portfolio distribution.
+   - Highlights key metrics such as gainers and losers.
+3. **Real-time Updates:**
+   - Integrated real-time stock data using **WebSocket APIs from Finnhub**.
+   - Portfolio values update dynamically.
+4. **Multi-user Login:**
+   - Each user has a personalized portfolio.
+   - Secure authentication and session management.
+
+### Additional Features:
+
+1. **Watchlist:**
+   - Users can create and manage a watchlist for stocks.
+   - Real-time updates for the watchlist with CRUD operations.
+2. **Stock Market News:**
+   - Integration of the latest stock market news.
+   - Helps users stay updated with trends and events.
+3. **Graphs and Visualizations:**
+   - Responsive graphs using **Recharts** to visualize historical data and portfolio trends.
+   - Dashboard includes historical stock performance graphs.
+4. **Microservices Architecture:**
+   - **Main backend (Backend1):** Node.js with Express and MongoDB using MVC architecture.
+   - **Auxiliary backend (Backend2):** FastAPI for fetching historical stock data via the yfinance library.
+
+---
+
+## Technology Stack
+
+### Frontend:
+
+- **Framework:** Next.js
+- **Styling:** Tailwind CSS, ShadCN UI
+- **Visualizations:** Recharts
+
+### Backend:
+
+- **Backend1 (Main Framework):** Node.js with Express
+- **Database:** MongoDB
+- **Architecture:** MVC (Model-View-Controller)
+- **Backend2 (Microservice):** FastAPI for fetching historical stock data via the yfinance library
+
+### Real-time Data Integration:
+
+- **API:** Finnhub API (WebSocket.io for real-time updates)
+- **Historical Data:** yfinance library via FastAPI backend
+
+---
+
+## Setup and Installation
+
+### Sample Credentials
+
+- **Username:** `demo_user`
+- **Password:** `demo_password`
+
+### Steps to Try the Application:
+
+1. Visit the **[Deployed Application Link](https://portfolio-tracker.vercel.app)**.
+2. Use the sample credentials provided above to log in.
+3. Explore the features:
+
+### Environment Variables
+
+The `.env` file includes the following keys:
+
+```
+NEXT_PUBLIC_HISTORY_API_URL=https://stock-history-api.onrender.com
+NEXT_PUBLIC_API_URL=https://stock-tracker-api.onrender.com/api
+NEXT_PUBLIC_API_FINHUB_KEY=cthoubpr01qm2t952970cthoubpr01qm2t95297g
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **`NEXT_PUBLIC_HISTORY_API_URL`**: Used to fetch historical stock data. Backend details are available [here](https://github.com/username/stock-history-api).
+- **`NEXT_PUBLIC_API_URL`**: The main backend for all app-related actions. Repository link [here](https://github.com/username/stock-tracker-api).
+- **`NEXT_PUBLIC_API_FINHUB_KEY`**: API key for accessing Finnhub data.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+### Links:
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend Deployment:** [Vercel](https://portfolio-tracker.vercel.app)
+- **Backend1 (Main API):** [Render](https://stock-tracker-api.onrender.com)
+- **Backend2 (Historical Data API):** [Render](https://stock-history-api.onrender.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Images
 
-## Deploy on Vercel
+For UI samples and screenshots, visit the **[Sample Images](https://docs/sampleimages)**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Video Demonstration
+
+Watch the full application demo [here](https://videolink.example.com).

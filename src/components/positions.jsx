@@ -24,8 +24,7 @@ import toast from "react-hot-toast";
 import { finnhubClient } from "@/utils/stockapi";
 import { useAuth } from "@/context/AuthContext";
 
-const socketUrl =
-  "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
+import { socketUrl } from "@/utils/stockapi";
 
 export default function Positions() {
   const [expandedCard, setExpandedCard] = useState(null);

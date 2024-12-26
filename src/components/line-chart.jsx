@@ -13,9 +13,7 @@ import { finnhubClient } from "@/utils/stockapi";
 import StockPriceAreaChart from "./dashboard/stock-area-chart";
 import { Skeleton } from "./ui/skeleton";
 import { getHistory } from "@/utils/api";
-
-const socketUrl =
-  "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
+import { socketUrl } from "@/utils/stockapi";
 
 const top = ["GOOGL", "AAPL", "AMZN", "MSFT", "TSLA"];
 const INITIAL = {
@@ -149,8 +147,8 @@ const TopIndexes = () => {
                 onClick={() => setActiveChart(symbol)}
               >
                 <span className="text-xs text-muted-foreground">{symbol}</span>
-                <span className="text-lg font-bold leading-none sm:text-3xl">
-                  {ltp}
+                <span className="text-lg font-bold leading-none sm:text-3xl w-[90px]">
+                  {ltp.toFixed(2)}
                 </span>
               </button>
             );

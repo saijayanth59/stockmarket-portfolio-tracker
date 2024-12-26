@@ -25,8 +25,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { finnhubClient } from "@/utils/stockapi";
 import { getWatchlist, addToWatchlist, removeFromWatchlist } from "@/utils/api";
 import toast from "react-hot-toast";
-const socketUrl =
-  "wss://ws.finnhub.io?token=cthoubpr01qm2t952970cthoubpr01qm2t95297g";
+import { socketUrl } from "@/utils/stockapi";
 
 const INITIAL_DATA = [
   {
