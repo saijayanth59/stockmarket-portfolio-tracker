@@ -26,7 +26,7 @@ export default function DashboardPage() {
   return (
     <div className="flex px-5 gap-5 flex-col">
       <TopIndexes />
-      <div className="flex gap-5 justify-between items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         <AreaChartPortfolio />
         <MostTransactions />
         <TopGainersAndLosers />

@@ -48,7 +48,7 @@ export default function TopGainersAndLosers() {
   );
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="hidden md:flex md:flex-col md:gap-1">
       {renderList(topGainers, "Top Gainers")}
       {renderList(topLosers, "Top Losers")}
     </div>

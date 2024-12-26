@@ -111,12 +111,12 @@ export default function PlaceOrderPage() {
       <Button
         variant="ghost"
         onClick={() => router.push("/user/positions")}
-        className="mb-4 -ml-5"
+        className="mb-4 ml-0 md:-ml-5"
       >
         <ArrowLeft className="h-4 w-4" /> Back to positions
       </Button>
-      <h1 className="text-2xl font-bold mb-6">Place Order</h1>
-      <div className="space-y-6">
+      <h1 className="text-2xl font-bold mb-6 ml-5">Place Order</h1>
+      <div className="space-y-6 m-5">
         <div className="relative">
           <Input
             value={searchTerm}

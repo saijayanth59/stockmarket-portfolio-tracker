@@ -185,9 +185,9 @@ export default function Positions() {
         <>
           <Card className="mb-8">
             <CardContent>
-              <div className="flex justify-between m-4">
+              <div className="flex justify-between m-4 m gap-2">
                 <div>
-                  <p className="text-2xl font-semibold">
+                  <p className="text-xl md:text-2xl font-semibold">
                     ₹{currentProtofolio.toFixed(2)}
                   </p>
                   <p className="text-sm text-muted-foreground">
@@ -196,11 +196,11 @@ export default function Positions() {
                 </div>
                 <div>
                   <p
-                    className={`text-2xl font-semibold ${
+                    className={`text-xl md:text-2xl font-semibold ${
                       positionsPL >= 0 ? "text-green-500" : "text-red-500"
                     }`}
                   >
-                    {positionsPL >= 0 ? "+" : ""}₹{positionsPL.toFixed(5)}
+                    ₹{positionsPL.toFixed(5)}
                   </p>
                   <p className="text-sm text-muted-foreground">Positions P&L</p>
                 </div>
@@ -273,6 +273,7 @@ export default function Positions() {
                 </CardContent>
                 <CardFooter className="flex justify-between pt-2">
                   <Button
+                    className="mr-1"
                     variant="outline"
                     size="sm"
                     onClick={() =>
