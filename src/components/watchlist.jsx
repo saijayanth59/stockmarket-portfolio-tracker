@@ -47,24 +47,28 @@ export default function Watchlist() {
   const [isSearching, setIsSearching] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [connection, setConnection] = useState(null);
 
   let socket = null;
 
   useEffect(() => {
     function connectWebSocket(companies) {
       socket = new WebSocket(socketUrl);
+      if (!connection) {
+        setConnection(socket);
+      }
       const symbolsToSubscribe = companies.map((company) => company.symbol);
       socket.addEventListener("open", function () {
         symbolsToSubscribe.forEach((symbol) => {
           socket.send(JSON.stringify({ type: "subscribe", symbol }));
+          socket.send(
+            JSON.stringify({ type: "subscribe", symbol: "BINANCE:BTCUSDT" })
+          );
         });
-        socket.send(
-          JSON.stringify({ type: "subscribe", symbol: "BINANCE:BTCUSDT" })
-        );
       });
       socket.addEventListener("message", function (event) {
         const data = JSON.parse(event.data);
-
+        console.log("from socket", data);
         if (data.type === "trade") {
           const updatedPrice = data.data[0]?.p;
           const updatedSymbol = data.data[0]?.s;
@@ -112,6 +116,15 @@ export default function Watchlist() {
       }
     }
     fetchWatchlist();
+
+    return () => {
+      if (socket) {
+        socket.close();
+      }
+      if (connection) {
+        connection.close();
+      }
+    };
   }, []);
 
   const handleAddToWatchlist = async (stock) => {
@@ -120,6 +133,14 @@ export default function Watchlist() {
       if (!watchlist.some((item) => item.symbol === stock.symbol)) {
         finnhubClient.quote(stock.symbol, (error, data, response) => {
           console.log("from", data);
+          if (!connection) {
+            socket = new WebSocket(socketUrl);
+            setConnection(socket);
+          }
+
+          connection.send(
+            JSON.stringify({ type: "subscribe", symbol: stock.symbol })
+          );
           addToWatchlist({
             ...stock,
             currentPrice: data.c,

@@ -13,6 +13,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getAllOrders } from "@/utils/api";
+import { finnhubClient } from "@/utils/stockapi";
 
 export default function PerformanceSummary() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,10 +23,39 @@ export default function PerformanceSummary() {
     const fetchOrders = async () => {
       try {
         setIsLoading(true);
-        const res = await getAllOrders();
-        setTrades(res);
+        const orders = await getAllOrders();
+        const updatedOrders = await Promise.all(
+          orders.map(async (order) => {
+            if (order.status === "active") {
+              try {
+                const stockData = await new Promise((resolve, reject) => {
+                  finnhubClient.quote(order.symbol, (error, data) => {
+                    if (error) {
+                      reject(error);
+                    } else {
+                      resolve(data);
+                    }
+                  });
+                });
+                return {
+                  ...order,
+                  ltp: stockData.c,
+                };
+              } catch (error) {
+                console.error(
+                  `Error fetching data for symbol ${order.symbol}:`,
+                  error
+                );
+                return order;
+              }
+            }
+            return order;
+          })
+        );
+
+        setTrades(updatedOrders);
       } catch (err) {
-        console.log(err);
+        console.error("Error fetching orders:", err);
       } finally {
         setIsLoading(false);
       }
@@ -53,16 +83,16 @@ export default function PerformanceSummary() {
 
   const pastPL = trades.reduce((acc, trade) => {
     return trade.status !== "active"
-      ? acc + (trade.price - trade.exitPrice) * trade.quantity
+      ? acc + (trade.exitPrice - trade.price) * trade.quantity
       : acc;
   }, 0);
 
   const positionsPL = trades.reduce((acc, trade) => {
     return trade.status === "active"
-      ? acc + (trade.price - trade.prevClose) * trade.quantity
+      ? acc + (trade.ltp - trade.price) * trade.quantity
       : acc;
   }, 0);
-
+  console.log(trades);
   console.log(positionsPL, pastPL);
 
   return (
@@ -132,10 +162,10 @@ export default function PerformanceSummary() {
                 <TableCell className="text-right">
                   <span
                     className={
-                      (trade.price -
-                        (trade.status == "active"
-                          ? trade.prevClose
-                          : trade.exitPrice)) *
+                      ((trade.status == "active"
+                        ? trade.ltp
+                        : trade.exitPrice) -
+                        trade.price) *
                         trade.quantity >=
                       0
                         ? "text-green-500"
@@ -144,10 +174,10 @@ export default function PerformanceSummary() {
                   >
                     $
                     {(
-                      (trade.price -
-                        (trade.status == "active"
-                          ? trade.prevClose
-                          : trade.exitPrice)) *
+                      ((trade.status == "active"
+                        ? trade.ltp
+                        : trade.exitPrice) -
+                        trade.price) *
                       trade.quantity
                     ).toFixed(2)}
                   </span>

@@ -72,30 +72,51 @@ The solution integrates **real-time stock data**, **RESTful API design**, and fe
 
 ## Setup and Installation
 
+### Project Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/saijayanth59/stockmarket-portfolio-tracker.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd stockmarket-portfolio-tracker
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   If any errors occur use --force due to nextjs recent upgrade to react19
+   ```bash
+   npm install --force
+   ```
+4. Create a `.env` file in the root directory and add the following keys:
+   ```env
+   NEXT_PUBLIC_HISTORY_API_URL=https://stock-history-api.onrender.com
+   NEXT_PUBLIC_API_URL=https://stock-tracker-api.onrender.com/api
+   NEXT_PUBLIC_API_FINHUB_KEY=...
+   ```
+
+- **`NEXT_PUBLIC_API_URL`**: The main backend for all app-related actions. Repository link [here](https://github.com/saijayanth59/stock_tracker_api).
+- **`NEXT_PUBLIC_HISTORY_API_URL`**: Used to fetch historical stock data. Backend details are available [here](https://github.com/saijayanth59/stock-history-api).
+- **`NEXT_PUBLIC_API_FINHUB_KEY`**: API key for accessing Finnhub data.
+
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+6. Open the application in your browser at `http://localhost:3000`.
+
 ### Sample Credentials
 
-- **Username:** `demo_user`
-- **Password:** `demo_password`
+- **Username:** `sai`
+- **Password:** `gogreen`
 
 ### Steps to Try the Application:
 
-1. Visit the **[Deployed Application Link](https://portfolio-tracker.vercel.app)**.
+1. Visit the **[Deployed Application Link](https://stockmarket-portfolio-tracker-7zmr.vercel.app/)**.
 2. Use the sample credentials provided above to log in.
 3. Explore the features:
-
-### Environment Variables
-
-The `.env` file includes the following keys:
-
-```
-NEXT_PUBLIC_HISTORY_API_URL=https://stock-history-api.onrender.com
-NEXT_PUBLIC_API_URL=https://stock-tracker-api.onrender.com/api
-NEXT_PUBLIC_API_FINHUB_KEY=cthoubpr01qm2t952970cthoubpr01qm2t95297g
-```
-
-- **`NEXT_PUBLIC_HISTORY_API_URL`**: Used to fetch historical stock data. Backend details are available [here](https://github.com/username/stock-history-api).
-- **`NEXT_PUBLIC_API_URL`**: The main backend for all app-related actions. Repository link [here](https://github.com/username/stock-tracker-api).
-- **`NEXT_PUBLIC_API_FINHUB_KEY`**: API key for accessing Finnhub data.
 
 ---
 
@@ -103,15 +124,15 @@ NEXT_PUBLIC_API_FINHUB_KEY=cthoubpr01qm2t952970cthoubpr01qm2t95297g
 
 ### Links:
 
-- **Frontend Deployment:** [Vercel](https://portfolio-tracker.vercel.app)
-- **Backend1 (Main API):** [Render](https://stock-tracker-api.onrender.com)
-- **Backend2 (Historical Data API):** [Render](https://stock-history-api.onrender.com)
+- **Frontend Deployment:** [Vercel](https://stockmarket-portfolio-tracker-7zmr.vercel.app/)
+- **Backend1 (Main API):** [Render](https://stock-tracker-api.onrender.com/)
+- **Backend2 (Historical Data API):** [Render](https://stock-history-api.onrender.com/)
 
 ---
 
 ## Images
 
-For UI samples and screenshots, visit the **[Sample Images](https://docs/sampleimages)**.
+For UI samples and screenshots, visit the **[Sample Images Documentation](https://docs/sampleimages)**.
 
 ---
 
