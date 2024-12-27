@@ -77,8 +77,8 @@ export function AppSidebar() {
               <SidebarMenuButton asChild className="h-12 mb-3">
                 <Avatar>
                   <AvatarImage
-                    src="https://github.com/shadcn.png"
-                    className="w-8 h-8 mr-2"
+                    src="/logo.png"
+                    className="w-12 h-12 -ml-5 object-contain"
                   />
                   <span className="text-xl">StockTracker</span>
                 </Avatar>

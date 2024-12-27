@@ -14,6 +14,7 @@ import StockPriceAreaChart from "./dashboard/stock-area-chart";
 import { Skeleton } from "./ui/skeleton";
 import { getHistory } from "@/utils/api";
 import { socketUrl } from "@/utils/stockapi";
+import { ArrowUp, ArrowDown } from "lucide-react";
 
 const top = ["GOOGL", "AAPL", "AMZN", "MSFT", "TSLA"];
 const INITIAL = {
@@ -64,6 +65,7 @@ const TopIndexes = () => {
                 ? {
                     ...stock,
                     ltp: updatedPrice,
+                    prevPrice: stock.ltp,
                   }
                 : stock
             )
@@ -87,7 +89,7 @@ const TopIndexes = () => {
                 });
               });
               console.log("from", data);
-              return { symbol: stock, ltp: data.c };
+              return { symbol: stock, ltp: data.c, prevPrice: data.c };
             } catch (error) {
               console.error(`Error fetching data for ${stock}:`, error);
             }
@@ -138,7 +140,7 @@ const TopIndexes = () => {
           <CardDescription>Showing historical data</CardDescription>
         </div>
         <div className="flex">
-          {data.map(({ symbol, ltp }) => {
+          {data.map(({ symbol, ltp, prevPrice }) => {
             return (
               <button
                 key={symbol}
@@ -146,8 +148,27 @@ const TopIndexes = () => {
                 className="flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
                 onClick={() => setActiveChart(symbol)}
               >
-                <span className="text-xs text-muted-foreground">{symbol}</span>
-                <span className="text-lg font-bold leading-none sm:text-3xl w-[90px]">
+                <span className="text-xs text-muted-foreground">
+                  {symbol}
+                  {prevPrice >= ltp ? (
+                    <>
+                      <ArrowUp className="inline-block w-3 h-3" />
+                    </>
+                  ) : (
+                    <>
+                      <ArrowDown className="inline-block w-3 h-3" />
+                    </>
+                  )}
+                </span>
+                <span
+                  className={`text-lg font-bold leading-none sm:text-3xl w-[90px] ${
+                    prevPrice == ltp
+                      ? "text-white"
+                      : prevPrice > ltp
+                      ? "text-green-500"
+                      : "text-red-500"
+                  } `}
+                >
                   {ltp.toFixed(2)}
                 </span>
               </button>
