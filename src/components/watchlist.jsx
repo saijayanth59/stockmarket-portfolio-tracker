@@ -99,7 +99,7 @@ export default function Watchlist() {
               const idx = prev.findIndex(
                 (item) => item.symbol === stock.symbol
               );
-              if (idx != -1) {
+              if (idx != -1 || data.c === 0) {
                 return prev;
               }
               return [...prev, { ...stock, ...data }];
@@ -137,7 +137,10 @@ export default function Watchlist() {
             socket = new WebSocket(socketUrl);
             setConnection(socket);
           }
-
+          if (data.c === 0) {
+            toast.error("Stock not found");
+            return;
+          }
           connection.send(
             JSON.stringify({ type: "subscribe", symbol: stock.symbol })
           );
