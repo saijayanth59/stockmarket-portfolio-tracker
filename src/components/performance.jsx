@@ -14,16 +14,50 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getAllOrders } from "@/utils/api";
 import { finnhubClient } from "@/utils/stockapi";
+import { socketUrl } from "@/utils/stockapi";
 
 export default function PerformanceSummary() {
   const [isLoading, setIsLoading] = useState(false);
   const [trades, setTrades] = useState(null);
-
+  let socket = null;
   useEffect(() => {
+    function connectWebSocket(companies) {
+      socket = new WebSocket(socketUrl);
+      const symbolsToSubscribe = companies
+        .filter((company) => company.status === "active")
+        .map((company) => company.symbol);
+      socket.addEventListener("open", function () {
+        symbolsToSubscribe.forEach((symbol) => {
+          socket.send(JSON.stringify({ type: "subscribe", symbol }));
+        });
+      });
+      socket.addEventListener("message", function (event) {
+        const data = JSON.parse(event.data);
+        console.log("from socket", data);
+        if (data.type === "trade") {
+          const updatedPrice = data.data[0]?.p;
+          const updatedSymbol = data.data[0]?.s;
+
+          setTrades((prevStocks) =>
+            prevStocks.map((stock) =>
+              stock.symbol === updatedSymbol
+                ? {
+                    ...stock,
+                    ltp: updatedPrice,
+                  }
+                : stock
+            )
+          );
+        }
+      });
+
+      return () => {};
+    }
     const fetchOrders = async () => {
       try {
         setIsLoading(true);
         const orders = await getAllOrders();
+
         const updatedOrders = await Promise.all(
           orders.map(async (order) => {
             if (order.status === "active") {
@@ -52,7 +86,7 @@ export default function PerformanceSummary() {
             return order;
           })
         );
-
+        connectWebSocket(updatedOrders);
         setTrades(updatedOrders);
       } catch (err) {
         console.error("Error fetching orders:", err);
@@ -62,6 +96,12 @@ export default function PerformanceSummary() {
     };
 
     fetchOrders();
+
+    return () => {
+      if (socket) {
+        socket.close();
+      }
+    };
   }, []);
 
   function getBadgeVariant(status) {
