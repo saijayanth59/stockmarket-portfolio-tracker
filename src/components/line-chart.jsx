@@ -163,7 +163,7 @@ const TopIndexes = () => {
                 <span
                   className={`text-lg font-bold leading-none sm:text-3xl w-[90px] ${
                     prevPrice == ltp
-                      ? "text-white"
+                      ? "dark:text-white text-gray-800"
                       : prevPrice > ltp
                       ? "text-green-500"
                       : "text-red-500"

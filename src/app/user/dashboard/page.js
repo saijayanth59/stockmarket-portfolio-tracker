@@ -6,6 +6,7 @@ import AreaChartPortfolio from "@/components/area-chart";
 import MostTransactions from "@/components/bar-chart";
 import TopGainersAndLosers from "@/components/TopGainersAndLosers";
 import DashboardSkeleton from "@/components/dashboard/DashBoardSkeleton";
+import HistoryPie from "@/components/dashboard/HistoryPie";
 
 export default function DashboardPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +30,7 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         <AreaChartPortfolio />
         <MostTransactions />
-        <TopGainersAndLosers />
+        <HistoryPie />
       </div>
     </div>
   );
