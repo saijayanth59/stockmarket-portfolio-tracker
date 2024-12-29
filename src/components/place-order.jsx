@@ -144,7 +144,7 @@ export default function PlaceOrderPage() {
                       onClick={() => {
                         handleStockSelect(company);
                       }}
-                      className="cursor-pointer px-4 py-2 bg-neutral-900"
+                      className="cursor-pointer px-4 py-2 dark:bg-neutral-900 bg-white"
                     >
                       {company.symbol} - {company.name}
                     </li>
