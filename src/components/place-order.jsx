@@ -65,6 +65,10 @@ export default function PlaceOrderPage() {
       if (error) {
         console.error("Error fetching stock data:", error);
       } else {
+        if (data.c === 0) {
+          toast.error("Stock data not available");
+          return;
+        }
         setSelectedCompany({ ...data, ...stock });
       }
       setIsFetchingStock(false);
