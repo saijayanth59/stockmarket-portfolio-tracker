@@ -18,12 +18,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-
-// Transaction data
-const chartData = [
-  { type: "buy", count: 10, fill: "var(--color-buy)" },
-  { type: "sell", count: 6, fill: "var(--color-sell)" },
-];
+import { getAllOrders } from "@/utils/api";
+import { Skeleton } from "../ui/skeleton";
 
 const chartConfig = {
   buy: {
@@ -37,9 +33,33 @@ const chartConfig = {
 };
 
 export default function HistoryPie() {
-  const totalTransactions = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.count, 0);
+  const [orders, setOrders] = React.useState(null);
+
+  React.useEffect(() => {
+    async function fetchOrders() {
+      try {
+        const orders = await getAllOrders();
+        setOrders(orders);
+      } catch (error) {
+        console.error("Error fetching orders:", error.message);
+      }
+    }
+
+    fetchOrders();
   }, []);
+
+  if (orders === null) {
+    return <Skeleton className="h-[250px]" />;
+  }
+  console.log("from history orders", orders);
+
+  const buyCount = orders?.filter((order) => order.type === "buy").length;
+  const sellCount = orders?.filter((order) => order.type === "sell").length;
+  const chartData = [
+    { type: "buy", count: buyCount, fill: "var(--color-buy)" },
+    { type: "sell", count: sellCount, fill: "var(--color-sell)" },
+  ];
+  const totalTransactions = orders?.length;
 
   return (
     <Card className="flex flex-col">
