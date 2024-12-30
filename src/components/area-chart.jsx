@@ -18,14 +18,13 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-// Updated chart data to reflect portfolio money.
 const chartData = [
-  { month: "January", portfolio: 5000 },
-  { month: "February", portfolio: 5200 },
-  { month: "March", portfolio: 4800 },
-  { month: "April", portfolio: 5300 },
-  { month: "May", portfolio: 5500 },
-  { month: "June", portfolio: 5700 },
+  { month: "July", portfolio: 5000 },
+  { month: "August", portfolio: 5200 },
+  { month: "September", portfolio: 4800 },
+  { month: "October", portfolio: 5300 },
+  { month: "November", portfolio: 5500 },
+  { month: "December", portfolio: 5700 },
 ];
 
 const chartConfig = {
@@ -86,9 +85,6 @@ export default function AreaChartPortfolio() {
           <div className="grid gap-2">
             <div className="flex items-center gap-2 font-medium leading-none">
               Trending up by 4% this month <TrendingUp className="h-4 w-4" />
-            </div>
-            <div className="flex items-center gap-2 leading-none text-muted-foreground">
-              January - June 2024
             </div>
           </div>
         </div>

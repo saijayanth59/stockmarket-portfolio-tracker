@@ -20,14 +20,13 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-// Updated chart data for monthly profit and loss
 const chartData = [
-  { month: "January", profit: 5000, loss: 2000 },
-  { month: "February", profit: 6000, loss: 2500 },
-  { month: "March", profit: 7000, loss: 3000 },
-  { month: "April", profit: 4500, loss: 1800 },
-  { month: "May", profit: 8000, loss: 4000 },
-  { month: "June", profit: 7500, loss: 3500 },
+  { month: "July", profit: 5000, loss: 2000 },
+  { month: "August", profit: 6000, loss: 2500 },
+  { month: "September", profit: 7000, loss: 3000 },
+  { month: "October", profit: 4500, loss: 1800 },
+  { month: "November", profit: 8000, loss: 4000 },
+  { month: "December", profit: 7500, loss: 3500 },
 ];
 
 const chartConfig = {

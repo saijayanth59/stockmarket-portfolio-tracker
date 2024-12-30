@@ -27,22 +27,8 @@ import { getWatchlist, addToWatchlist, removeFromWatchlist } from "@/utils/api";
 import toast from "react-hot-toast";
 import { socketUrl } from "@/utils/stockapi";
 
-const INITIAL_DATA = [
-  {
-    symbol: "BINANCE:BTCUSDT",
-    c: 0,
-    d: 0,
-    dp: 0,
-    h: 0,
-    l: 0,
-    o: 0,
-    pc: 0,
-    name: "Bitcoin",
-  },
-];
-
 export default function Watchlist() {
-  const [watchlist, setWatchlist] = useState(INITIAL_DATA);
+  const [watchlist, setWatchlist] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -189,7 +175,6 @@ export default function Watchlist() {
       stock.symbol.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Simulate initial data loading
   useState(() => {
     setTimeout(() => setIsLoading(false), 2000);
   });
@@ -254,75 +239,84 @@ export default function Watchlist() {
             </CardContent>
           </Card>
         )}
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Symbol</TableHead>
-              <TableHead>Name</TableHead>
-              <TableHead className="text-right">Current</TableHead>
-              <TableHead className="text-right">Change</TableHead>
-              <TableHead className="text-right">High</TableHead>
-              <TableHead className="text-right">Low</TableHead>
-              <TableHead className="text-right">Open</TableHead>
-              <TableHead className="text-right">Prev Close</TableHead>
-              <TableHead></TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {isLoading
-              ? [1, 2, 3].map((i) => (
-                  <TableRow key={i}>
-                    <TableCell colSpan={9}>
-                      <Skeleton className="h-12 w-full" />
-                    </TableCell>
-                  </TableRow>
-                ))
-              : watchlist.map((stock) => (
-                  <TableRow key={stock._id}>
-                    <TableCell className="font-medium">
-                      {stock.symbol}
-                    </TableCell>
-                    <TableCell>{stock.name}</TableCell>
-                    <TableCell className="text-right">
-                      ${stock.c.toFixed(2)}
-                    </TableCell>
-                    <TableCell
-                      className={`text-right ${
-                        stock.d >= 0 ? "text-green-500" : "text-red-500"
-                      }`}
-                    >
-                      {stock.d >= 0 ? (
-                        <ArrowUpIcon className="inline h-4 w-4 mr-1" />
-                      ) : (
-                        <ArrowDownIcon className="inline h-4 w-4 mr-1" />
-                      )}
-                      ${Math.abs(stock.d).toFixed(2)} ({stock.dp.toFixed(2)}%)
-                    </TableCell>
-                    <TableCell className="text-right">
-                      ${stock.h.toFixed(2)}
-                    </TableCell>
-                    <TableCell className="text-right">
-                      ${stock.l.toFixed(2)}
-                    </TableCell>
-                    <TableCell className="text-right">
-                      ${stock.o.toFixed(2)}
-                    </TableCell>
-                    <TableCell className="text-right">
-                      ${stock.pc.toFixed(2)}
-                    </TableCell>
-                    <TableCell>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => handleRemoveFromWatchlist(stock.symbol)}
+        {watchlist.length === 0 && (
+          <div className="text-xl text-center">
+            Add Stocks to Watchlist for realtime updates
+          </div>
+        )}
+        {watchlist.length > 0 && (
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Symbol</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead className="text-right">Current</TableHead>
+                <TableHead className="text-right">Change</TableHead>
+                <TableHead className="text-right">High</TableHead>
+                <TableHead className="text-right">Low</TableHead>
+                <TableHead className="text-right">Open</TableHead>
+                <TableHead className="text-right">Prev Close</TableHead>
+                <TableHead></TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {isLoading
+                ? [1, 2, 3].map((i) => (
+                    <TableRow key={i}>
+                      <TableCell colSpan={9}>
+                        <Skeleton className="h-12 w-full" />
+                      </TableCell>
+                    </TableRow>
+                  ))
+                : watchlist.map((stock) => (
+                    <TableRow key={stock._id}>
+                      <TableCell className="font-medium">
+                        {stock.symbol}
+                      </TableCell>
+                      <TableCell>{stock.name}</TableCell>
+                      <TableCell className="text-right">
+                        ${stock.c.toFixed(2)}
+                      </TableCell>
+                      <TableCell
+                        className={`text-right ${
+                          stock.d >= 0 ? "text-green-500" : "text-red-500"
+                        }`}
                       >
-                        <X className="h-4 w-4" />
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                ))}
-          </TableBody>
-        </Table>
+                        {stock.d >= 0 ? (
+                          <ArrowUpIcon className="inline h-4 w-4 mr-1" />
+                        ) : (
+                          <ArrowDownIcon className="inline h-4 w-4 mr-1" />
+                        )}
+                        ${Math.abs(stock.d).toFixed(2)} ({stock.dp.toFixed(2)}%)
+                      </TableCell>
+                      <TableCell className="text-right">
+                        ${stock.h.toFixed(2)}
+                      </TableCell>
+                      <TableCell className="text-right">
+                        ${stock.l.toFixed(2)}
+                      </TableCell>
+                      <TableCell className="text-right">
+                        ${stock.o.toFixed(2)}
+                      </TableCell>
+                      <TableCell className="text-right">
+                        ${stock.pc.toFixed(2)}
+                      </TableCell>
+                      <TableCell>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() =>
+                            handleRemoveFromWatchlist(stock.symbol)
+                          }
+                        >
+                          <X className="h-4 w-4" />
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+            </TableBody>
+          </Table>
+        )}
       </CardContent>
     </Card>
   );

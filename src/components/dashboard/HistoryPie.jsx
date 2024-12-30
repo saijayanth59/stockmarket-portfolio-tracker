@@ -49,7 +49,7 @@ export default function HistoryPie() {
   }, []);
 
   if (orders === null) {
-    return <Skeleton className="h-[250px]" />;
+    return <Skeleton className="h-[400px]" />;
   }
   console.log("from history orders", orders);
 
@@ -65,7 +65,7 @@ export default function HistoryPie() {
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
         <CardTitle>Pie Chart - Transactions</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardDescription>Last 6 months</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
