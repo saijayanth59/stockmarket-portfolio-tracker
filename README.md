@@ -132,10 +132,10 @@ The solution integrates **real-time stock data**, **RESTful API design**, and fe
 
 ## Images
 
-For UI samples and screenshots, visit the **[Sample Images Documentation](https://docs/sampleimages)**.
+For UI samples and screenshots, visit the **[Sample Images Documentation](/docs/images/)**.
 
 ---
 
 ## Video Demonstration
 
-Watch the full application demo [here](https://videolink.example.com).
+Watch the full application demo [here](https://drive.google.com/drive/folders/1mLCCn-DbRJrNobEZNj5NZL2Hs4ZDbkMU).
