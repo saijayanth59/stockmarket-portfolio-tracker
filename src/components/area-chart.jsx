@@ -105,6 +105,9 @@ export default function AreaChartPortfolio() {
   if (chartData === null) {
     return <Skeleton className="h-[400px]" />;
   }
+  // if (chartData.length == 0) {
+  //   return null;
+  // }
 
   return (
     <Card>
@@ -115,42 +118,48 @@ export default function AreaChartPortfolio() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
-          <AreaChart
-            accessibilityLayer
-            data={chartData}
-            margin={{
-              left: 12,
-              right: 12,
-            }}
-          >
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="day"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-            />
-            <YAxis
-              tickLine={false}
-              axisLine={false}
-              tickFormatter={(value) => `$${value}`}
-            />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="line" />}
-            />
-            <Area
-              dataKey="portfolio"
-              type="natural"
-              fill="var(--color-portfolio)"
-              fillOpacity={0.4}
-              stroke="var(--color-portfolio)"
-            />
-          </AreaChart>
-        </ChartContainer>
+        {chartData.length == 0 ? (
+          <div className="flex justify-center items-center">
+            No transactions
+          </div>
+        ) : (
+          <ChartContainer config={chartConfig}>
+            <AreaChart
+              accessibilityLayer
+              data={chartData}
+              margin={{
+                left: 12,
+                right: 12,
+              }}
+            >
+              <CartesianGrid vertical={false} />
+              <XAxis
+                dataKey="day"
+                tickLine={false}
+                axisLine={false}
+                tickMargin={8}
+              />
+              <YAxis
+                tickLine={false}
+                axisLine={false}
+                tickFormatter={(value) => `$${value}`}
+              />
+              <ChartTooltip
+                cursor={false}
+                content={<ChartTooltipContent indicator="line" />}
+              />
+              <Area
+                dataKey="portfolio"
+                type="natural"
+                fill="var(--color-portfolio)"
+                fillOpacity={0.4}
+                stroke="var(--color-portfolio)"
+              />
+            </AreaChart>
+          </ChartContainer>
+        )}
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col items-center gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
           Starting Portfolio Value: 10000
         </div>
