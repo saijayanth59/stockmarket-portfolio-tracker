@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import ThemeToggleButton from "@/components/theme-toggle-button";
 import { AuthProvider } from "@/context/AuthContext";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "StockTracker",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
           <AuthProvider>{children}</AuthProvider>
           <ThemeToggleButton />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
