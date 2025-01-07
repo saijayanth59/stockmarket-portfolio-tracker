@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   Card,
@@ -10,8 +10,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { finnhubClient } from "@/utils/stockapi";
-import StockPriceAreaChart from "./dashboard/stock-area-chart";
-import { Skeleton } from "./ui/skeleton";
+import StockPriceAreaChart from "@/components/dashboard/stock-area-chart";
+import { Skeleton } from "@/components/ui/skeleton";
 import { getHistory } from "@/utils/api";
 import { socketUrl } from "@/utils/stockapi";
 import { ArrowUp, ArrowDown } from "lucide-react";

@@ -11,14 +11,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowLeft, Loader2, Search } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { format } from "date-fns";
 import { finnhubClient } from "@/utils/stockapi";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import { checkMarketStatus } from "@/utils/functions";
 import { createOrder } from "@/utils/api";
 import toast from "react-hot-toast";
-import SubmitButton from "./submit-button";
+import SubmitButton from "@/components/submit-button";
 
 const today = new Date();
 const tomorrow = new Date(today);

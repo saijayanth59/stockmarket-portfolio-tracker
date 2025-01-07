@@ -16,8 +16,8 @@ import {
   PencilIcon,
   DoorClosed,
 } from "lucide-react";
-import { EditOrderDialog } from "../components/edit-order-dialog";
-import { ConfirmationDialog } from "./confirmation-dialog";
+import { EditOrderDialog } from "@/components/positions/edit-order-dialog";
+import { ConfirmationDialog } from "@/components/confirmation-dialog";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getOrders, updateOrder } from "@/utils/api";
 import toast from "react-hot-toast";

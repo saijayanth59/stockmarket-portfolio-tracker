@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import TopIndexes from "@/components/line-chart";
-import AreaChartPortfolio from "@/components/area-chart";
-import MostTransactions from "@/components/bar-chart";
-import TopGainersAndLosers from "@/components/TopGainersAndLosers";
+import TopIndexes from "@/components/dashboard/TopIndexes";
+import AreaChartPortfolio from "@/components/dashboard/AreaChartPortfolio";
 import DashboardSkeleton from "@/components/dashboard/DashBoardSkeleton";
 import HistoryPie from "@/components/dashboard/HistoryPie";
 

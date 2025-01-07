@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { TrendingUp } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import {
@@ -13,29 +12,23 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { getOrders } from "@/utils/api";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function AreaChartPortfolio() {
   const [chartData, setChartData] = useState(null);
-  const [totalPortfolioValue, setTotalPortfolioValue] = useState(0);
 
   useEffect(() => {
-    // Fetch data from the backend
     const fetchData = async () => {
       try {
-        const data = await getOrders(); // Replace with your actual API endpoin
-
-        // Extract and process the data
+        const data = await getOrders();
         const processedData = processPortfolioData(data);
 
         setChartData(processedData.chartData);
-        setTotalPortfolioValue(processedData.totalPortfolioValue);
       } catch (error) {
         console.error("Error fetching portfolio data:", error);
       }
@@ -47,7 +40,7 @@ export default function AreaChartPortfolio() {
   const processPortfolioData = (data) => {
     // Parse orders and calculate portfolio value for each order
     const orders = data.map((item) => ({
-      date: new Date(item.createdAt).toISOString().split("T")[0], // Format as YYYY-MM-DD
+      date: new Date(item.createdAt).toISOString().split("T")[0],
       value: 10000 - Math.abs(item.price * item.quantity),
     }));
 
@@ -70,13 +63,7 @@ export default function AreaChartPortfolio() {
       chartData.push({ day: formatDate(date), portfolio: lastValue });
     });
 
-    // Calculate total portfolio value
-    const totalPortfolioValue = chartData.reduce(
-      (acc, item) => acc + item.portfolio,
-      0
-    );
-
-    return { chartData, totalPortfolioValue };
+    return { chartData };
   };
 
   const generateDateRange = (start, end) => {
@@ -105,9 +92,6 @@ export default function AreaChartPortfolio() {
   if (chartData === null) {
     return <Skeleton className="h-[400px]" />;
   }
-  // if (chartData.length == 0) {
-  //   return null;
-  // }
 
   return (
     <Card>
