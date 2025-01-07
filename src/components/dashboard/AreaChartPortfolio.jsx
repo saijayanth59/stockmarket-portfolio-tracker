@@ -41,7 +41,7 @@ export default function AreaChartPortfolio() {
     // Parse orders and calculate portfolio value for each order
     const orders = data.map((item) => ({
       date: new Date(item.createdAt).toISOString().split("T")[0],
-      value: 10000 - Math.abs(item.price * item.quantity),
+      value: 100000 - Math.abs(item.price * item.quantity),
     }));
 
     // Get the range of dates
