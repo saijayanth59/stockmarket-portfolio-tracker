@@ -145,7 +145,7 @@ export default function AreaChartPortfolio() {
       </CardContent>
       <CardFooter className="flex-col items-center gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Starting Portfolio Value: 10000
+          Starting Portfolio Value: 100000
         </div>
         <div className="leading-none text-muted-foreground"></div>
       </CardFooter>
